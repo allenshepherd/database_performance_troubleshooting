@@ -1,0 +1,104 @@
+Hotsos Test Harness
+
+This version (V4) of the test harness works on Oracle database version 11. It may or may not
+work in older versions. 
+
+Critical usage note:
+In SQL*Plus version 9.0.x, the REPLACE option of the SPOOL command is *not* valid.
+You must either update all harness files to remove the REPLACE option or upgrade your
+version of SQL*Plus to a later release (9.1 or above).
+
+
+Installation Instructions
+-------------------------
+
+Download the harness .zip file from the Hotsos portal and unzip into a local directory
+on your computer (e.g. C:\Harness).
+
+Create an environment variable named SQLPATH and set it to the harness directory:
+    SQLPATH = C:\Harness
+
+Log in as SYS or a SYSDBA-privileged account on the instance on which you wish to install the harness.
+        SQL> conn sys/sys as sysdba
+
+Note:
+If you are NOT logging on as SYS, the account you use must have explicit privileges granted to
+certain objects.  Please see the harness_dba_privs.sql for the grants required.
+
+Open the script file named harness_sys_install.sql and read the header information.
+Search through the script and locate any section marked with '****** CHANGE ME ******' and
+make modifications as needed to match your environment.
+
+Verify that the support packages are loaded:
+   1) dbms_support (v9)
+   2) dbms_pipe
+   3) dbms_monitor (v10)
+   4) dbms_lock
+   5) dbms_space
+
+Execute harness_sys_install.sql.
+        SQL> @harness_sys_install
+
+For each user that will be using the Hotsos Test Harness, the DBA must execute the
+harness_grant_privs.sql script:
+        SQL> @harness_grant_privs username
+
+Note that any error messages that indicate tables not found or packages not found (dbms_monitor
+won't be found in v9 databases for example) are expected and are not problematic to the installation.
+Just ignore them.
+
+
+------------- End of SYS installation ----------------
+
+
+Each person who wishes to use the Hotsos Test Harness will need to create the
+harness-related objects in their schema.
+
+Log in to the schema/account that will be using the Hotsos Test Harness.
+        SQL> @hconnect op/op@hotsos
+
+NOTE:  If this connection fails, open hlogonoff.sql and edit it to comment
+       out the first connect string and uncomment the second connect string as
+       follows:
+
+        rem @hconnect &hotsos_testharness_user/&hotsos_testharness_passwd@&hotsos_testharness_instance
+
+        @hconnect &hotsos_testharness_user/&hotsos_testharness_passwd
+
+        Save the file and try to execute @hconnect again, and this time
+        it should work.
+
+Execute harness_user_install.sql
+        SQL> @harness_user_install
+
+Respond to the prompts as appropriate based on your computer's operating system.
+
+
+------------- End of Harness User installation ----------------
+
+
+You are now ready to use the Hotsos Test Harness!
+
+
+------------- Verifying the Harness Installation ---------------
+It is advisable that you complete a simple test to verify the harness installation.
+
+Open the file named 'Harness User Guide.txt' and follow the steps to start the harness and execute the do.sql script.
+
+Any simple SQL statement will suffice to use for testing the functionality of the harness.  If you don't 
+have the old stand-by emp table created in your schema, simply use a query such as 
+SELECT 'hello world' from dual ; instead.
+
+If any portion of the initial test of do.sql fails, you have two options to debug the error.  First, you can 
+open up the do.sql script file and locate at approximately line 22, the command " define debug = 'OFF' ".  Change 
+the entry from OFF to ON and save the file.  Then re-execute your test and look through the output for error 
+messages.  Just remember to reset the value back to OFF after you have found and fixed the problem.  If the 
+first method doesn't help you locate the error, then there is a second option.  There is a script named 
+harness_test_load.sql that can be used to manually verify installation step-by-step.  Simply open the 
+harness_test_load.sql file and manually execute each step one at a time.  If errors exist, this script will show 
+you exactly where the error is and you can address those errors specifically.  If you have any questions about 
+any error that doesn't seem obvious how to resolve can be submitted to our Hotsos Support Discussion 
+forum at http://support.hotsos.com/default.asp?hotsos.  Simply post a message showing the error and provide a 
+brief explanation of your installation.  You can also search the forum for similar posts that may already 
+contain the answer to your question.  We find that there are typically only 2-3 common errors that occur and they 
+are easily resolved.

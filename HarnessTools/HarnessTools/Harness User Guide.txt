@@ -1,0 +1,402 @@
+Using the Hotsos Test Harness
+------------------------------------------------------------
+Updated to V4 18Aril2011 by Ric Van Dyke
+------------------------------------------------------------
+To use the Hotsos Test Harness, you must have already installed both the SYS-owned
+objects and the harness objects for your userid (see Harness Installation Guide.txt).
+
+To start using the harness, execute start_harness.sql
+
+SQL> @start_harness
+========================================
+Harness User          : op
+Harness User Password : op
+Database Instance     : hotsos
+SQL*Plus HOST command : host
+OS erase command      : erase
+Preferred Editor      : C:\Program Files\Crimson Editor\cedt.exe
+========================================
+******************************
+The harness is NOT running
+******************************
+******************************************
+This is your current harness configuration
+******************************************
+Do you wish to update any of these settings? (Y/N): n     <----- See note 1 below
+
+Enter a unique name for your harness snapshot capturing session
+This name must be less than 10 characters in length: RVD  <----- See note 2 below
+*************************************************
+Creating the Harness Capture Job...
+*************************************************
+The Harness Capture Job has been STARTED
+* From HCONFIG:
+Harness Job Name    : HARNESS_RVD
+Harness Pipe Name   : RVD
+Capture Session Job#: 1
+*************************************************
+* From USER_SCHEDULER_JOBS:
+Scheduler Job Name  : HARNESS_RVD
+Enabled             : TRUE
+State               : RUNNING
+Restartable         : TRUE
+Logging Level       : FULL
+Last Start Date     : 18-APR-11 03.26.07.296000 PM -04:00
+*************************************************
+
+Note 1:
+You will see a display of the current harness configuration information and asked
+if you'd like to change it.  If you answer yes (Y), you will be prompted to enter
+the configuration specifics otherwise, this step will be bypassed.
+
+If you request to update the configuration information you will be prompted to enter
+the configuration information for your current harness setup.  This will include
+your userid/password, the database instance, the SQL*Plus HOST command for your
+operating system (either HOST, $ or !), the erase/remove command for your operating
+system (rm for UNIX, erase for Windows) and an editor preference (if you don't enter
+an editor by entering the full path and executable file name, you will use the
+default editor for your OS).
+
+Harness User          : op
+Harness User Password : op
+Database Instance     : hotsos
+SQL*Plus HOST command : host
+OS erase command      : erase
+Preferred Editor      : C:\Program Files\Crimson Editor\cedt.exe
+
+Note 2:
+You will then be prompted with:
+
+Enter a unique name for your harness snapshot capturing session
+This name must be less than 10 characters in length:
+
+This should be a name unique to your account's usage of the harness.  It will be
+used to start a background session with an open pipe that waits to receive requests
+from your harness test session to take snapshots of the V$ views before and after
+a test is executed.  You should name this something that only you would likely use
+as it is possible that other people will also be using the harness and you want to
+be able to have your requests serviced by your own unique pipe.
+
+For example, if I was logged in as HOTSOS, I might name my pipe:  HOTSOS1234.
+
+Once this information is entered, the harness will be "turned on" and ready for use.
+
+To verify the harness configuration and display the harness pipe information, execute hshowconfig.sql
+
+SQL> @hshowconfig
+========================================
+Harness User          : op
+Harness User Password : op
+Database Instance     : hotsos
+SQL*Plus HOST command : host
+OS erase command      : erase
+Preferred Editor      : C:\Program Files\Crimson Editor\cedt.exe
+========================================
+******************************
+The harness is running
+Harness Job Name    : HARNESS_RVD
+Harness Pipe Name   : RVD
+Capture Session Job#: 1
+******************************
+Harness Capture Session Info
+SID     : 140
+Serial# : 3
+Program : ORACLE.EXE (J002)
+Module  : Hotsos Test Harness
+Action  : harness_pipe_RVD (capture)
+******************************
+Data from USER_SCHEDULER_JOBS
+Name            : HARNESS_RVD
+Enabled         : TRUE
+State           : RUNNING
+Last Start Date : 18-APR-11 12.31.34.546000 PM -04:00
+End Date        :
+Auto Drop       : FALSE
+Comment         : Hotsos Harness Capture Job
+******************************
+Data from USER_SCHEDULER_JOB_RUNNING_JOBS
+Name            : HARNESS_RVD
+Elapsed Time    : +000 02:50:19.76
+CPU Used        : +000 00:00:00.05
+******************************
+
+Make sure the user, password, instance, HOST command, erase command and preferred editor are
+exactly as you entered them.  If need be, these values can also be updated manually as the
+following example demonstrates:
+
+    UPDATE hconfig
+       SET harness_user = 'OP',
+           harness_pswd = 'OP',
+           db_instance = 'HOTSOS',
+           editor = 'C:\Program Files\Crimson\cedt.exe',
+           rm_cmd = 'erase',
+           host_cmd = '$';
+
+    COMMIT ;
+
+
+You may check just the harness pipe configuration by executing chk_harness.sql
+
+SQL> @chk_harness
+******************************
+The harness is running
+Harness Job Name    : HARNESS_RVD
+Harness Pipe Name   : RVD
+Capture Session Job#: 1
+******************************
+Harness Capture Session Info
+SID     : 140
+Serial# : 3
+Program : ORACLE.EXE (J002)
+Module  : Hotsos Test Harness
+Action  : harness_pipe_RVD (capture)
+******************************
+Data from USER_SCHEDULER_JOBS
+Name            : HARNESS_RVD
+Enabled         : TRUE
+State           : RUNNING
+Last Start Date : 18-APR-11 12.31.34.546000 PM -04:00
+End Date        :
+Auto Drop       : FALSE
+Comment         : Hotsos Harness Capture Job
+******************************
+Data from USER_SCHEDULER_JOB_RUNNING_JOBS
+Name            : HARNESS_RVD
+Elapsed Time    : +000 02:51:07.75
+CPU Used        : +000 00:00:00.05
+******************************
+
+The pipe must be running in order for the harness to function properly.
+
+Once you start the harness, it will remain running until you turn it off -- even
+if you logout and disconnect your session and then log back in later.  Always
+remember to check the harness before you run any tests to make sure it is on
+and configured properly.
+
+Later, when you wish to stop the harness, you will execute stop_harness.sql
+
+SQL> @stop_harness
+***************************************
+Shutting Down Harness Capture Job
+Pipe: RVD
+Job#: 1
+Job Name: HARNESS_RVD
+*** Removing job info from hconfig
+*** Dropping Job
+***************************************
+The harness has been STOPPED
+***************************************
+
+The harness allows you to test both single SQL statements and PL/SQL code blocks.
+To conduct a test, place your SQL or PL/SQL you wish to test in a text file in the
+current default directory.  The default directory is the directory from which
+SQL*Plus was started and can be determined by executing the HOST command as follows:
+
+        SQL> host
+        Microsoft Windows XP [Version 5.1.2600]
+        (C) Copyright 1985-2001 Microsoft Corp.
+
+        C:\Hotsos> exit
+
+In this case, the default directory is C:\Hotsos.
+
+The file should have a .sql extension and contain either a single SQL statement OR a
+single anonymous PL/SQL block.  The last line of the file should have a / (forward slash)
+in the first position of the line.  Do NOT end the file with a semi-colon.
+
+Once the test statement or code block has been placed a text file and appropriately
+named, you are ready to execute the test.  Tests are conducted by executing do.sql.  For
+example, let's test the following SQL statement:
+
+        SQL> get emp.sql
+          1  select *
+          2    from emp
+          3*  where empno between 100 and 250
+        SQL>
+
+The do.sql script will prompt you for several pieces of information to identify, conduct,
+and save the test results:
+
+        SQL> @do
+        Enter .sql file name (without extension)             : emp
+        Enter the workspace name                             : my_tests
+        Enter the scenario name                              : original
+        Is this a (S)QL or (P)L/SQL test execution?          : S
+        Display results of SQL (Y/N) [N]?                    : N
+        Load trace files (Y/N) [Y]?                          : Y
+        Execute once prior to test (Y/N) [N]?                : Y
+        Display? (S)tats/(L)atches/(A)ll/(C)ustom/(N)one  [C]: C
+
+Enter .sql file name (without extension)
+    This is the name of your test file located in the default directory.
+    Do NOT include the extension here.  A .sql extension is assumed.
+
+Enter the workspace name
+    A workspace is an organizational tool.  Think of it like a file folder
+    that contains related information:  in this case, it will contain the
+    details of one or more test executions.
+
+Enter the scenario name
+    A single test execution is called a scenario.  This name is how each
+    test will be identified by you.
+
+Is this a (S)QL or (P)L/SQL test execution?
+    Enter S if you are conducting a test of a single SQL statement.
+    Enter P if you are conducting a test of a PL/SQL block.
+
+Display results of SQL (Y/N) [N]?
+    Enter Y if you want to see the output from the execution of the test.
+    Enter N if you do not want to see the output (this is the default).
+
+Load trace files (Y/N) {Y}?
+    Enter Y if you want to load the trace files generated for the test.
+        -- You should answer Y in virtually all cases.
+        -- This is the default.
+    Enter N if you do not to load the trace files.
+
+Execute once prior to test (Y/N) [N]?
+    Enter Y if you want to execute the test once prior to actually
+    running and capturing the test results.  This can often be used to
+    allow for a hard parse to occur before the test captures the results
+    or to load the buffer cache with blocks of data (to avoid extra
+    physical reads).
+    Enter N if you want to execute the test directly (this is the default).
+
+Display? (S)tats/(L)atches/(A)ll/(C)ustom/(N)one [C]
+    Enter S to display just the Statistic Info (from v$sessstat)
+    Enter L to display just the Latch Info (from v$latch)
+    Enter A to display all statistics and latch info
+    Enter C to display just the specific stats and latches you choose
+        --  This is the default.
+    Enter N to display no information (can use @lsscstat later instead)
+
+
+You can also use a command line version of "do".  There are 3 different
+command line versions.  The parameters that aren't taken on the command line
+default to the values listed above.
+
+docmd.sql
+    SQL>  @docmd <.sql file> <test type: S or P> <Workspace> <Scenario>
+
+dosql.sql
+    SQL> @dosql <.sql file> <Workspace> <Scenario>
+
+doplsql.sql
+    SQL> @doplsql <.sql file> <Workspace> <Scenario>
+
+
+Note:
+When you install the harness, a set of Custom statistics and latches were
+defined that display when you choose a Custom display.  To review the list
+of custom elements, issue the following query:
+
+    SELECT * FROM hstat WHERE always_print = 1;
+
+Should you wish to include your own selections in the custom display,
+you will need to UPDATE the HSTAT table to set the always_print column to
+1 for each item you wish to include.  For any items you wish to remove
+from the custom display, you need to set the always_print column to 0.
+
+
+You can execute as many tests as desired and can compare the results to
+determine which alternative is the best performing.
+
+To compare different test scenarios, you can use any of the following scripts:
+
+diff.sql
+    This script allows you to compare two different scenarios.  Only the values
+    for the "custom" selected items are displayed and compared.
+
+diffall.sql
+    This script allows you to compare two different scenarios.  All the values
+    that have differences between the two scenarios are displayed and compared.
+
+hlio.sql
+    This script displays the IO related statistics for all scenarios within a
+    single workspace.
+
+hrank.sql
+    This script displays the elapsed time for all scenarios within a single workspace.
+
+hcosts.sql
+    This script displays the Optimizer COST for each test's EXPLAIN PLAN within a
+    single workspace.
+
+hstatcomp.sql
+    This script displays the values of the named statistic or latch for all scenarios
+    within a single workspace.  The statistic or latch name must be exact (see HSTAT for
+    the complete list of statistics or latches).
+
+
+Numerous scripts exist to display individual test information.
+
+hshowdo.sql
+    This script shows the entire results of a previously executed test (similar to the
+    output initially produced by executing do.sql).  Note:  This script should be
+    used to review SQL statement tests.
+
+lsscstat.sql
+    This script shows the statistic and latch consumption for a previously executed
+    test.  Note:  This script can be used to review both SQL statement tests or
+    PL/SQL tests.
+
+hsctrace.sql
+    This script displays your choice of output from the extended SQL trace (10046)
+    file for a previously executed test.  You can display
+        A - All lines in trace file for your SQL statement's cursor
+        Q - The SQL statement itself
+        P - The PARSE line
+        B - The BINDS line(s)
+        E - The EXEC line
+        F - The FETCH line(s)
+        W - The WAIT line(s)
+        S - The STAT line(s)
+
+    Note:  This script is not applicable to a PL/SQL code block test.
+
+horatrace.sql
+    This script displays the entire contents of the extended SQL trace (10046) file
+    for a previously executed test and optionally can display the TKPROF output
+    summary for this trace file as well.
+
+    Note:  The tkprof executable must be able to be located in the current PATH.
+
+hopttrace.sql
+    This script displays the entire contents of the Optimizer trace (10053) file
+    for a previously executed test.
+
+hprof.sql
+    This script displays a resource profile for the test execution based on the
+    contents of the extended SQL trace (10046) file collected for a previously
+    executed test.
+
+    Note:  In order for this script to execute properly, Perl must be installed
+    and associated with .pl files to automatically execute.  This script calls
+    the Perl program prof.pl.  The prof.pl file must exist in the current default
+    directory.  It can be copied from the Harness download location into any
+    working directory as needed.
+
+lsscexpl.sql
+    This script displays the explain plan output for the SQL statement from a
+    previously executed test.
+
+htracefiles.sql
+    This script displays a list of all the tests which have been executed and
+    the trace files (by name) associated with each test.
+
+lsws.sql
+    This script displays a listing of all the current workspaces.
+
+lssc.sql
+    This script displays a listing of all the scenarios for a named workspace.
+
+rmws.sql
+    This script removes/deletes an entire workspace (all scenarios) by name.
+
+rmws_all.sql
+    This script removes/deletes all workspaces currently being stored.
+    Caution:  This removes all previous test data entirely!
+
+rmsc.sql
+    This script removes/deletes a single named scenario (test) from a named
+    workspace.

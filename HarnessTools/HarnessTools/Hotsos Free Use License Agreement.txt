@@ -1,0 +1,76 @@
+
+FREE USE SOFTWARE LICENSE AND MAINTENANCE AGREEMENT
+
+By downloading and accepting this SOFTWARE LICENSE AND MAINTENANCE AGREEMENT, you are representing to Hotsos Enterprises, Ltd. that you have the corporate authority to enter into the following agreement.
+
+Agreement is made this DATE (download date), by you ("LICENSEE"), and Hotsos Enterprises, Ltd., a Texas limited partnership, ("LICENSOR"), having its principal place of business at 1701 W. Northwest Hwy, Suite 240 Grapevine, TX 76051-8107.
+
+1.  Software License
+
+LICENSOR hereby grants to LICENSEE a perpetual, non exclusive license to use the Software and Documentation (collectively, the "Software System"), subject to the terms and conditions hereinafter set forth.
+
+2.  License Fee
+
+There is no fee associated with the use of this Software System, however, as consideration for the perpetual license to use the Software System granted to LICENSEE herein, LICENSEE agrees not to release any portion of this Software System into the public domain or distribute this to any other third party outside of the legal structure of the company or organization that the LICENSOR represents.
+
+3.  The Software
+
+The Software shall consist of the identified modules or components, shall perform the functions and shall comply with the stated specifications.
+
+4.  Delivery
+
+LICENSOR shall make the Software System available for download by LICENSEE.
+
+5.  Use of Software
+
+Whenever in the Agreement it is said that LICENSEE may exercise any right, it is understood and agreed that LICENSEE may itself exercise any such right as a division of LICENSEE or as an Affiliate of LICENSEE.  An Affiliate for the purposes of this Agreement shall be defined as any incorporated or non-incorporated entity, including partnerships and joint ventures, in which LICENSEE, directly or indirectly, has at least a 51% interest.
+
+
+6.  LICENSOR's Warranties
+
+LICENSOR DOES NOT WARRANT THAT THE SOFTWARE SYSTEM WILL MEET LICENSEE'S REQUIREMENTS OR THAT IT'S OPERATION WILL BE UNINTERRUPTED OR ERROR-FREE. LICENSOR EXCLUDES AND EXPRESSLY DISCLAIMS ALL EXPRESS AND IMPLIED WARRANTIES NOT STATED HERIN, INCLUDING THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
+7.  Software Maintenance
+
+a.  LICENSOR shall use best efforts to correct any defects or malfunctions in the Software or Documentation and may make available to LICENSEE corrected copies.
+
+b.  LICENSOR may provide to LICENSEE copies of the Software System and Documentation revised to reflect any enhancements to the Software System made by LICENSOR.
+
+8.  LICENSOR's Proprietary Notices
+
+LICENSEE agrees that any copies of the Software or Documentation which it makes pursuant to this Agreement shall bear all copyright, trademark and other proprietary notices included therein by LICENSOR and, except as expressly authorized herein, LICENSEE shall not distribute same to any third party without LICENSOR's prior written consent.
+
+9.  Assignment
+
+LICENSEE may assign this Agreement to any Affiliate, or pursuant to any merger, consolidation or other reorganization, without LICENSOR's consent, upon notice to LICENSOR.  LICENSOR may assign this Agreement without LICENSEE's prior written consent.  An assignee of either party, if authorized hereunder, shall have all of the rights and obligations of the assigning party set forth in this Agreement.
+
+10. Indemnity
+
+LICENSOR represents and warrants to LICENSEE that it either owns or has the rights and authority to grant to LICENSEE the license granted hereunder without infringing the proprietary rights of others. LICENSOR agrees to hold LICENSEE free and harmless from any loss, damage, or injury, to defend at its own expense any and all suits or actions, and to pay any judgments against LICENSEE, arising out of alleged infringement of patent rights, copyrights, trademarks or alleged misuse of trade secret information, by the whole or any portion of the Software.
+
+11. Limited Liability
+
+If one party or its Representatives are held liable to the other party for any matter arising out of or in connection with the Agreement, whether based on an action or claim in contract, equity, negligence, intended conduct, tort, or otherwise, the amount of damages recoverable against a party and its Representatives for all events, acts, and omissions shall not exceed the fees paid by LICENSEE  to LICENSOR under this Agreement (excluding payments for taxes or costs and expenses). IN NO EVENT WILL EITHER PARTY OR ITS REPRESENTATIVES BE LIABLE FOR ANY LOSS OF INCOME, PROFIT, SAVINGS OR INDIRECT, INCIDENTAL OR CONSEQUENTIAL DAMAGES OF ANY NATURE WHATSOEVER IN CONNECTION WITH, RELATED TO, OR ARISING OUT OF ANY ASPECT OF PERFORMANCE UNDER THIS AGREEMENT, EVEN IF A PARTY OR ITS REPRESENTATIVES HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+12. Governing Law
+
+This Agreement shall be governed by and construed under the laws of the State of Texas, USA with resort to choice of law rules.
+
+13. Severability
+
+If any provision of this Agreement is held invalid or otherwise unenforceable, the enforceability of the remaining provisions shall not be impaired thereby.
+
+14. No Waiver
+
+The failure by any party to exercise any right provided for herein shall not be deemed a waiver of any right hereunder.
+
+15. Complete Agreement
+
+This Agreement sets forth the entire understanding of the parties as to its subject matter and may not be modified except in a writing executed by both parties.
+
+
+I agree by accepting this that I am binding my company to the stated terms and conditions herein with LICENSOR:
+
+Hotsos Enterprises, Ltd., a Texas limited partnership
+By Hotsos, LLC, a Texas limited liability company
+Its General Partner

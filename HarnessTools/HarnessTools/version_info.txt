@@ -1,0 +1,15 @@
+Hotsos Test Harness v 4.0.0
+valid as of 18 April 2011
+
+v4.0.0
+--------------------------------------------
+Main changes from the v3 scripts were to the harness 
+start, stop and chk scripts.  These scripts were modified to use 
+DBMS_SCHEDULER instead of DBMS_JOBS. The older version of theses 
+scripts have the _OLD suffix in the file name. 
+All scripts dealing with INDEX information were modified to show 
+invisible indexes.
+Minor changes to other scripts were made so they work under v11
+of Oracle.  No attempt was made to keep backward compatibility.
+The intent was to make v4 of the harness for v11 of Oracle.
+The HLIO scripts and associated files were not updated.

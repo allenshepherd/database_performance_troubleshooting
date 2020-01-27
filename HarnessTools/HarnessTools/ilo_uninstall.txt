@@ -1,0 +1,16 @@
+To uninstall the HOTSOS_ILO packages and objects (including extensions for SLA):
+
+1. Change directory to the location of the HOTSOS_ILO scripts. You must have write
+   permissions to this directory so that the install script can create files.
+   
+2. Using SQL*Plus, login to your database as the SYS user, or a user with SYSDBA privileges:
+
+	sqlplus SYS/<password>@<alias> AS SYSDBA
+
+3. From the SQL prompt in SQL*Plus:
+
+	SQL> @hotsos_ilo_uninstall.sql
+
+4. Follow the on screen instructions.
+
+

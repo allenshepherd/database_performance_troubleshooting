@@ -1,0 +1,145 @@
+Release Notes - Hotsos ILO: 2.0
+
+***:  Installation scripts and instructions were modified to increase user friendliness. 
+
+298:  Added uninstall script
+     
+      Hotsos_ilo_uninstall.sql is now included in distribution.
+
+905,1606:  BEGIN_TASK should call ILO_TIMER function to get Trace status for MODULE/ACTION
+
+      The method hotsos_ilo_timer.get_config is now responsible for determining the status
+      of each MODULE/ACTION pair for tracing, as well as the desired nesting level. This 
+      method is now called from hotsos_ilo_task.BEGIN_TASK.
+      NOTE: hotsos_ilo_task.set_config and set_nesting_level are now deprecated.
+     
+1666: "Mark all tasks interesting" for testing
+
+      A developer who wishes to unit test his code can call 
+      HOTSOS_ILO_TIMER.SET_MARK_ALL_TASKS_INTERESTING(TRUE,TRUE) to override the
+      normal GET_CONFIG schedule, but calls to this method are typically not going
+      to be present in production code unless they are implemented as menu options
+      (for example, Help > Debug > Trace All). The decision about whether or not
+      to trace should be reserved until runtime.
+
+1293,1646: Begin and end a task with a specified time
+
+      BEGIN_TASK, END_TASK, and END_ALL_TASKS now have timestamp parameters which can
+      be used to specify a begin and end time. Default behavior remains if these are
+      left out or null.
+      
+1450: Add 'do not change module/action' parameter for Oracle Applications
+
+      In an Oracle Applications environment, changing the session's MODULE/ACTION
+      can have adverse affects. This code can now be overridden.
+      This was implemented as a set of methods in hotsos_ilo_task:
+      SET_IS_APPS(is_apps boolean);
+      GET_IS_APPS RETURN BOOLEAN;
+      
+1586: Add a 'do not ignore exceptions' parameter or method for users of ILO
+
+      For development and testing, a set of methods was added to hotsos_sysutil:
+      SET_RAISE_EXCEPTIONS(raise_exceptions BOOLEAN);
+      GET_RAISE_EXCEPTIONS RETURNS BOOLEAN;
+      
+      Default is FALSE - Don't propagate exceptions.
+      
+1712: Remove literal from procedure call in BEGIN_TASK
+
+      Use a variable for call to hotsos_sysutil.write_to_trace to improve 
+      performance. 
+      
+1722: Allow multiple ILO installs in single database instance
+
+      The installation now creates the HOTSOS_SYSUTIL package in the HOTSOS schema
+      instead of SYS. Appropriate grants are now needed for the HOTSOS schema to access
+      the SYS packages and tables, and these are detailed in the Install.txt file. The
+      public synonyms are still created, but a warning will be given if they already exist.
+      If multiple HOTSOS schemas are desired, the correct management of public and 
+      private synonyms is the responsibility of the developer/dba.
+
+1721: ILO_LOGOFF_TRG trigger should handle errors gracefully
+
+      ILO_LOGOFF_TRG trigger is still installed in SYS, but will scope to the "correct"
+      HOTSOS schema based on the current user. It will no longer be marked invalid if
+      the HOTSOS schema or packages are dropped. 
+
+1777: SET_CONFIG temporarily modified to call SET_MARK_ALL_TASKS_INTERESTING
+
+      In order to assist migration from 1.5 to 2.0, SET_CONFIG() in 2.0 will turn tracing
+      on similar to 1.5. See doc for explanation. This will not be supported in future 
+      releases, so developers should start using the new calls.
+      
+Release Notes - Hotsos ILO: 1.5
+
+***: Added methods and globals to reduce number of calls to SYS_CONTEXT
+     hotsos_sysutil.get_ip_address
+     hotsos_sysutil.get_terminal
+     hotsos_sysutil.get_session_id
+     hotsos_sysutil.get_os_user
+
+***: Added BNL (beyond nesting level) to the task record
+
+***: Modified several methods to utilize database version correctly
+
+***: Corrected code in hotsos_sysutil.get_session_user
+
+Release Notes - Hotsos ILO: 1.4
+
+***: Added error_num attribute to the end_task and end_all_tasks procedures
+
+     This would allow the hotsos_ilo_timer to recognize when errors occur 
+     and store in the ilo_run table
+
+     Several performance enhancements to SYS.HOTSO_SYSUTIL package to read data 
+     once per session and cache it from that point on. 
+
+Release Notes - Hotsos ILO: 1.3
+
+***: Version 7 - 9 hotsos_sysutil.turn_trace_off wouldn't stop tracing
+
+     hotsos_sysutil.turn_trace_off made the following call to stop tracing :
+         exec_str := 'BEGIN dbms_support.start_trace(FALSE, FALSE); END;';
+     When it should have been :
+         exec_str := 'BEGIN dbms_support.stop_trace; END;';
+	 
+
+Release Notes - Hotsos ILO: 1.2
+
+297: Alter installation scripts to install properly across versions.
+
+     Altered the install script to identify which version of the database 
+     (<= 9 or >=10) on which the software was being installed, and to automatically 
+     check for and install the necessary supporint DBMS packages.
+
+     Altered HOTSOS_SYSUTIL to use dynamic SQL based on database version number to 
+     execute the correct DBMS package for turning on 10046 level trace.
+
+
+366: Add utility functions for retrieval of SPID and CLIENT TYPE;
+
+     Implemented 2 new utility functions in HOTSOS_UTIL:
+
+     GET_SPID returns the SPID from V$PROCESS for the current session
+
+     GET_SESSION_TYPE returns the TYPE column vrom V$SESSION for the current session.
+
+299: Add "VERSION" function to ILO
+
+     Implemented a GET_VERSION function in all packages that returns the current version of ILO.
+
+301: Calls to Begin Task with no Client ID are not formulating one as expected
+
+     HOTSOS_ILO_TASK.BEGIN_TASK was comparing MODULE, ACTION and CLIENT_ID against '' 
+     when it should have been comparing against NULL. This had the side effect of not 
+     consistantly setting MODULE, ACTION and CLIENT_ID to the correct values when a NULL was passed.
+
+302: Final END_TASK call does not re-instate what might have been in place before it.
+
+     Altered HOTSOS_ILO_TASK package to capture the pre-existing MODULE and ACTION info which 
+     may have been in play before the initial BEGIN_TASK call, and re-instantiate it after the 
+     final END_TASK call.
+
+300: Missing code in the examples in the ILO package text.
+   
+     Updated the documentation where a code example was incomplete.
