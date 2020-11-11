@@ -1,0 +1,94 @@
+@@?/rdbms/admin/sqlsessstart.sql
+CREATE OR REPLACE LIBRARY utl_sys_cmp_lib wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+16
+2b 61
+BRdDOqQCmU0qJwJFxYBtFZiejbIwg04I9Z7AdBjDFmL69JbiVkqu/2LjcvpZCee9nrLLUjLM
+uHQr58tSdAj1YcmmpjV4sg4=
+
+/
+CREATE OR REPLACE PACKAGE utl_sys_compress wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+6a9 1e6
+6gYwKeBFcGeKkxpKlxGySdqLrFYwgzvDDK5GfC8zR2R17xRB7YomBcv2C3ktYrNVDCjUE2Dv
+I6Wa2ccp0WlwMuG9vZA6HE41YH2kMajPqu1FBrC4crsgLE+W6fvbovNnEj3+k/savhqn1b0G
+j01FciGrtv0ua8XR+2HmeWTvBGQHbudI/tc10fQZ2tFiuWkdaoldFRUu4at54gEA3gN0gkPh
+tYj1l0TQ3JWwzzOICMnmZ2qiXmNwtI3e6fdDqxAp4iPtaE7odS1VUo26yBjlfp0aUoPtFKIt
+JQPggKoBvkrJu53BAZhFrQ5AhsiPdFm7gMTNkw58CU9yLXJqJnQBzyaQQVgXhzx5TPKuh0QV
+ZwJlBJrT+jbLF9FH22bG0MhGLZn7Se4VeXl32d8uHLevINlt5u2IJFIKWYE5AnmywfNP2Bt3
+1IwnDERO7jbn7yw9x17VQXoQUYc+N6KnHWnC1z2WxZwjzw==
+
+/
+show errors;
+CREATE OR REPLACE PACKAGE BODY utl_sys_compress wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+b
+13e7 3fe
+NqC8SNRGmDCKe3E+5rOGj8Bxreowg81Ur0gGfC9Vgg84gTYJPWonIK2tSgw7LorYzU1jnE0M
+rQ7JmcXKMviB2tzg017T5pdRHCfzvXK0CEcSQYjafxskCHVmDza2oJMXKfy7xZDR+VYPyQqU
+FSd8Z03ORKGOLi+uZk/ylh9qtgw1EchaGAQX7O7IVeuJN+HVjuAi3EeYvdKtShZFMCMj1+jZ
+Ok7PEDgbC70JLmOs/8jn4imQQJ3vMOaLDFZJFrM45RvFbMxurHQhxFmaDsBL6ljBBLYZsKKi
+LRryYz8W5GvxNljUV+ZguK1neWJpg8sf9GBxL/OuRVnkjaY2IwnYalcwyGVL9VlDTaSOZ3oS
+2W+d/VL6H2FIwy4vOSsCrHBiGoJACKlDCRrkLL7UIz3fmJvPv2EyOyeYqxfLe0GFOfnik1pM
+4fBdpvNzPuQGSyQHXCG5JVilAPu957+oGrh9APcHKbTS7oz3Sst+IfHuR3NwEXct2KxqqTFs
+fLyP9Z8pKg4mWI/c//N/Q2o7KsboyHmJiPJoNqwUPfRolL9a1W1Dir6kzgPJQHFekiVRJp3N
++Cae4b0CUWr9R9bIvAdTC0x9A3MDxN5hVNeD3hbNwEy/IUlZ/LCsjls1rmf97n5PYS77WgYF
+0YUkeiI/Zmj9nq3OwA7Pui5aOgR1PhXYxswmQQ0nQ8pyusnwwsIz13gT0b3BC1tYThvQq2DN
+KYxe83oQq1eQEg6cdX3u+U5kVWtbowELLDDJZB6cBymStMABefZKVwr0paQ2ae1ak/C26sGo
+4P0YWUPusVMDYS0Wolp/gM1p/+oH70uu//i7Uup6skkKuR8IM7q0QcmzApzsu29hV1i8WwBP
+SogsjuAkCT7jZOMaVB3CzFZfvxvJ0fenvaRCOt0QT/PRzCLlIWR2VOKy7Hbhlx1k/eE7WzOu
+WzftfnbWNccNwgInsAmQPM4A/v9okrnbzYK0plLLbaTdBVnRPOb/6leWmrYdgo8FJBRQiUQ=
+
+
+/
+show errors;
+@?/rdbms/admin/sqlsessend.sql

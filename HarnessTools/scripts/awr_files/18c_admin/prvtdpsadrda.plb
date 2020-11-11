@@ -1,0 +1,466 @@
+create user SYSIBM identified by "SysIbmS"
+ password expire account lock
+ default tablespace SYSIBM
+ quota unlimited on SYSIBM;
+commit;
+create table SYSIBM.DRDAAS_TRACE (
+ CALLER VARCHAR2(128)  Not Null,    -- Auth ID which wrote the trace record
+ FUNC   VARCHAR2(128)  Not Null,    -- Function being traced
+ ARG1   VARCHAR2(128),              -- Argument #1
+ ARG2   VARCHAR2(128) DEFAULT NULL, -- Argument #2
+ ARG3   VARCHAR2(128) DEFAULT NULL, -- Argument #3
+ ARG4   VARCHAR2(128) DEFAULT NULL, -- Argument #4
+ ARG5   VARCHAR2(128) DEFAULT NULL, -- Argument #5
+ TS     TIMESTAMP                   -- Timestamp of trace entry
+);
+create table SYSIBM.DRDAAS_PACKAGE (
+ COLLID          VARCHAR2(128)  Not Null, -- Collection ID of Pkg     (RDBCOLID)
+ NAME            VARCHAR2(128)  Not Null, -- Name of Pkg                 (PKGID)
+ VRSNAM          VARCHAR2(128),           -- Version Name               (VRSNAM)
+ CONTOKEN        RAW(8)         Not Null, -- Consistency Token       (PKGCNSTKN)
+ OWNER           VARCHAR2(128)  Not Null, -- Auth ID which owns the Pkg
+ CREATOR         VARCHAR2(128)  Not Null, -- Auth ID which bound the Pkg
+ CREATE_TIME     TIMESTAMP      Not Null, -- Time Pkg was created
+ LAST_BIND_TIME  TIMESTAMP      Not Null, -- Time Pkg was last bound/rebound
+ QUALIFIER       VARCHAR2(128),           -- Default Qualifier       (DFTRDBCOL)
+ PKSIZE          NUMBER(5)      Not Null, -- Max # Sections in Pkg   (MAXSCTNBR)
+ VALID           CHAR(1)        Not Null, -- Pkg valid state: Y=yes, N=no
+ ISOLATION       CHAR(1)        Not Null, 
+ RELEASEOPT      CHAR(1),                 -- C=COMMIT, D=DEALLOCATE  (RDBRLSOPT)
+ BLOCKING        CHAR(1),
+ CODEPAGES       NUMBER(5),        -- Default SBCS codepage (PKGDFTCC(CCSIDSBC))
+ CODEPAGED       NUMBER(5),        -- Default DBCS codepage (PKGDFTCC(CCSIDDBC))
+ CODEPAGEM       NUMBER(5),        -- Default MBCS codepage (PKGDFTCC(CCSIDMBC))
+ CODEPAGEX       NUMBER(5),        -- Default MBCS codepage (PKGDFTCC(CCSIDXML))
+ DEGREEIOPRL     NUMBER(5),        -- Degree of Parallel I/O          (DGRIOPRL)
+ DATEFMT         CHAR(1),
+ TIMEFMT         CHAR(1),
+ DECDEL          CHAR(1),                 -- Decimal Delimiter       (STTDECDEL)
+ STRDEL          CHAR(1),                 -- String Delimiter        (STTSTRDEL)
+ DECPRC          NUMBER(5),               -- Decimal Precision          (DECPRC)
+ CHARSUBTYPE     CHAR(1),                 -- Character Sybtype       (PKGDFTCST)
+ DYNAMICRULES    CHAR(1),                 -- Pkg Authorization Rules (PKGATHRUL)
+ REPREPDYNSQL    CHAR(1)                  -- Prepared Statement Keep  (PRPSTTKP)
+);
+create unique index SYSIBM.DRDAAS_PACKAGE_IX1 on SYSIBM.DRDAAS_PACKAGE (
+ COLLID, NAME, CONTOKEN
+);
+create unique index SYSIBM.DRDAAS_PACKAGE_IX2 on SYSIBM.DRDAAS_PACKAGE (
+ COLLID, NAME, VRSNAM
+);
+create table SYSIBM.DRDAAS_PACKSTMT(
+ COLLID    VARCHAR2(128)  Not Null, -- Collection ID of DRDA Pkg      (RDBCOLID)
+ NAME      VARCHAR2(128)  Not Null, -- Name of DRDA Pkg                  (PKGID)
+ VRSNAM    VARCHAR2(128),           -- Version Name of DRDA Pkg         (VRSNAM)
+ CONTOKEN  RAW(8)         Not Null, -- Consistency Token of DRDA Pkg (PKGCNSTKN)
+ STMTASM   CHAR(1)        Not Null, -- Statement Assumptions         (BNDSTTASM)
+ STMTNO    NUMBER(9)      Not Null, -- Statement Number              (SQLSTTNBR)
+ SECTNO    NUMBER(5)      Not Null, -- Section Number                    (PKGSN)
+ STMTLEN   NUMBER         Not Null, -- Statement Text Length
+ STMT      CLOB           Not Null  -- Statement Text                   (SQLSTT)
+);
+create unique index SYSIBM.DRDAAS_PACKSTMT_IX1 on SYSIBM.DRDAAS_PACKSTMT (
+ COLLID, NAME, CONTOKEN, SECTNO
+);
+create unique index SYSIBM.DRDAAS_PACKSTMT_IX2 on SYSIBM.DRDAAS_PACKSTMT (
+ COLLID, NAME, VRSNAM, SECTNO
+);
+create table SYSIBM.DRDAAS_PACKAUTH (
+ GRANTOR    VARCHAR2(128) Not Null, -- Auth ID of user granting privileges
+ GRANTEE    VARCHAR2(128) Not Null, -- Auth ID of user being granted privileges
+ GRANT_TIME TIMESTAMP     Not Null, -- Timestamp when privilege was granted
+ COLLID     VARCHAR2(128) Not Null, -- Collection ID of DRDA Pkg      (RDBCOLID)
+ NAME       VARCHAR2(128) Not Null, -- Name of DRDA Pkg                  (PKGID)
+ PRIVILEGE  INTEGER       Not Null  -- Privilege number
+);
+create unique index SYSIBM.DRDAAS_PACKAUTH_IX on SYSIBM.DRDAAS_PACKAUTH (
+ GRANTOR, GRANTEE, COLLID, NAME, PRIVILEGE
+);
+create table SYSIBM.DRDAAS_PACKSIDE (
+ COLLID    VARCHAR2(128) Not Null, -- Collection ID of a DRDA Package (RDBCOLID)
+ NAME      VARCHAR2(128) Not Null, -- Name of DRDA Package (PKGID)
+ SIDEITEM  INTEGER Not Null,       -- Side Item
+ SIDEWORD  VARCHAR2(255) Not Null, -- Side Keyword
+ SIDEVALUE VARCHAR2(255) Not Null  -- Side Value
+);
+create unique index SYSIBM.DRDAAS_PACKSIDE_IX on SYSIBM.DRDAAS_PACKSIDE (
+ COLLID, NAME, SIDEITEM, SIDEWORD
+);
+create or replace package SYSIBM.DBMS_DRDAAS wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+18e9 4d4
+U+Jmby7Vm18KkD38RMiUjann91Awgz1U2UgFfC+KrQ9runEORAlJYoOrAGldg6hZ95fxCYq2
+tbWWRYldsFZYiboflNPb48nbkFU9VinxCCq6NRubFSM3rH/4yLO7hOjwlsw8CftVSNFIoDJZ
+mNjDPAzNfTnJJKoBrplRFjI5LOaqqPXRDVcCKGvBRovoaNRrT72y/Y+N1u8VL5ICUOEuiP6K
+ZEZhj2ZcP7ppngwhDKwj1URaW5WN2BZqWNNHpPPUJSXdkFZmj6iWSLrmr5d1cIfmpWsdrDzi
+1XrKJ4LmknqqkggAoOa+h0PDGY6jaWTwdwy3ohN4IbRaHv8wjKDBp0AwvLRaBxdrLZIeX17m
+0yZbV+Oea/aSMxAT864+j9yrzWOFGv8nQOSN7uTrhN/1MpFkk/v3iatQQCr/PlipbAqJ2fVj
+d+ckhe8xDjo82gM5pBysihBG4BkqY8rRNMQYPr6JszDe8OCo3vss3e9UNkRHrD5MNlewxN5i
+gSdbVcHBzCRK6IBniPLgHczq6csEHR/epWayvPSsmVSoqRqccZXu1oJism9HgQPSeqdj1Bob
+f0S4k3xDRBaTyPY40KpjqjuE5fz1IkRpZtAMJAA8K0KlMeNAtrojbGz+VD5LJsyoidKE0Esg
+/Gb+Zir5T+6SU1NdD10yIdpnmN7L3/pqSL8toSJv7LC2HlgNXMw5OzOjONDeIWbgewcWTGaG
+vfgqwwpsAuugX2VCndRnbMsy3GRI4EwgJhHgYplhCEw/0HFFPT9pGX7Ne7JHrW4u9rvretvr
+3Jt/O5UFrx7+jGWfKXN0M6GgjAjuA4XLaL6HCyMiFWyY9w/VqmkykKxmgAHepfjvl8rvc9Rs
+v3GoeeEoB9aTYbV9E7qoX4xiBlOpJLMSs9iXCSkSuziuyuYuu4MBAs3tFPReKtyOiArCACj5
+8C6SzqO8PAP4pwCXN2Q211WQ1hzC+T9uzcztraquGH8AvFXetSPuhH4Haj+Yf0FuhbqHGJkF
+kuNN0GFOtVb8A++VMHdV6iy//B3GwPzho5bT3K+QjFuRyoZ3R9csncPYrdiL1FB/6rsE2fJ4
+ksLqKyh1KqpEvNyl/KGUHJ81qxTiFVWfOCH81I6wWz+1qLYpJj4+52/4JGNwtGuAXLsr9ryR
+AwOY31Upg8RZBqoxeBfFSATX/j5zJsSo2OGUFzG5Xpf8EtzXwz39vPVNTM/Ospn0kyw=
+
+/
+show errors;
+create or replace package SYSIBM.DBMS_DRDAAS_ADMIN wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+9fa 291
+K0drH+BHQs6s1LSBJ2m7nkHQkBowg5Vcr0oFyi/NrQ+vf42j3hNVO4NgAF84bumvqTmKSNzk
+tQ/1S5iYh7Cf49VjcX70/nX+QFswyIBXDmlctvFmRC/TTWAF8KlLMece8UlV3tZ0/Af136JL
+zDC28WH3SVrkzj65M1l/yeFPhKo49WM7IyhPhLsEYpAkjWu7iPByFgXj7xV2kjezGG6Wuvj3
+s/sLa9lkEkhrSeqCIUQ7aYB+0fWVV71gNXbzp4MlaoxIno++lghdLfsPZouobXK9hYcPwjei
+PGLIIru5vKrZzKXGhJUFErJimMTcBYNM6QWBIc88qNwwbaD4N2AhYmHIuPfWMocXWPEThYjI
+TaPmUspA7ZUX1YeqXiRsoKSWm97vb0D11A5fgzEaXMmfZ5u9EcRZTmprrm+rVhcN+ylfZiK5
+STm92r/bndp2i+LCUzyG8rdj0Qf9CxYtTGNS3JrAO3cxzXnE7YSeviVY3AIqoBueBavHNaBf
+eG+Qcu9PXqCbiWaA/8nFr2THkGoBGZpQCiGHZLtDAFM0CJMFBcdp2idwEO+1Q2ldfyVpTUWq
+jfkD/PdA2eW1ekp4lzVGGF7dgZ7uVkgYQS01yq1Hc0k9OctYCa0XL35yZwozLD8drYoMlA==
+
+
+/
+show errors;
+create or replace package body SYSIBM.DBMS_DRDAAS wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+b
+7d6c 12fe
+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
+
+/
+show errors;
+create or replace package body SYSIBM.DBMS_DRDAAS_ADMIN wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+b
+265c 820
+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
+35oYXc8yoY5EenI08i2FRVaKJPlbeSAkvg==
+
+/
+show errors
+create or replace view SYSIBM.USER_DRDAASTRACE as
+select FUNC, ARG1, ARG2, ARG3, ARG4, ARG5, TS
+ from SYSIBM.DRDAAS_TRACE
+ where CALLER = USER
+;
+create or replace view SYSIBM.DBA_DRDAASTRACE as
+select CALLER, FUNC, ARG1, ARG2, ARG3, ARG4, ARG5, TS
+ from SYSIBM.DRDAAS_TRACE
+;
+create or replace view SYSIBM.ALL_DRDAASPACKAGE as
+select
+  COLLID, NAME, VRSNAM, CONTOKEN, OWNER, CREATOR,
+  CREATE_TIME, LAST_BIND_TIME
+ from SYSIBM.DRDAAS_PACKAGE
+;
+create or replace view SYSIBM.USER_DRDAASPACKAGE as
+select distinct
+  P.COLLID, P.NAME, P.VRSNAM, P.CONTOKEN, P.OWNER, P.CREATOR,
+  P.CREATE_TIME, P.LAST_BIND_TIME,
+  P.QUALIFIER, P.PKSIZE, P.VALID, P.ISOLATION, P.RELEASEOPT, P.BLOCKING,
+  P.CODEPAGES, P.CODEPAGED, P.CODEPAGEM, P.CODEPAGEX,
+  P.DEGREEIOPRL, P.DATEFMT, P.TIMEFMT, P.DECDEL, P.STRDEL, P.DECPRC,
+  P.CHARSUBTYPE, P.DYNAMICRULES, P.REPREPDYNSQL
+ from SYSIBM.DRDAAS_PACKAGE P, SYSIBM.DRDAAS_PACKAUTH A
+ where (P.OWNER = USER or P.CREATOR = USER)
+    or (P.COLLID = A.COLLID and P.NAME = A.NAME and
+        (A.GRANTEE = USER or A.GRANTEE = 'PUBLIC'))
+    or (P.COLLID = A.COLLID and A.NAME = '*' and
+        (A.GRANTEE = USER or A.GRANTEE = 'PUBLIC'))
+;
+create or replace view SYSIBM.DBA_DRDAASPACKAGE as
+select
+  P.COLLID, P.NAME, P.VRSNAM, P.CONTOKEN, P.OWNER, P.CREATOR,
+  P.CREATE_TIME, P.LAST_BIND_TIME,
+  P.QUALIFIER, P.PKSIZE, P.VALID, P.ISOLATION, P.RELEASEOPT, P.BLOCKING,
+  P.CODEPAGES, P.CODEPAGED, P.CODEPAGEM, P.CODEPAGEX,
+  P.DEGREEIOPRL, P.DATEFMT, P.TIMEFMT, P.DECDEL, P.STRDEL, P.DECPRC,
+  P.CHARSUBTYPE, P.DYNAMICRULES, P.REPREPDYNSQL
+ from SYSIBM.DRDAAS_PACKAGE P
+;
+create or replace view SYSIBM.USER_DRDAASPACKSTMT as
+select 
+  S.COLLID, S.NAME, S.VRSNAM, S.CONTOKEN,
+  S.STMTASM, S.STMTNO, S.SECTNO, S.STMTLEN, S.STMT
+ from SYSIBM.DRDAAS_PACKSTMT S
+;
+create or replace view SYSIBM.DBA_DRDAASPACKSTMT as
+select 
+  S.COLLID, S.NAME, S.VRSNAM, S.CONTOKEN,
+  S.STMTASM, S.STMTNO, S.SECTNO, S.STMTLEN, S.STMT
+ from SYSIBM.DRDAAS_PACKSTMT S
+;
+create or replace view SYSIBM.ALL_DRDAASPACKAUTH as
+select
+  GRANTOR, GRANTEE, GRANT_TIME, COLLID, NAME,
+   CASE PRIVILEGE 
+    WHEN 2 THEN 'BIND'
+    WHEN 3 THEN 'COPY'
+    WHEN 4 THEN 'EXECUTE'
+    WHEN 5 THEN 'DROP'
+    WHEN 6 THEN 'SET'
+   END PRIVILEGE
+ from SYSIBM.DRDAAS_PACKAUTH
+;
+create or replace view SYSIBM.USER_DRDAASPACKAUTH as
+select distinct
+  GRANTOR, GRANTEE, GRANT_TIME, COLLID, NAME,
+   CASE PRIVILEGE 
+    WHEN 2 THEN 'BIND'
+    WHEN 3 THEN 'COPY'
+    WHEN 4 THEN 'EXECUTE'
+    WHEN 5 THEN 'DROP'
+    WHEN 6 THEN 'SET'
+   END PRIVILEGE
+ from SYSIBM.DRDAAS_PACKAUTH
+ where GRANTEE = USER or GRANTEE = 'PUBLIC'
+;
+create or replace view SYSIBM.DBA_DRDAASPACKAUTH as
+select
+  GRANTOR, GRANTEE, GRANT_TIME, COLLID, NAME,
+   CASE PRIVILEGE 
+    WHEN 2 THEN 'BIND'
+    WHEN 3 THEN 'COPY'
+    WHEN 4 THEN 'EXECUTE'
+    WHEN 5 THEN 'DROP'
+    WHEN 6 THEN 'SET'
+   END PRIVILEGE
+ from SYSIBM.DRDAAS_PACKAUTH
+;
+create or replace view SYSIBM.ALL_DRDAASPACKSIDE as
+select
+  COLLID, NAME, 
+   CASE SIDEITEM
+    WHEN 1 THEN 'PROFILE'
+    WHEN 2 THEN 'DATEFORMAT'
+    WHEN 3 THEN 'TIMEFORMAT'
+    WHEN 4 THEN 'TYPEMAP'
+   END SIDEITEM,
+  SIDEWORD, SIDEVALUE
+ from SYSIBM.DRDAAS_PACKSIDE
+;
+create or replace view SYSIBM.USER_DRDAASPACKSIDE as
+select
+  COLLID, NAME,
+   CASE SIDEITEM
+    WHEN 1 THEN 'PROFILE'
+    WHEN 2 THEN 'DATEFORMAT'
+    WHEN 3 THEN 'TIMEFORMAT'
+    WHEN 4 THEN 'TYPEMAP'
+   END SIDEITEM,
+  SIDEWORD, SIDEVALUE
+ from SYSIBM.DRDAAS_PACKSIDE
+;
+create or replace view SYSIBM.DBA_DRDAASPACKSIDE as
+select
+  COLLID, NAME,
+   CASE SIDEITEM
+    WHEN 1 THEN 'PROFILE'
+    WHEN 2 THEN 'DATEFORMAT'
+    WHEN 3 THEN 'TIMEFORMAT'
+    WHEN 4 THEN 'TYPEMAP'
+   END SIDEITEM,
+  SIDEWORD, SIDEVALUE
+ from SYSIBM.DRDAAS_PACKSIDE
+;
+create or replace context DRDAAS using SYSIBM.DBMS_DRDAAS initialized externally;
+create role DRDAAS_USER_ROLE;
+grant FORCE TRANSACTION to DRDAAS_USER_ROLE;
+create role DRDAAS_ADMIN_ROLE;
+grant execute on SYSIBM.DBMS_DRDAAS       to DRDAAS_USER_ROLE;
+grant execute on SYSIBM.DBMS_DRDAAS_ADMIN to DRDAAS_ADMIN_ROLE;
+create or replace public synonym DBMS_DRDAAS       for SYSIBM.DBMS_DRDAAS;
+create or replace public synonym DBMS_DRDAAS_ADMIN for SYSIBM.DBMS_DRDAAS_ADMIN;
+grant SELECT,DELETE on SYSIBM.USER_DRDAASTRACE to DRDAAS_USER_ROLE;
+grant SELECT,DELETE on SYSIBM.DBA_DRDAASTRACE  to DRDAAS_ADMIN_ROLE;
+create or replace public synonym USER_DRDAASTRACE for SYSIBM.USER_DRDAASTRACE;
+create or replace public synonym DBA_DRDAASTRACE  for SYSIBM.DBA_DRDAASTRACE;
+grant SELECT on SYSIBM.ALL_DRDAASPACKAGE  to DRDAAS_USER_ROLE;
+grant SELECT on SYSIBM.ALL_DRDAASPACKAGE  to DRDAAS_ADMIN_ROLE;
+grant SELECT on SYSIBM.USER_DRDAASPACKAGE to DRDAAS_USER_ROLE;
+grant SELECT on SYSIBM.DBA_DRDAASPACKAGE  to DRDAAS_ADMIN_ROLE;
+create or replace public synonym ALL_DRDAASPACKAGE  for SYSIBM.ALL_DRDAASPACKAGE;
+create or replace public synonym USER_DRDAASPACKAGE for SYSIBM.USER_DRDAASPACKAGE;
+create or replace public synonym DBA_DRDAASPACKAGE  for SYSIBM.DBA_DRDAASPACKAGE;
+grant SELECT on SYSIBM.USER_DRDAASPACKSTMT to DRDAAS_USER_ROLE;
+grant SELECT on SYSIBM.DBA_DRDAASPACKSTMT  to DRDAAS_ADMIN_ROLE;
+create or replace public synonym USER_DRDAASPACKSTMT for SYSIBM.USER_DRDAASPACKSTMT;
+create or replace public synonym DBA_DRDAASPACKSTMT  for SYSIBM.DBA_DRDAASPACKSTMT;
+grant SELECT on SYSIBM.ALL_DRDAASPACKAUTH  to DRDAAS_USER_ROLE;
+grant SELECT on SYSIBM.ALL_DRDAASPACKAUTH  to DRDAAS_ADMIN_ROLE;
+grant SELECT on SYSIBM.USER_DRDAASPACKAUTH to DRDAAS_USER_ROLE;
+grant SELECT on SYSIBM.DBA_DRDAASPACKAUTH  to DRDAAS_ADMIN_ROLE;
+create or replace public synonym ALL_DRDAASPACKAUTH  for SYSIBM.ALL_DRDAASPACKAUTH;
+create or replace public synonym USER_DRDAASPACKAUTH for SYSIBM.USER_DRDAASPACKAUTH;
+create or replace public synonym DBA_DRDAASPACKAUTH  for SYSIBM.DBA_DRDAASPACKAUTH;
+grant SELECT on SYSIBM.ALL_DRDAASPACKSIDE  to DRDAAS_USER_ROLE;
+grant SELECT on SYSIBM.ALL_DRDAASPACKSIDE  to DRDAAS_ADMIN_ROLE;
+grant SELECT on SYSIBM.USER_DRDAASPACKSIDE to DRDAAS_USER_ROLE;
+grant SELECT on SYSIBM.DBA_DRDAASPACKSIDE  to DRDAAS_ADMIN_ROLE;
+create or replace public synonym ALL_DRDAASPACKSIDE  for SYSIBM.ALL_DRDAASPACKSIDE;
+create or replace public synonym USER_DRDAASPACKSIDE for SYSIBM.USER_DRDAASPACKSIDE;
+create or replace public synonym DBA_DRDAASPACKSIDE  for SYSIBM.DBA_DRDAASPACKSIDE;
+commit;

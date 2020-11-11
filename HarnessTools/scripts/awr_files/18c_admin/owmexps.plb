@@ -1,0 +1,37 @@
+@@?/rdbms/admin/sqlsessstart.sql
+create or replace package wmsys.lt_export_pkg wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+a98 374
+KunORc53kXUCpsv+swkg77aHacAwg80r+kgFfC/NMQ9/B+ErqQ4Hh8dRTS1HRma9wBSV7S/p
+86Bn/SFNHaBz+PGDZkKNENGu360gzovX5ojULFRKpYY9JHNCOjoePZ3PtZ7YGg2FymqNaRE1
+U+kDpitjBhSg4c8hg/GWdX/mQ7zTVPgw528moJ78FXloB0UwLHSMjUmnrPM5AaV1r1U1F1pW
+C9vcMP1Z/75H988hIQE4NIXxEpD8e9QJf9mxRz80AktjVDfrpK79ghknvTBc8r0mPNNYGMJL
+CdPYdfUw68fDAfc5tfghRmagGKFk6xJdXeLxhQgqb1bOo94sirczJNsqyEzdCAFWq80W+X70
+QaBv0Qy6wcfY1aDRwG7Z6QKK6AlOW6ZM06IQwKDWyO3QTETfSkswXnCOs1lBcdWUtmffiX4S
+/la8jM7i9H/ix1LR4EAhxtigtMSEE+B4ieJkyZoZjZ9tdVs4wp1/UTlIEDuWEyeBJ0JFSMBj
+YiP6dkKgKwW8F9xRo7Gj+i7kvxrZG8sEwX1uWmzmRTfb9YTYzRaheHkpisWDdkkgN0EY08J8
+V2U4KLTbtixKe4yNyDDd/P5OM7s8IJ3PEiP5NGjvFBi1PhkMCOJg8shwCc8VhK2YAiVG+ywZ
+1uiee8uMbeZfVbn7ckp1Bn2tt2Wg6CgpWhX1M9cSfOr/4gMd2CzUHxXssMkZfYP9Bk412KRP
+agRFqZGJ7ZyRdADREXhFg9pJ8Yca/8M81Q7toB99NmetOsSTqrOQC/eWp0LF0pSlI/BrbL6R
+Y2qCWPyHs+KlB4CgXt4w/MkGE9RYkrSEVF1FfGw4qcORMmJlnMOOIpaYlug/ntsg2ONgjVXt
++FvgFeox
+
+/
+@@?/rdbms/admin/sqlsessend.sql

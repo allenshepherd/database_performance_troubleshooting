@@ -1,0 +1,10 @@
+{
+global:
+	XS_ASMCMDCLNT_kgfnGetConnDetails;
+	XS_ASMCMDCLNT_kgfPWFileGetRes;
+	XS_ASMCMDCLNT_GetASMVersion;
+	XS_ASMCMDCLNT_GetGIUser;
+	XS_KFODCLNT_DGAsmCompat;
+local:
+	*;
+};

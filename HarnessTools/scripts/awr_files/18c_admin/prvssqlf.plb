@@ -1,0 +1,102 @@
+@@?/rdbms/admin/sqlsessstart.sql
+CREATE OR REPLACE PACKAGE prvt_sqladv_infra wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+1459 4c4
+2+pu/2NtPfrs9aaWBjwTTIkNTeAwg81ULtDrfC9DaA/uusTTB3Nn4cxSuJDe9jwt1s3ShpE7
+RsjIL6xECPgtkCH0ttpV4QH+S1woCv/9Enq78AADRBvEMER9BXNkT4vG/pa/LKpYcg8kVZqo
+cfwq1y8+YzbiLiZnZtgbtkb8IPgf5hjj4XSMrT3Ia/yENuqrx/DfVPEqp7EfZBfn7RAH6CpI
+eyB69IWZvfaPGEjKBkIygk5B+/+SvwtQEpjIQJDcivnloxWo5P90391fgVE2AzCgHA/75XA3
+EcVTr1/pxE2MoMkoKFGMQpDKt6/TnFm/b2fjnDoVG7QjD+2+NG5bKc079ei7wl35uONa3YPJ
+0woFbfQMbP/fw73eV//7qJcTTrzSyYE3Dd6/yRXbUWViFnKKa40idXY8c01ooUL6VALHBuWc
+gC2kbmBQ7ut/Eq3pjsO+DT5kVfwU77vfFBozwsFK1KwVdYJpoiUVsH50F6HfMazJLqU1jqi5
+qatqOs7bpwVfkzDWE5OMNkyX38iEQnqCEiLJE0NguLB8M1MNkFBn1dkvqXpRcHUTKiv2A6/Y
+RqlKhBw09kYIfHm9l/2ayJ93mj4V2hgvJLQDHzhaqnak7qo2BJ6mABg2+fd2b0tRaBZKbRxE
+jYiKO1CrW4sXf3PtdaUrnxm2jtdQt8NVvg2rnTSOfTa6DQ4tUdtWPus9+H+Fz0mM4AgZ36lM
+uKvVf53t5hZi/xwzkjaK14QtDthILvvxtG8ZDToALXQtKax9cPgBeF/uGpf9SIGPBgxuIkyq
+Cymbv67qvR2KIcbaHXQfnmWGrG45e06Vp1CTnauz1qPESSvcRN/6G+Vb3sDzAlcBcL05n2fU
+Fq1je7VpjbXM8UnVm89R3vXKay8J/drNmYwM3DrljPT8DWRaq3lSVZia3WAS7hCbrzNkuThA
+ZFA/oq6M1r28bzUqa0lJGJ+pKOLShoaTuz9f+9qJUzXeIkLC0PzjHBGHfIVVqs97J3yYbkx2
+Hj978c3SMO3LaaxiF0Dq5SoFJvPZ7WtxavymHrPxSMBh5hllN4JemdW92OUWIuICCWFl0e1a
+OV5S536jPQt/0xKz4kZoLHnNpxUidxvG7NgL1Yc8sg5iXNmyU7+QGFbtZKNtO1JixI9+T3H/
+fyUe+vjZ12kKfgo2nPxgaLa6kk3I/c2fwiDjQ1I+COSVINI3aY4=
+
+/
+show errors;
+/
+CREATE OR REPLACE PACKAGE prvt_sqlset_infra wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+155 113
+53s2G8EnkxDHvndFMsKtNUbYKlowg2PQLZ4VZ3RAkPiOiJRudpQHMPAjMIsnuf9KrzU1L8y6
+zz8KYhast8ioXbWFcuoOk+6sj8CYsaNMrj28PIY6uAX76FOgrXUU5nYqRNPdyPvkrU7bG6Ny
+cEZ88UDwmY74LuFQuZdTG6bZS+l/DInzX7Dd+r7ubebBzyaZ4EOBt+xCu+eIQcOJomKNXnzg
+beo9uw9MjJa+s/gOOS7Fjrc0rreKuhvv/2vIeYoUd5txuCUSpqQGWQ0=
+
+/
+show errors;
+/
+CREATE OR REPLACE PACKAGE prvt_sqlprof_infra wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+468 1ce
+hEZs8UtfpCpEhjj2e/XPd/DlC1cwgzu3Na5qfHQCrf7qXYUU3HZYV1PiBQJjobhoUZBm0bfI
+L183znP1Yn4BpJAbK4HDqhBCci0Aj3aeCQqBwYDPqhKHOw+cCCkBvj/DL/GiJk68QgHMoAOe
+L/oMdP4bI5++3/UxiY3T504RaxQ9AIPlqwQX3bHqYqaTO9aGYoKmcSOAFswX2kS6jT5S6rne
+uywOSEj9d3XLRxbK9ppFpETzRp7GbYwYed/+cPS1hdRdssqB7WP/iKzUNYyJ1r13974LGlSs
+j4rnJoTSun6J5LwHFpmujK0/Z5HhUmhbSfobAsM0+CEAQhirEBrY4AmI2iRu9w/qVxFR0dgL
+q+ik3tn7J8BRzQBycFmav3X5v42fknBGzlpey83w5x6g0/zfF2lkr8Mhm7UZdqSrjC5yhcnw
+sUVVivCdTXn/fO3O4dlhfeI=
+
+/
+show errors;
+/
+@?/rdbms/admin/sqlsessend.sql

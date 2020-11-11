@@ -1,0 +1,35 @@
+@@?/rdbms/admin/sqlsessstart.sql
+create or replace PACKAGE BODY dbms_logmnr wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+b
+920 316
+51pKK0K20HymZgvAgVH2+RZGawswg+1cciATfARVDTrVz5n3cfTDCqAbScbfdJT9yXQJrlo9
+Gkw8LoP5qt5PeXZLvYkMB8A3u7EScj8PJ+ZPof+zY+CWffgeBZr5wbssIJ35DlExMbArlEPY
+XHYACuKzoik2zchCigyEbKtP4YeR1dFxqNSCJaerY+eY9dFYobyYmI1GSWIyqDC08fPXZL74
+c7R8WUwMyUQ9k8zAoXEC6bPz6Z3TgXyuZCdMw8JScJYCFPxjlhqLQt2KuDlCWtHnZX+N85fM
+5ghcPuOA4dONbEjmk0NeehztB44G463RymZfWEHVS3D5do7nQmBtbC+QnFAjDrPP1RKVkz3E
+8VzZnHAOhArClMIPZgAkB2sOKzTuCdqho6QID+4MHq2fs3PqiqQ+ug84S/islHdRE4wrJx49
+k95+7LQ8Nb8S6hJ9xRqjfP4Y0dZks/hY95h42hIDCsRCkqS2Nzu/S+TRepYUjofEQeo2KF8I
+hVsS21dnRnNayHbT4ZBy7vOpx/juVFWoxhd6mrL9Kc6QL1JlbRFlC+GUk9i2Z/PD48t2Uacv
+WjnoC0pi/6OhLv6F/8R5U1WsmcYQZxgeK/pa89afYWkViU6Jy9hTpohBSsbM74/w5LR8Bjb0
+nS7p8wJdSAzPoMoib1ru/rcoG0/rIQA2Cd3UaMoCefWE5/hV+nwJ8NGNBlH8zp+Z27ExSMah
+N53UOA/Ew80nIUhEJBh7MSxPQbxosNCl2qTQsAfGXuy51/Ehqm1P+fvny2IN
+
+/
+@?/rdbms/admin/sqlsessend.sql

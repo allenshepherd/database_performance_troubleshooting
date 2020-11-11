@@ -1,0 +1,104 @@
+@@?/rdbms/admin/sqlsessstart.sql
+SET ECHO ON
+SET FEEDBACK 1
+SET NUMWIDTH 10
+SET LINESIZE 80
+SET TRIMSPOOL ON
+SET TAB OFF
+SET PAGESIZE 100
+grant dbfs_role to xdb;
+grant execute on DBMS_DBFS_CONTENT_LIST_ITEMS_T to xdb;
+grant execute on DBMS_DBFS_CONTENT_PROPERTIES_T to xdb;
+create or replace package xdb.dbms_xdb_content wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+622 24c
+5sYyrcUMzBmjhtt5fgQJ0ijliv4wgw3DvsDWfC8u1+p+iHJTwPLFqGJUtqh/bZEolIJKXtQ+
+BmZPLNveR+4a50PCu1AFjWXUD5OsuCIQz42awV46M0K+vA/i3W5VDPto82thY9n34adbL9rX
+OyGriUfNx9SKHBpAHe+8F6AFpmsyGjWi3ocYFv8MSKCBdLydiW8KRQLKt4jFJsxG+5GRV56A
+572jcldrVZJBdPryRxBVV5mDuLeUguaE9t7EpjW6ZDX3ZbNvNG0lb4g8KpNz3Mjftc0UcCZS
+gzMWnGBaunxSbgtMzcXEQLpI4MayRi/dtGYcyBgn3HtYf6MqlhBuyDqonskTdCN3nhYq5tTx
+taR1Uyf3PwV6kDzyTorK6pJzX8a9YcDMLXzN/9zaIbtNGylkr4RK+fIwfgRoOFgJaqfYff4G
+pLoDVrYiLNTCAsshrKCSlV9FLMeku3aT6gQXo2Rv1AnuI+wQ8cdQnCnzp6O/gmWXw7onfbk/
+Mxh49Cp65iXAyYQRHVkOFQKE4pFVDiuVbw2g89ANj2DYIw2TGIFgq2zoiN56IvU3o0auJJ+v
+GF4=
+
+/
+show errors;
+grant execute on DBMS_DBFS_CONTENT_LIST_ITEM_T to xdb;
+grant execute on dbms_dbfs_content to xdb;
+create or replace package body xdb.dbms_xdb_content wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+b
+1e7e 954
+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
+
+/
+show errors;
+create or replace public synonym dbms_xdb_content for xdb.dbms_xdb_content;
+grant execute on dbms_xdb_content to public;
+@?/rdbms/admin/sqlsessend.sql

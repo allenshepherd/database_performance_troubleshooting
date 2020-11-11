@@ -1,0 +1,44 @@
+@@?/rdbms/admin/sqlsessstart.sql
+CREATE OR REPLACE PACKAGE dbms_ijob wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+1397 519
+f98yVLOI8G1SJTAdy9fcGhjiKeIwg81ULvb9fy/NPTqUe+KoiVdiqHfSDj2XYas7FNLu2+3n
+5pZiiRyStWvxK/hilQjmngLRmfojwddfQUHUgm8vAN0AOZpBqvlhmqrkIzmiTPuPueWg47Hh
+JwkJz6odaAJXXqtlsnUmDFavsHKP+XPX3zi8+uwg04sTbjrJhlUPKr2o9GvUn4DuHPXqnqCB
++WwftusaCDt40Wyq3Yo0wdAZzpmWYqLspajKDcMgiiKJgyuGNF6tmkL29AK6UWxZC0JGoDcU
+2CRG2KHOdvCIoVSavqAAAtpq5oOEub1skl0GJ++TRn79YVViFIBTZdMHaW+kfCMWg00iP6Jx
+DzsreeSknPlMMLrA3H+RHo9SKsDjTza/23dJu+K4iWDjnfIVDnpEbzMZrYWHsmiGU7OP52x7
+Z0KYGUDkB9XR9NFnDiaugzHr+VJV8S+3Gf9MTYLRFYbNuO7e4AeHKpq7Pj95SB0khElnBENh
+e6sNIdL4deMeyhqXzRIVQRa6pGLJUJA8/HZcNRaH0ml1o1QR0msRCRQQI6EVcwAl9GUBLqCa
+HuGijaJrWcPhwmVrqMCZ9moPxsSTdVQ5hNlwdCQqAWbd5CRCVcRDONNm9prDxErEQLk0Oob7
+J3wPNSIy5XzahzQG4/R8vSw32sRVlGyBD+e1yC/Iwo6fAjTolwA4I0EWJyg2VjfMP62K13d7
+VhPtfmziOvOukdrqYlQgF1BB+YIYnbgdalv0MO2bp9QT9ngfCiBmp9SrDaiCdycN/Kv3a7Tr
+vqCwEULRJsd1GD1P3WMt0Xpq9GImpcur5Td7JqVuWutDcjO0I7OW14LqeU6mUj6mTJ5aT3Pb
+kmM4jyqAZIabi0T6Dd+jqzRB35OGSEl0Yj9cPOkyzckQ7J8uJlWDiPJ562n+OtF9Y/Ma9RkM
+tT24DOxzosSSwE97EcVLuSODUYSBsnoEubFdRs5v6lrAw/c20PI90kKfsiu+JI1rSGRVhZ/b
+CTrqVZuZnPgZUcDIR00DoYB+Y9Rob7ImXeEMtNIIdOfl/+FF/JLy+MxYsxrUy4eZpVrSqHqs
+ZG7u8yOk6rcc4WBx/fOLwav2fRcYdpqW3klZ6IzzClVuP2bmIQDp8PBo82POX/cXahCkTcIT
+2MZYyUcPfBwM3+ThLQXzixe/D2xo8dHBC1PGC10j8Y8i1Iov6RAYunzp3ICXWE+5gG2rJ/W4
+g3hHjff3v7vf2s7Lke4eXQWN7RQe4hW604DzruRmqJIKZTIQ8oLQkw0Q/lvMVlbX
+
+/
+grant execute on dbms_ijob to imp_full_database
+/
+@?/rdbms/admin/sqlsessend.sql

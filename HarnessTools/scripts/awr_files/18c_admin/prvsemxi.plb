@@ -1,0 +1,41 @@
+@@?/rdbms/admin/sqlsessstart.sql
+CREATE OR REPLACE PACKAGE prvt_emx wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+b68 394
+7MHlDaoXGjcu+sb4OxS1xgU0o9EwgzsrACAFfC/Nig+vYmXIqFptyyp7aXeTyYT3NqGVnx/c
+HLb9NWnSwf4U/Nn3iqMY58uJylUS/rlt7MJJ7OGt7XNC/gecnUaDlazIn6p6MbIqyM5G/XDc
+WO3qCJZ690t18TzMKYWCKnSdz1+8qrrxLCT6pJGYBrCYXAEX10QweYk5hjNBumROVLgzs0pH
+AwRZODUKYnV9CEF6VuoqiOhlOxRawTuCcegakxBmDyzh85/PraQPKGS7WgIvHaNY+bvqYnVq
+Kc4r5LwE8Slh8EGCWsAdhcpDPDcIAmbf4OERUt8889Gh2I68yIVb97HDVFMPyNltzGE1gM9s
+/asRRIm+L9k9dlnMM1mhuxEj9Lt6V6hX38UAueHu/CdeDAN6mfqqjMD7vDkVEdgiC2vyOy88
+j+a34nom798+oupSqNaQ33DNeSL1/nucR1JsoZ43V9Pw5mMJxD5TPJVL2xa+aHddxgeYNxUl
+0L4aySwhxbMU1w73sDdW2Q02O2aa0vFBYp0qwwv2iDjH5e/WwqFW0NWHMj5GI9SR84mNewuL
+2blbMuBuqs5Z6cvBp+x0J5Dg5pXvTPzagiJ678yYCJkxK/+s8+Nxe1oXbYcApyM2QK8NS/mC
+NjkRtM175ZIHNyoEyHTJ0xIEL7o5jb3LnwG3wrTvAb5ZkjKa4bFkSB0khPYgKGyJ0Yc29MGp
+/FGUTGensZQgNV6E84HmgP1GE+JNZY74LZpNdButJWKeITItOi4OB+3WSXc3xOR4MBsRSPvW
+UELs1cvqKvFwntOhfmtLbQFboRat8L9tVGedLie1Nvhr+SYKQDDfUTnjtylHBa2Z2nCtZb++
+VtG6SoNJNDXU+E167n4gQCN/R3+1Kw/5+yIcokc=
+
+/
+show errors
+/
+CREATE OR REPLACE PUBLIC SYNONYM PRVT_EMX FOR PRVT_EMX
+/
+@?/rdbms/admin/sqlsessend.sql

@@ -1,0 +1,60 @@
+@@?/rdbms/admin/sqlsessstart.sql
+CREATE OR REPLACE LIBRARY dbms_trigger_lib wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+16
+2c 61
+Xbl8BMBc64yFWJQlXNygex20dmAwg04I9Z7AdBjDWqGXYkqWPpdZrq5iGHL6WQnnvZ6yy1Iy
+zKV0K+fLUnQI9WHJpqbcy7K7
+
+/
+create or replace package dbms_ddl_internal wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+7dc 2cd
+GNG/iRyuFcXTUTxkkw2LXph0UEEwg2NcDNATfASKrZ0VxqL8qMjIkf2BcIqW2/1LO3I57Lc9
+xQDDg7lrzbXqqI7feXn2LIXTKELUgkH7IQFJo6a+zzr560zRKLkFhmRkJBwkJC84yUbkgkcx
+V21RFqaQYGP7zTEq4aPm514lVMVi9zKNHfEoLKHCKKwEYgwkFrLWud6Ecw4yBNt5SOQOTASR
+tC2eMINGzFWRBoA7ZuJGnmvf87pbY+FNFKRfAsi+Lfsg3m9/nIye225s878h5wyn3tsssgpx
+4u/69Egi/r+RQrEFmfsk+x8rFil58sCc1FEWDD2rqrormOOh8N2p1gjqyZgxlW+Vp1GaKRvZ
+K/cU86tnHflpK/rA/U7y1w2/GXDf3sKHgJiwQtzmpRrZKgUZohqbEhdyq2Cr5hW09SQTvAlV
+J1XiPOdGpDeQG5RbN+Zvt3VCtWgmK9xH5oeusumfGnW8T/cXLOrRodXKIMHgw8U6nHzmw3ma
+FTIKij1xI4NFSdAAsS9qDHUn3ic7lKOPsfVgXL4JbGm+tLW1HjqCSCDLDZGxeCsExkKti3q7
+mB3wKu28NQVRE/Bw9omG0/gELF6N6Dwm63YH2cGCLnZEWklrzQx0R3uvgLTd6z2Bnymwl+yn
+J7HMugv3/K2s0T7Wnhoy35YHGDIn1ORvAPNa3DCHspjKGkSJoGid+LKLHYYk
+
+/
+create or replace public synonym dbms_ddl_internal for sys.dbms_ddl_internal
+/
+@?/rdbms/admin/sqlsessend.sql

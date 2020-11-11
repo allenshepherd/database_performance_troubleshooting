@@ -1,0 +1,11 @@
+{
+global:
+	ofs_init;
+	ofs_mount;
+	ofs_umount;
+	ofs_receivev;
+	ofs_sendv;
+	ofs_destroy;
+local:
+	*;
+};

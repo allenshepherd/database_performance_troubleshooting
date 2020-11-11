@@ -1,0 +1,11 @@
+{
+global:
+	vsnlibnum;
+	vsnnum;
+	vsnnum_full;
+	vsnsta;
+	vsnstr;
+	vsn_getVersion;
+local:
+	*;
+};

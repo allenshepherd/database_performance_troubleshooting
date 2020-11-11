@@ -1,0 +1,93 @@
+@@?/rdbms/admin/sqlsessstart.sql
+ALTER SESSION SET CURRENT_SCHEMA=GSMADMIN_INTERNAL
+/
+CREATE OR REPLACE LIBRARY DBMS_GSM_ALERT_LIB wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+16
+2e 65
+l+WtBGL1124pFTjCnPJUpOF19nowg04I9Z7AdBjDuFKbskq/KDPwv9JSsp70/gj1Cee9nrLL
+UjLMuHQr58tSdAj1YcmmplcJdLM=
+
+/
+CREATE OR REPLACE PACKAGE BODY dbms_gsm_alerts wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+b
+39ee 913
+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
+
+/
+grant execute on dbms_gsm_alerts to gsmuser_role;
+/
+grant execute on dbms_gsm_alerts to gsm_pooladmin_role;
+/
+grant execute on dbms_gsm_alerts to gsmadmin_role;
+/
+grant execute on dbms_gsm_alerts to gds_catalog_select;
+/
+show errors
+ALTER SESSION SET CURRENT_SCHEMA=SYS
+/
+@?/rdbms/admin/sqlsessend.sql

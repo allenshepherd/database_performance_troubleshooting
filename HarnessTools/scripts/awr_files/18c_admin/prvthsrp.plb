@@ -1,0 +1,112 @@
+@@?/rdbms/admin/sqlsessstart.sql
+CREATE OR REPLACE PACKAGE dbms_streams_rpc wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+2112 71c
+otWhF7MtussENebmJgWso+a0iakwg82TLnKGGy+5OnOUaN/VXACKMq4Et0bUOR+l+Lyta58F
+C2MnxLUPpN0sZ0vw7b7DeY4+LDNHek5HfIKPy7f9vGnS+CCqP4Ka+fmSxmSlOoFkluf+kpcn
+oiM+PrHo6sNm2Icv8hmQjkY87Rql8J9UCYxSPWlqUyV19kAqtuRdtYZTY+d/SoctFOpWJHPn
+npeHX50Y/WelmigWTQpACP174qnn4n+Gy4QOj4bBnKSiBKG8T21ifNBajr4lb0l/iPnSZ8tm
+vWrAw4AEWIx75iLyarfvlYV1pxfbsBRnnGDDU6Hh0iAbeMEvyNoKo6hD5g3Mv2Pe9o97nd3g
+KQUYl0bI89eHnODySifMRrCq9Ifv0KB377rLn9XCFn+zyjtNIvAZilKvGTbC//8JL+VBKjJK
+CNO8ZY6c45BYw2fD8oVZgNx9soJ5/+bm4pD9n74njJq+GH5r7EFSmhHS7vmoHrDwaqiGCjMM
+RxdjT/d9roWbLf5bblSUOkdHe+BCLg0axUC/o1pxnMOkG8OIkv/KIco2klA+NeLVQxgNZfLZ
+gat4KZNUF+v4aMfg1SsclR1Gq2oQVMyCabxg0ja/yaDio1tB4M5uYqtxxCREJDiVP9KXFD3t
+XR3SoIzSLgtFOfbj6fjdjXaO3tSWNRQJyIzkWevgHQOL4cgvEC1IlDu0so6++ZhgXVivjumi
+coE85pXwYqduJew8EnNSK/JuI1TKuryUVvIXaPYMsVIZOa92g37XFGyjhZjzPXKlYsBXIO+m
+oI5OAmuaCEStACl/2Pkox42UODJCB79Gkl+QkxZUzJWZJ70mxD576v48sCvaAlfG0QnSVUFD
+7gY3PITTEW8gSPx2RqfIJOPXuux5LerFjZAuwUtI40SfcYBpNVrq22Da90dhtOan6OD986vw
+JGPIYqIpVMg8p9LmqTyiG4AeFajRzWYT4dLttgkTU4Ti/okUBHL2PtX3MOAEb1eycGvCUcSK
+WqE46dlB3ZtLmQu61FU7u1XJAxPWgHBW6/VHFetKGDIacaQmXAFlhK9UJ80Dap/cwmqS3hYA
+6yKs8Jip8ABGnHykigkFAMBfhB1R8oygVyvmIY5ORH9m2/CzFtk0tNbQ68MgH11LSh5h+nuY
+HtjbmfjWjNYV4sy7JBgMkJpsz0hLRSt1aBXtMXyNkTMEqNZiHar44oLwU3EOo4jdy8t3vdDu
+dH8ndlG+Yf4DCClCYlk958DaPmaTsGqs4F7yBsQHgaTtbrhLBbrVZ7P230xl7gGsKY50dlay
+JQPEDY6QCCI54uErHu5RfxEikfwHHbDrNWqIeBjJPN/ORv1aEPIjTd4Z6Q8lZkqEBfNt+m6I
+UjaxWu/FquklK6lEY2ufSurxeaJp4EQHxSrSWtjw0wDOyXLLhwZHuSMAPCN4NmJJmJ2xxW5h
+Nqcb1H9HaWFQcSV2pdMLur+iflpnkV5nbTBAEqQOazAgVf3mMWdl885tvXspJ+rZCRxOkCQ1
+o4b4tbR679+fzTTLSSgzcWWOVju5sw62KzhJRr1r8n8WtE1FjF5wuETZPpcHZsr4a5YGP34f
+zHgfLi5zKc3eroOLGHi5RYtBQsWnYaIoFEijgnS/m1j8mVIO8It6CpekXv/JPQM0mriqXCFO
+dAtIlApBZQEaEMrTDMtzVtdggXEYLGkf4P+vh4U9VwDox+BL2CVpzSOphnJ3gFusVfxvpTwA
+97eMfYvr8JMvxTlBpBmDu2DiOdD7NFWkqV5HQ+NeUD5dH5cezopMn11OKLWmV1Yoow==
+
+/
+show errors;
+DROP PUBLIC SYNONYM dbms_streams_rpc
+/
+create or replace public synonym dbms_streams_rpc for sys.dbms_streams_rpc
+/
+grant execute on dbms_streams_rpc to execute_catalog_role
+/
+CREATE OR REPLACE PACKAGE dbms_streams_rpc_internal wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+f9 f7
+vTG/2OMSebW4ku+SYm65q2vSNG4wgzJfr8usfC+iAE6UAAZ4uMUBPvBLyM3f/N7Wl6+i9Pv5
+JDxN9OxXnL91WLHeA7Nvdym4kAGH6GvQbkiArdDZfPBz6d5PFj3M9g7nNpfhbZoSQGBZY7Os
+cBHADnf9wyTeHQoXmP/xlgwccUwaY+8sedCGtSkr2qfCbFJUPP8rVjRqdzZm3bE6pAcsy93m
+lEKGlYI3Shr/olsda+IDPaSIV4TK
+
+/
+CREATE OR REPLACE PACKAGE dbms_streams_pub_rpc wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+23a 171
+nz7QB7SyVRS8xQIuepPdhqBAtwcwg433cq6EqHTGAJ2dUYCcMJtFXje5AJsOyOHU/VL8s5Ex
+0rUf/tTk8/CThBEMm96dYvOBX++v6zNDaShk+MEHi78gBUWaAOGnepMdReMvwaPTvXCrpoP0
+0yFYZjZZkSclz3mJA3pqMVZPrNqOAGtoGXSlE5P/FInAQwaurmtdn8Rx9+Q1KS/JDJpFYsO7
+YaMobXcuOJB5cAQ+6kXQNcAqGaQq9l3dYuyFhr7/JCMkbHbuX5fzjLCZ7iySlqx4y+sag5oQ
+dLPuAUzVL5fpI4OcpTIoGWH3DF89AlKgejwbnddwezFcIae0qcwiPYkCSzpUw41Nseq78es/
+lA==
+
+/
+grant execute on dbms_streams_pub_rpc to PUBLIC
+/
+@?/rdbms/admin/sqlsessend.sql

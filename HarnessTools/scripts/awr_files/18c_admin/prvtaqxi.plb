@@ -1,0 +1,508 @@
+@@?/rdbms/admin/sqlsessstart.sql
+CREATE OR REPLACE PACKAGE dbms_aq_exp_queue_tables wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+505 1a5
+GaERqi2cxgIf+cGjVPkaUuzegrYwg5DrLdxqfC85cIt6lfDD4ODN9VLi8D13n3KfOAOj97IU
+5Qn0xklsoHHziVcc2FadTpoXMWujj26P3vjCrhNMJ5oP67lQHIPSYTEixBLdBCdMNxhHkeYY
+QQRQH0TdVquUoCoO8CgRjmx5yd+zjNa61gysZGMuxDv3XPDPqurdPUNcLgx28/VZ/5KlpPXw
+u55E7La1nD28xcxh14Xi9HPzqJhLawfD3ytiRSD9apWuSU+T6C8xbihu+UIONF8caXECjs3V
+y/YWNfhocJQpWIiNbq15Y8m7OtZOH1nGK8yUWNwRnhPobfLCr7I26v/drMVJG3WRavpDVMEH
+QqtZetnuoHxACyGFEfH2FkRYnuXAKbbiSmRmO2bp8vvZQOTSix1YFeFK
+
+/
+CREATE OR REPLACE PUBLIC SYNONYM dbms_aq_exp_queue_tables
+   FOR sys.dbms_aq_exp_queue_tables
+/
+GRANT EXECUTE ON sys.dbms_aq_exp_queue_tables TO PUBLIC
+/
+CREATE OR REPLACE PACKAGE dbms_aq_exp_index_tables wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+1e2 130
+l1qbn4m95/cDroJbWfmpH4ZbbAUwg5DI7dwdNXRGJrs+cayi6ROXxB5dK75O0WF4GgPTQxha
+qWdrhYbHNeNP4Wl14F2L/dDocFQGrHDEEFfOizHGhre7LL+Gsw/fBfgIplQ7DPPmlKjfZPLh
+TS4dfGR2VgFA2yeFN3oIeto7mXFlyza78noxnmz1FnixsuTFsqSyzihL543YM72nh7DmYJnx
+nbQaLZVkeXJw6hQjq+6KFVm/GTOtVrDa6vgz0vzwlMLF5PNX+KhLqEovBTWkIK4erqj3PEi0
+MxoDbeom5QFX
+
+/
+CREATE OR REPLACE PUBLIC SYNONYM dbms_aq_exp_index_tables
+   FOR sys.dbms_aq_exp_index_tables
+/
+GRANT EXECUTE ON sys.dbms_aq_exp_index_tables TO PUBLIC
+/
+CREATE OR REPLACE PACKAGE dbms_aq_exp_timemgr_tables wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+1e6 138
+S6CBDzZUNO6SNQ6LKKM5DbY5Jpcwg5DIJK5qZ3SVWE4+eqzb24P6vlP6Jq0PSxAC1yc956jz
+vRFbIiI+5uSIpo14ekI6ACTt+2qeuqxVn4P4i/rGnIAkaK6G9f6KB9czOGgdbx7gHWvjLxMf
+bPt35eFUb8tvgoSRKl1nHEJYkEhbVxdZNrsYegWrbPUW6pyU5MWypGzkW1fnspPNtnYjkJmI
+DRSqLcwTq51hADdMt31SRreZglUwVcFL7LtxigXrbXgrhRilgI8GB90YUzfo3PwwEHGaYhvy
+O1M4VbfR/4f7b0TJwg==
+
+/
+CREATE OR REPLACE PUBLIC SYNONYM dbms_aq_exp_timemgr_tables
+   FOR sys.dbms_aq_exp_timemgr_tables
+/
+GRANT EXECUTE ON sys.dbms_aq_exp_timemgr_tables TO PUBLIC
+/
+CREATE OR REPLACE PACKAGE dbms_aq_exp_history_tables wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+1e6 138
+TVczDcQuceaKDEmmC5taC4q8GbMwg5DI2q4dNXRGJrvqU3TTlHnFmkG3ukP/mLQZZ8XV8/fj
+NgZSPo+axzXjgPsWWX/ATvCAt39WuNy47b79z3N9BcFbnTGy+PiwH5pkeMQF+0tU/f3n6Ua0
+NBa9DiuU3di4S3UEZgqoW5uFA131jTgVtLY01ZsRDIlQUW5PXKUKIaB3hiTdVom3g0l12qSZ
+iNeh+eCM3yo/eRI2mBSzaueAH8lF0kUMOH8ZJrTEsLAg2MiU7tDdKSg3lFIdLlUKhpU4ECCM
+o/GN/TykKdJdlAy6yYo=
+
+/
+CREATE OR REPLACE PUBLIC SYNONYM dbms_aq_exp_history_tables
+   FOR sys.dbms_aq_exp_history_tables
+/
+GRANT EXECUTE ON sys.dbms_aq_exp_history_tables TO PUBLIC
+/
+CREATE OR REPLACE PACKAGE dbms_aq_exp_dequeuelog_tables wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+1ec 13c
+6nWAXoeHQP4TtB1VZmcT+Exr+7Qwg5DI7dwdNXRGJrs+cayi6ROXxB5oO8DBVbSYN//yiZQu
+L6Ko09ByRKg/nmc4GPcTIHrsRkg3pK+fTrhLgRn82bd5HvlU0DL+MCByHtfiHKYMudZb6qLj
+A5Rs+3fo+3Ufn62iQN3s96STj0IhRQy4+lfTNNWlkdWOsYxocXilCneBIQYk3RSJUYuufLJ7
+lJd39+SVOYFiP3kSOZhms+vnFx/JRQ2f40h/VS1dIK5kGVRrcUYk4RckNt/bHM/a5e6boLxC
+o2/FIdv/ZWEdKYoGlBpQEYU=
+
+/
+CREATE OR REPLACE PUBLIC SYNONYM dbms_aq_exp_dequeuelog_tables
+   FOR sys.dbms_aq_exp_dequeuelog_tables
+/
+GRANT EXECUTE ON sys.dbms_aq_exp_dequeuelog_tables TO PUBLIC
+/
+CREATE OR REPLACE PACKAGE dbms_aq_exp_cmt_time_tables wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+1e8 138
+ugya+Nz0UAbpdmwCC1bBft02oFMwg5DIJK5qZ3SVWE4+em/09A23x1ITXsf/OPieEz3mORRm
+lCodLE+OqPl0qZf9QTTkQU+H1EuvKq9qP3qSuTEHnNaa0Leu0IaP60i1IXb7bQ0tN2mi49dt
+8aYnXPvYnlttAISRKl1nHEI92lUBVHwbrL/pQXlt06OJHgqeP41Ap9P5HUfmvur4Nsewx6iM
+KvoPfnfo1GR5cnDEFCOr7ooVWcSHvxC0R78PigXr2XgrhRilgI+bB90YUzfo3Pwwx6OahGXE
+dYWyHkr1QgielrgXfg==
+
+/
+CREATE OR REPLACE PUBLIC SYNONYM dbms_aq_exp_cmt_time_tables
+   FOR sys.dbms_aq_exp_cmt_time_tables
+/
+GRANT EXECUTE ON sys.dbms_aq_exp_cmt_time_tables TO PUBLIC
+/
+CREATE OR REPLACE PACKAGE dbms_aq_exp_signature_tables wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+1ea 13c
+pcDBQ/tZf4EBkfLvQhNycRx4Iq4wg5DI19xqZ3RGrcE+z35s3HESwN9IwicGTIpVFdfy6UbI
+FlEu1QjOGucIx6bDi3ybQ/3QG1G6OC64xDFKPLt+MEJhCO75JiR2/takkteGfOGLd86ecW+o
+3KeNNmlt4XBYMWwsBHr25p+RQZyvfd8VXy3vMJzB+jwW4jW+RVaP6ib2TWqqqcwWOS5PcH4y
+xYlNGzptgaONzg3NiIrsoq7vbkx1KdSX31M99QduvACQnS3mPpmqNtE/51bj1U2X3LJkrh4T
+kuxS5vrTp2IpBgaU40wRVg==
+
+/
+CREATE OR REPLACE PUBLIC SYNONYM dbms_aq_exp_signature_tables
+   FOR sys.dbms_aq_exp_signature_tables
+/
+GRANT EXECUTE ON sys.dbms_aq_exp_signature_tables TO PUBLIC
+/
+CREATE OR REPLACE PACKAGE dbms_aq_exp_subscriber_tables wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+1ec 13c
+ozlVNB+IzJqLPClzu/rIJTch8kowg5DI7dwdNXRGJrs+cayi6ROXmMFdK75O0TNIDgPA7p4U
+yFrR95vOcS8GsKaO6AS+OtSMoX2cU8owfU+AuiB5V7y0MH3G17ktLJ9hD/6uaudUwLYnpelG
+V7rM02c7xalCOE+EkefYiDG3REGAjPg2nF+kr5jhrmHmCLKX1zJEnfIQhKT5HVnmPif5Nl4K
+XmtZmfGdtA4NamR5cnDqFCOr7ooVWb+Lg32c66QM+TPS/PCUl+nO77gzhHDpcYTNeyo0ADsg
+o24jvUrbZUWn9Z8InjvnEVA=
+
+/
+CREATE OR REPLACE PUBLIC SYNONYM dbms_aq_exp_subscriber_tables
+   FOR sys.dbms_aq_exp_subscriber_tables
+/
+GRANT EXECUTE ON sys.dbms_aq_exp_subscriber_tables TO PUBLIC
+/ 
+CREATE OR REPLACE PACKAGE dbms_aq_exp_queues wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+463 171
+Png13+QAdgCffzU7xgWkNdG8HxIwgw3xAK4df3RAWLvqMDb09A23t3X2kvcan8Ddjjcj79Nc
+XPRPckwUacyts6n8qJelgz/kg/uB07qszdkeIiS7wLX5p78H+VC7+15uuh17f7dtrb1/DiGy
+3RDAe6O7Z4I4GlnQ7oMKlcrROFWlU6Ar28Sy5ASkLV9EIj2kwkHvmi4ppACRDZsjvY9eNufV
++jzpJ/Qg8p5eWYq8/Ee8OGFfaqY9iStfFe8IzOv0XyWFTs5idZ1fKinhIR+4+7ctqrhrwFy1
+CyGKhCrgpDgAj6H06wXxSb1+2j6KDcYQy4humJq98QzWdOjIgnB3o2VI1ItCtxb3R+IipuEZ
+gV8=
+
+/
+CREATE OR REPLACE PUBLIC SYNONYM dbms_aq_exp_queues FOR sys.dbms_aq_exp_queues
+/
+GRANT EXECUTE ON sys.dbms_aq_exp_queues TO PUBLIC
+/
+CREATE OR REPLACE PACKAGE dbms_aq_sys_exp_internal wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+98f 2c1
+DZIo/qD/c1DF0fMBDsDTsNG6rFYwgw1cLtDrfC9DaA/uC/cjBkWwUnrX7DJ+v36cQ5Fi4Cha
+S+GX+/kA/4C3IXnsyZgNUVpYzu1HNFh6uoUcyoAzgdnQTM+SlL+1nwg6u3LOzUNyTrucsLt0
+aOCvVEU8NReHq9els6ubUrZ8cNLdlNEKEvUxAG/ddXdfLWJpnyjSOI0OwSuyPWlwOiGZRenA
+AeaBe6m8ZA5GIshI1r9tLWWnQKqJ4K5RhK/38hjvrBwZq/2OzhQ3v7NEPxgLlTzxbsGXkSgB
+aDZyU3+eNSzr0ANtLvszQOT9qro/nBme/jksWqgMG4Tz54hUbaOlS9yGgK2SALwx7eD/NpdL
+dLuEvWR0xNRcrYkTE4fQ0GCgFMQJOBmy+jX7toKjeb+shG0Dl+kmEGY05262ESBN/58nvEkx
+3MMpItrQ6eqLfU+CU0VgL4tlUmloB2fpTbyzoTz0f66YJzHUGjlWnJLbyLAq5WvedDmKWUwH
+4oGX9ctMTkXsGcN1A+XnNBqaEO+QhLiVUnzlivTAydfAxZ6CnY4RCyBBD3iFRoPGXrDX6WYu
+yWUavd86B9205B4NhbknjUmBzZTgIikTXXyd2RBOThvo28gaEcnfr5jHnSrde3fv9r1ltglJ
+OOvS2y0BJPff0O9R9ZF/r5nq5reBp+XDxvveab+7+R0gbe91
+
+/
+show errors 
+CREATE OR REPLACE PUBLIC SYNONYM dbms_aq_sys_exp_internal
+   FOR sys.dbms_aq_sys_exp_internal
+/
+CREATE OR REPLACE PACKAGE dbms_aq_sys_exp_actions wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+589 227
+AjFy8MQ6Na0dwVvlVq1TYo/GIMowg423oa5qfC8CrcHqzrTydg7YZgaPV4QnTcYmnCVB2MJ2
+V0s+do+atxox5TzyexjAWtIAcjR43D4SDr3InLD+RzudTDOcvrGalsQ/+UL45IXnPfuoVcbY
+CbhvLGkiZt5toXdAUagUkN7Gs2fhGGho8bdLQItvVleEjIjSNbCy239AQ3wRJWdAmS/0/HCH
+fdg36HH9JiuEDk45Jd8lWQjn7Go0UOmZCDYmLeUqaplM3y+26G4KzXKZTCppdGMpgljSYb+k
+Oa0yF/eI0ffdZY2Xfk3zCcyYrjD3kqzF32MnwHYvrt7fRDUo5glEJnfo6Xukkibg/zsZOcyZ
+aUUEx7DtUvQWhYaviwtaM0K3D/0hI3dY9aklHJDX7S9wfVpg/nrRAVAYzyae8HlEnanRwmA5
+jeMP3WTItUqo4uaWmuJBSHBAXBtsoyDXNRF4dR2zufmKuRVTBxm95fZea7qT7rR0FoOg/5AL
+qgYTnqYL04Dm2nu/I2NMSLyMQ/t7epJbbX+hhg==
+
+/
+CREATE OR REPLACE PUBLIC SYNONYM dbms_aq_sys_exp_actions
+   FOR sys.dbms_aq_sys_exp_actions
+/
+CREATE OR REPLACE PACKAGE dbms_aq_exp_zecurity wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+bc df
+u3Gxxs76V/ziLKBG3wvPGZzpB54wg/D/vssVfC82afzPladQJeiDtNXgZizYzecRK3Y+FshX
+bI8eUs7hg7N61zbDpNHnSvhOTJ/qiIcfOnQHwc3SMB2Ld6uyxYK3DPHvf3DYxandh/f/WQ6j
+CZBQezDc07TSXppWbKe0ZgRbUO8Kb0IiCrU3AbmwcWGyCBGF3lDw8KwKLWK6xapZg3e3liCC
+Ifg=
+
+/
+CREATE OR REPLACE PUBLIC SYNONYM dbms_aq_exp_zecurity
+   FOR sys.dbms_aq_exp_zecurity
+/
+CREATE OR REPLACE PACKAGE dbms_aq_sys_imp_internal wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+21aa 6b7
+bymMh4UFAptJq+IgvhZags/pJc4wgz2TDCCG3y+5MZ2sVI5URIVv3MjZ330300nfmNNs98Pg
+uwK0UQBWUEygLpZz/qTypztbAffAnzcENeEW7NCCmnqt0RGbN0ip5PkFnBdOKSBO5JoDOuRD
+lk46Hp2q5E6B609GCj0YyMKsnl/oUp5gXeGfcd4v7N3RN+ZOcWiGDAIaE19BQYjRU0obomT6
+mAWYgZIz/EG0HW81mGeamqga6V0G9+huWBSuClnO3YFsVjySyy3nnkvO8xr07qiccEg8bm4i
+odGJ6E24R0SNEkYlS/uhP/kC2LvQURBYQrMTgzkrJ2UIrZciCVh+JjTwSOLYjwV4IPazqU/s
+yHr7K6HKetXAJi7G9vfyYal+gSJxj2QzfR6UrbWtVxjJS45rCcqIPXd9EPtMNswBf1qushwJ
+RcwQsnpDjWxEHYSyraWJlhRyqx+6ZGy4ibuYP4coZ8YDIiXTbhRyZRMB2RCX4NY3O3wSOefW
+cEFqUuBqHTsJAPKYQnhOdCLgAHUhHmV5o84K3PPMXMwacPoaJqFO8C04q/DrfexQ8sGL9B47
+LYrHEJTsTcHAKpet/atiKeuI1JLezR7kSulrCZHukwdf/gzEX7lfNmKtFiCI+PkZfFopGbro
+sztiFhnBcHWgiIZJ6653HMc4zH0sqoymhqyvuVB0K7mlKb48KVU/j0edcsfqu/28u9c1xjmW
+G3F6flKXhX8Jh3i2ANXPjBXpW9aD0221kIitkORmX3Syk3bKGCA2Pc6PjQeF3UqVz7Q/WHld
+1ReMF5VsvYzlVGzxC6+1GV90rrwhIjm4QRpf56HCQFXqHMoQguiFBJMomBXKDmiAM5/vz2TT
+1q2iwQhkmQHM09NiZbVrmmyadBHw4RmJpHkgtOxwTaLmzQp0GE1310TT7V070Zd25ibvAXjL
+QcfrKc7i7Eow0cACehEBQcA6qKtPQlWZs0Flx0XSDtAnWRxKaiBgvo/gTrI9V6QlQ0Nr06EA
+VcBcnfRHqG2BtLo4MMZCQeE7/paCFPLj1UFlajHiJr1qI1CC3kPlptl+HnbP6BqtISswLx3J
+lyCikvOqdgdJeQbF1UvLf4yKeu/T48IjYzKPaniEgHzBXqBhYh2OVgVE0Bc/p+WBHvTlarau
+NgUHzsZhznaW/MQegSNgwkxMdBQg4SAzPEgoI8j6FnVuqHiCw36tDBxeCRqXx71G8pM3L/TF
+y4nIXJ4dO/+ZNpvQ385QqoVB+jLJtIsKMSHwOKcOXx+MmWl22bPIVV13rCEEai0UstS4VvKc
+iniwp2NtLXaZ62z5HLtJlkyuSsS3P+Vfp8SQG1I3q3guG9xj4CaCJxe+idV5cl4SgbeD+VSu
+o0T52bSqR/0OgIyP5EGTraMDn/AHwdIX8PuKkTX24dZl26zpGzRfsmH2YM72Efsi5f3sT0QB
+pSH5ZZcFo0r8BSTvHYpqpranBPNwOd48pqQM073DhLYbX7FqZW9RffUuKXdGDhVRpLbA5+YS
+vmZt834oZXMbkfPk9lblULUj0Y5wUfg2tHyzEqwFlaKavdQ+DYhhkLidy7rcyub5FFAtVWRi
+oYeynS1hPtqjCHbG4kboPpeikOeZCVG2BTXAAjYSNydDe4JNhsWctJjeXHbTsyEqxhfvQ6oT
+xxxSqw/qygSfCFmIo6vYETMCozg+ESO1arXj8W9c
+
+/
+CREATE OR REPLACE PUBLIC SYNONYM dbms_aq_sys_imp_internal
+   FOR sys.dbms_aq_sys_imp_internal
+/
+CREATE OR REPLACE PACKAGE dbms_aq_imp_zecurity wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+6f b6
+/HuscYkUI5TWwvG/k/w0zjjhiN8wg5RHLcusfC+macE/lXNb60LtUOj7/A1sr0Nm/N1n4U3W
+PwBlnV3pGqkqagtuDyO6MuwfcwC7T3kjqvsMnxnhlPNIA6fb4XVf++Ml8wVmdF11rJIbn/Eq
+GLvVC1MNcHIuCTR2Uer5HyIoPd5b8EHKHg==
+
+/
+CREATE OR REPLACE PUBLIC SYNONYM dbms_aq_imp_zecurity
+   FOR sys.dbms_aq_imp_zecurity
+/
+CREATE OR REPLACE PACKAGE dbms_aq_imp_internal wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+e9f 3e9
+/Clu8bR53WgkftMndmK2N1FQk6cwgzvq+kgFfC/NMQ+vhCjLLzafSiojDoUtLokaFNFIbpn3
+UQA2EaxItdDx8QH2a99qrO7dXTSweJkHt3S3ljBbffjExJ25Q8QSEPhDh5q1c85O+Zu2OPYz
+X2bgjeHebj0OLzxtRObBKC7LDnHhBcM3umQERXoUjYNw3mkVFCuAxho3kBfO0og73xcRtoLL
+TCAV+IKN0w4r++BmDI1SvkSZ/49GasBSiz4/2vREcVNY0g9b2IUcCsb4bXmlSuDWkK3JacSN
+KxQOuQXYukq/RfqDLXc1q6G+YBHbZV5ZiUE5xr1uYhPzTcfW0NN54EDzFJQVwS3zKbwRUNs6
+ihGnl6d51e+OYbTA6ybWEsNtH7albvJ9ECDwY8Lt/VrHYq8mlnJvJhUP9j93/ODdBRUnIRtJ
+4l5C204WpbdecI4dVfa2M9BK4cbGhxObTFzwgZvO9Ss+GAUhxxml2EnbWQkwJ08Up+y5PmIp
+1Ij+WRN3Es8M3J7pRjBF9uuHn+IOPX5JLQiZeJT9GKOKdy6tDS4hzEcXmC4FGVjpDKI+/t+j
+ttVlroCQy6EIYvzmFnV6cBmAVDwIVeidPZl8MFjqOwDAowuu4iox1t0qpqtgRnAj2uUxgm7D
+kJg9hicNq0I4PYS6hYHIFyIr2TE/DVWrCJcPHl3dzNQyXUHjZsooqa3nE0eiFtlrYycEfASV
+yCoOsHviBoLui/0wZobblFb3Ne8ZmICNIWDIMXb37pHfgJF+iEE1OQzYglBx15SIMuL6v7+4
+3ktZZt4iVaEX7In/fDxaPKDU8f03AwFIU53QmaAi/FvttXX4J8BYmsc4F8PQPsupxg8jET0r
+9m2E5hEmRp9jztkSQPHjicyFWSZrtZZz6rpND8XiDqHmTr5lwRhWSE0BCLDvIVbcnCMCtBy+
+FuSqtHZb51tWeYvyx+qSj4A5yHcs52uk/2rgUneN289O7iT0X7LQ
+
+/
+show errors
+CREATE OR REPLACE PUBLIC SYNONYM dbms_aq_imp_internal
+   FOR sys.dbms_aq_imp_internal
+/
+GRANT EXECUTE ON sys.dbms_aq_imp_internal TO PUBLIC
+/
+@?/rdbms/admin/sqlsessend.sql

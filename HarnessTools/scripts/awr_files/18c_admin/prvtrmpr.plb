@@ -1,0 +1,37 @@
+@@?/rdbms/admin/sqlsessstart.sql
+CREATE OR REPLACE PACKAGE BODY dbms_resource_manager_privs wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+b
+d2e 37c
+Bj9oI+Iv4dVR4kKW4f9peXBxXScwg5UrTNDsZ47Ngp0GIn5RG/WGg36DYjEH87kGonWognAN
+lrd59uwifgURg5qaOC+RjgjW8ALjN1j4MrmtH9MGrqHjfIuv4bwQQpMKPcBzHnL8HgnterXP
++bxxJpoKLKqxZxqMKKkpF6GidIulrbc+OD5fPu/gaxYMf6L7LCw4ISO7Q5hq40dSSoCfmvB6
+xqE2/n+FNuZZ043ne4z3GQ7PHHCdRUSXcGBGJKjgXXtQn13f1Kswp+bT+mVdpk311AQJyXZQ
+SX2C7exsvRh5Gvt65tA2fwHD6BaJZ/qC7owYvevI9BmmJb1lF5bs0U1n+oL2BKFofp7ULcPA
+qJSer5U7ysPgP0/gcXr8naQANBLOfLRUwmdJwa06tSIbhxnQqydrUI+nGeU7EE4EzH/TTx2H
+kwnzILEE4c9mk4kc/rMYj72tBMeVt4nApxd8i3rmFVmZHg6xgxPWH40bM+az9bARRfBfNqfp
+zDtjsCoe+RnNPaSBGBmNO9VmzeExqKfN5X/sspMHVDKA+PebDxMJLqxIPah5mokPjeo9Lc8c
+MNQSY26Sg1CXaj6Z04PBO+MgifNGiRtiAk5306kSsHJ2KMT1vi6lNmUVhwrw3xONxAquN4Ii
+lRA3b3KW030eWtK0ifZe7GwWmPHL2wrakpqse0+Lxj6TZK62wFRpwDAbH7/MZXF63WVy3j+6
+z1EmJMw6Cq1tMv6ErwMa2dWMktG0RZjbhPdVayYP8NY5xYcSoLs8g6inzeV/7PAMsUXsgBJe
+TdWuKWtvAvDUPtsmYCM6PSlhch4buSyrg/B7KSG+BQIJfFUG0oHoHg1XELkadvzrrR9ceV4I
+7iUmRb68Olu1oMVo
+
+/
+@?/rdbms/admin/sqlsessend.sql

@@ -1,0 +1,37 @@
+@@?/rdbms/admin/sqlsessstart.sql
+CREATE or REPLACE PACKAGE BODY DBMS_CONNECTION_POOL wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+b
+9f8 2ea
+I2CLBPO4Wtrkk7WRRkpOX5NgJuEwgz1cLm0FfI6Kk50GLR8XqFtJLgwpwluTK3bzumWSWreH
+opMRPs2ooHO10jEIG/nI7bpaHzwHyM7XNIgALhrxwmLXVxTFAGfsjtSCbGwXKxYpDGPADjnn
+qGMrX7Dcx3ynJxLF1+dngZUMo7h9AOYVSidhayO9LLuoZVuGXrzo0cQQ8ONorHzd/qf2occJ
+xJg6Unr55Pn4cmQHhrLP058dhcLj+/Ftol6kMx4t5xoaqxJw2oL2VMfKYscfsdQnqANCU3XH
+WGtLDG/vpqher01cq1nCJzVIuyOCXkOqpIj1F5/PDYL2srIu2OlAmuJ6vpcrqBrzT1t5/GAB
+SDTdgRdx6u0rKkG5T/DQ1azIWVuIhBXCFf1IWUPIzGHuJhfc/WMuBJrnaXHr3LTWxFGPlzHM
+N8RSaNivBfDIBex83t4teoJu7rx/eJUwH+py7z4f9of09XWEJQf+CqcN7XaD/cAG9I8kz3Mz
+J6yar3rUs4GaeC0enSSwCg8E9LPIJOeuZ0XtpGvA2qtrkspENfC5YZgmC4mLU6G8GeIeHFsy
+2WmwK4yZSIDHxoBStjrkm+ZbgnqIac6xRmEbjo6+iYBc0ciwkdwdHLGtPbAC3HUXGXLshrLw
+Hy6388fN9uwUerbTEp+7oDGT4XNn2hkDFuyEFEzuk1E9b6pWFS/kmVzxF7Tle0DzlwEYDNty
+cOK5GeREX3OT+w==
+
+/
+show errors;
+/
+@?/rdbms/admin/sqlsessend.sql

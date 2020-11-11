@@ -1,0 +1,83 @@
+@@?/rdbms/admin/sqlsessstart.sql
+delete from sys.exppkgact$ 
+where package = 'DBMSZEXP_SYSPKGGRNT'
+/
+insert into sys.exppkgact$(package, schema, class, level#)
+values('DBMSZEXP_SYSPKGGRNT','SYS', 1, 2000)
+/
+CREATE OR REPLACE PACKAGE dbmszexp_syspkggrnt wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+126 113
+TRSR4fO7XlHs994hWlt8M2yd8W0wg3nQ2igVfHRGkxMP7vMUGyvoL1lNntxdUzSnWud3+zcv
+AaY/AGJynlKbn0+79YcTWbpG1yMPGWGcC1ZkQ1LqjrBqiPVpng5CjG5fGkrKVtaPIeghwPMf
+vM2I7ZnhlmM2j0lrm0RiwOrt8Da8ZUrn8DbuiVap2UTJ7NdUx2QK8RpgF4Vr4vbb+WZGTld1
+V7cA93tjs2hCIYLy/9JCzdXO1QIhRu5wqys9GlQu0lgNWSUgVfuBNIQ9
+
+/
+CREATE OR REPLACE PACKAGE BODY dbmszexp_syspkggrnt wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+b
+13c5 5e4
+MHFN/AJj1Hqc3+FTGbsvGt2dsYMwg81UuiAF344Z9uTVzhv9tuHGoZYm8eGgovrYAQlrTbQp
+bak4hCxAspXCB0iF0JqoPqMaAdlZmjnD5yUveuQw/7/ifgLrKtHno5uKvXOS2Sxytfkzzfb4
+5HJOsZqdzzoecp3z4km2Ro+wZfF5lxQlmvFlVkGjlxQ+42csubN6+76j4KHITmKtlr3J8mcY
+QBRa+4uyDGxDdPdMlQJ+HrBFDXiO4YKTrs3x7rI1iajS4+lFFeDzrmmFsDhTfJkZhXM6WABk
+tZSi36zNeNrW86MfY9glMu446G43EN1nXDziQ8T0ANa/kYBKTzjXyd7bZG9ghwpaz1KJYngy
++FC4ocKnyUpw2dUuWHN2pEAJeWJEAelyg/V/TyaYk16nYDTT0lLd7MxlzHZWoTUxka53VUw1
+kdmF3D/kVzHVkkLpl/wJzaVDSfGX/xKklevndv2VhYEBNLDfKwgvjPS7S7Ql0xI5laOatNux
+Vn/cUUIfIMDpdVx31MoEE4bCQOMe3+dWy80AejjmoJp9FYwX8Et04s25xPIRxbsStdUye6a0
+gTRbGb/E0COy0uNQp5eNMaLJgvJFgitEwXqzl/bQj0Ub5ofT6AtaXiKUGsVS8uinMecic9UY
+yS0b3qcwOfbGTCc0YCXxl7AMS9V5A9h+Kur9FV0hGF8/Jwr7+d005+00dl2wnIWWlspmvqcF
+Cki1euNV+/EJePR7XI14YkR2L3n1y2iinz6zUyMLCmYC1luizZKvKKbZROgNhxagt42e0VLV
+q+emAMhYrSDuR6Dhm0JiO7Ll8a1YBR8DmZ3JfFobE2pIgRhJHx/y0vN0uOU3D8rw5+8Fn5Ob
+9VWxZ8GLMVo6BY9MujttPLRZZbAYspf5Bhs1hpQ6xrnQVbVV0Rp59glC2DqqU7GE0DuyTLxm
+sM0ZR8HHTC00ZX3Zcf29IOCte5m04l/I66qSIeqMlQ6CWPzHu6tddwCdJTBONWlOHqp56qAU
+GXUweNjvbMGNXBl9wYVqNt79Ot0uHBLlJOyH/qkDLonSrFCOOQ5bczOOCZqH0HBWFXwW/em+
+yzXzAQCewLbh8fdu50O5zE147mkosvOujHAgaq/Dm+dA2aZ3v5o3I/+K/jVIylwYQxb/eef/
+hwqm3QpCU8lw9aNKjEzt4Ts4fM5nUoXUqNabDslTCVNTUYYRsWTMaUEtM4uUcFHyxq8ZRjev
+25xe5+1fizpXjwVpBvyUJLYUqD770C3g1bhc83/LM/kq2JQXIZiy3DwI4AVjr5W9NkHBbAEa
+Q5VXWWnkukvKuR83EI/r1ApnXUc3NN3WxpBMRbdEduf4tfG0/9MD2ykN+Ynm9lW00P0aRwIF
+aENyJ2G0JHjLWIj1IyifpnquG7CH2luChbOtkc6eM1Qcpp9+0geY6uLGhYpNmXfmLmKfKQAb
+riJJxnQzh41bZJVd0hF7zAbFcSLWbp6mDpgvWRskc1stMwDt
+
+/
+CREATE OR REPLACE PUBLIC SYNONYM dbmszexp_syspkggrnt FOR sys.dbmszexp_syspkggrnt
+/
+GRANT EXECUTE ON sys.dbmszexp_syspkggrnt TO exp_full_database
+/ 
+GRANT EXECUTE ON sys.dbmszexp_syspkggrnt TO execute_catalog_role
+/
+@?/rdbms/admin/sqlsessend.sql

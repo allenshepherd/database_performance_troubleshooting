@@ -1,0 +1,224 @@
+@@?/rdbms/admin/sqlsessstart.sql
+create or replace library SYS.DBMS_PICKLER_LIB wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+16
+2b 61
+aAn+BI9qqDtarCwYQNuFQC2dGnQwg04I9Z7AdBjDuFKbskoopfUzM1KyGP4I9QnnvZ6yy1Iy
+zKV0K+fLUnQI9cmmpst5mfw=
+
+/
+create or replace package dbms_pickler wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+5dc 1e6
+OAAO6uy6F/g26TEJxQEJHBJ+ESYwg0NeAK5qfC8BuWRTLY3FOTzcH8HxVDKKfX7E/JH00Pv7
+06y1ljjGUBRjkw5ZVCtRThA0v66/pBhiPDb+xJa77oEIuSk67rIaTFZoa+9aT6n/UnDlrKV+
+soCWopnCDYhEow/StTq06UMNuCURTfoCl7hty6dc3t0wW1/4XHS/QSqOCe8srHdKJxhYpmqQ
+K/pQsmBvDNWrJ/OfhVE1vJNJh6sFs4RHckkjX1aduLFL72EmkSN1rGQHbiUzPwH1kAN3+tnF
++0egpZmDHzhMFl5uOHquMNg6aKTsm0z0Sqz2tM5FoYSm2UoKPnK2So8JeD4GhTOK93nssw9p
+QbG8m/Js2vwuygPxnD0QdW8mO4TNFG8YyanYu+MSP8lk9LDM7yCuv/x6PIWZ1SO/k6Df9Ql+
+lAiBvjIchKriu3GL/nP5MVO17V1Cd7WcaBrZoffXPVufejDx
+
+/
+show errors;
+CREATE OR REPLACE PUBLIC SYNONYM dbms_pickler FOR sys.dbms_pickler
+/
+GRANT EXECUTE ON dbms_pickler TO PUBLIC
+/
+create or replace package body dbms_pickler wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+b
+37ad d09
+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
+
+/
+show errors;
+begin
+  execute immediate 'revoke execute on dbms_java_test from PUBLIC';
+exception when others
+  then null;
+end;
+/
+create or replace package dbms_java_test wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+2e60 1a1
+B2Rm0P1PcoDMwbdCpBaTSvF2YfEwg83smMusZy/pO3MYPiprac/GJwKB9BG0PadwoH8tFc5z
+q5n9tu0Rz+5jZhN2cBe53p911SBROaM8CkyrILeE07t4KYdg6BYlD0ZBpNcVTvCe4T5CN2Vg
+p8WbQMXApFgn2m46nALCooPRUaXCUBBdPv+9RapY/LAPmeG5chBJ53ebnX8vTQPT6o2mNzkM
+/s8pZw76o6oOPMpQ4Mc/a63KUMl4xzEuL31Lc36qp9RcBAQ5iy3dDqKN8wvbGZR/ibiI8kCb
+EoT003qeC1/HlAuJj/pJ1rXBr4C9QfVelOXxzJSJjxHWwMzinNkC03bJzID8zgJ7UTbBnI51
+4cHmcImPR+yXXjokXBwyu4uqnnvSlbsuLnorDJS6eX7EuDZDbHKs
+
+/
+CREATE OR REPLACE PUBLIC SYNONYM dbms_java_test FOR sys.dbms_java_test
+/
+create or replace package body dbms_java_test wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+b
+63c5 4f5
+BffvCpTdZTFoT3O1HqWf7nN37eUwg81xDK6GfARogp0VBjYJKDrx0mzcSCfyp8hR20NSGLSx
+OA+jvZ+qtUAl4Arx9gs4fQsjZy57tvE65NeiO5AMQZBO9HCMKc6nEDrSHrw6P/674kLOI7Xd
+m5KpLeuTWPrPo8JfH+leDNFO2DqFZDDHqF0x9UdKo1Dr1dUwTAPVhwEXNBjafvswGQh0XT0a
++ugDCcLMh5v8YfoMPhtRCePsQd5+Vtw62MjYbpQCQOM749sYWjvj4pSzA2aSK9vdGASj844x
+qJ9c+tHVMTJsmEuR6qeKJfFMusJtDJ8yC9ZFxtjTwCuN/OtCseP9PuXxH80F8Q/nn87BTtBP
+mvn5IpGKe5wXVhNh7/lgYSwPm+VEoH3spGIz5aqYV5+ol6EM5YDeF77VlsZC1EOg7LtM3q+j
+K0KtKVZhdFDpv9EtbS4dVDKK5BR36PuaM7ub3c26thYrDrTn8o4Wf6wJRPLwDuLhMvAOQeGB
+Xw684YHwDjfhsl8Oa+Gy1+Bg7Oz3iOhtSCuQITH62NreFbeTQiUaSQMzGvSuyYGht09Hkrcr
+pmXqqaDTyL45GpQ3R1zjDcXb1VxXIhabzD1giP3Q0fyLZXL/mcwqzf+3HQCiLJqgrYNhkpLY
+IbSXWlmbwDr3qMhPy+164AfpxklZiQudTmmcnbljY4HVQVcAp4Yurhn3LwdTg84IJ1XccIH1
+37rvgObT5nfbD8OWK8ILY7gUGqgnnLwyzTRUKbzqaPdQsn+iRQV/ojRUTHTYH8tWgOaW21qK
+zZta0uCBfD+E0A+A5iTbqbsL3WQ8lW09gBN+cRNX0zmokiepvCOQvJvgslDwBZrwSkY44zOk
+URCaAxDtVIQhcxzf7fbuUcoPeYCl9M1OvZZv6UsftG3W7VNlFeQ8YHwa7X8UJKuvxo8LNc9H
+jfNdv78Y7s+4vIHvPdBvanw4df3gdeJfygO4FjeVFeDWVNgsYjeCaljEPFhMiDXJQ8yelgec
+IPGc+LN8ILbzS67zj5fnZa6cReeyRtTLRkAssl6+9yqF7DKThpfnZb9PfEIsKaDGKV2AapLL
+RqvmzTKE143zkekoOKEo4C9/ziUE0ow4MR8ltik6GSkpl+fCJdBLdyhCbTQQjDSBjDgAFuCr
+f+0Qf82X58I5dUvnBK9KcJqKcP6MOCZXuVu4JEso/h3i7R9dCKZ/HCip2udoNYpdpEYP6goH
+WqCqT0F/Iv4oPidCm+4kqc5WiA==
+
+/
+declare
+  cursor c is select d.obj# from obj$ p,obj$ d,dependency$ 
+                where p_obj#=p.obj# and d_obj#=d.obj# and d.status!=1 and
+                p.name in ('DBMS_PICKLER_LIB','DBMS_PICKLER','DBMS_JAVA_TEST');
+  objn number;
+begin
+  open c;
+  loop
+    fetch c into objn;
+    exit when c%NOTFOUND;
+    begin
+      execute immediate 'begin dbms_utility.validate('||objn||');end;';
+    exception when others
+      then null;
+    end;
+  end loop;
+  close c;
+end;
+/
+@?/rdbms/admin/sqlsessend.sql

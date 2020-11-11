@@ -1,0 +1,32 @@
+@@?/rdbms/admin/sqlsessstart.sql
+CREATE OR REPLACE PACKAGE dbms_datapump_int wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+5f1 1e6
+z4zmAon96KYEMi51k3mIRm0chzQwg9eJLUgVfC9A2sE+evUWJylQjSngT9aoCJMX/Xf6UeAp
+ZwLDkvku5k0Jygl7sxOKzv5D+HIzrcgMFml+mp9P3pitfjMPmBAjtVfn4zhIiWlN8OlvjwMb
+FQqEqO+wn3A0cHfXaLZywl5ZsNAxkyFPRlCzl3CFGOGEo7aW9xCpLxDezzBNRLHgyyuNtMvw
+lN8rrZvrqZ81QuCJkJ+IkIlylzeCJrqoK7cPEoiEXWAjqvsh/XmV+4QNrGVRnb5tHNkwHcUr
+3BPTABn5BCNWhrJ3QpQjQsfOSoauj8b9/ixQ0BQdpSTkSqFRGF87+5cfFoRlK+tjAhxpH9Zx
+nEFFR6BIknLeTp5U/zcPOUNvxY6GQ3ks/aggLhIgfvdKXNOOajAQc9C8P8Dt1MGBgdfr23pv
+hJzWfmY7rtKtzPRwBV2Ig0VCwY2unuFTki49gI7Jv5qcD2Ud
+
+/
+GRANT EXECUTE ON sys.dbms_datapump_int TO EXECUTE_CATALOG_ROLE;
+@?/rdbms/admin/sqlsessend.sql

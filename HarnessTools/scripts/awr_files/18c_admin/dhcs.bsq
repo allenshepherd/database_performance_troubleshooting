@@ -1,0 +1,707 @@
+REM
+REM dhcs.bsq - HCS catalog tables
+REM
+REM MODIFIED   (MM/DD/YY)
+Rem   sfeinste  11/30/16 - Proj 70791: add dyn_all_cache to hcs_analytic_view$
+Rem   jhartsin  11/03/16 - remove mv_name from hcs_av_lvlgrp$ (not used)
+Rem   almurphy  08/23/16 - add REFERENCES DISTINCT to ANALYTIC VIEW
+Rem   mstasiew  01/28/16 - add hcs_av_col$.sub_obj#, sub_obj_type
+Rem   beiyu     01/19/16 - Bug 21365797: add owner_in_ddl col
+Rem   beiyu     12/15/15 - Bug 20619944: add level_type column
+Rem   sfeinste  12/04/15 - Remove NOT NULL constraint on precision# and scale
+Rem   smesropi  11/24/15 - Bug 21910928: Modify all_member_name to be clob
+Rem   sfeinste  10/28/15 - Bug 21542146: hcs_hr_lvl_id$ and in_minimal col
+Rem   smesropi  10/08/15 - Bug 21171628: Rename HCS tables
+Rem   mdombros  08/16/15 - Bug 21378698: Cube Cache remove not null lvlgrp_lvls
+Rem   mdombros  06/06/15 - Bug 21163869: create hier cube level grouping tables
+Rem   smesropi  05/05/15 - Bug 20555264: Add aggr column to hcs cube and meas
+Rem   sfeinste  05/04/15 - Bug 20844599: Parent-child metadata
+Rem   mstasiew  04/28/15 - Bug 20898181: hcs_hrcube_col$, hcs_cb_meas$ dt cols
+Rem   smesropi  03/09/15 - Bug 20508729: Add datatype to hcs attr$ tables
+Rem   smesropi  03/03/15 - Bug 20556365: Modify hcs_cb_dim$ for invalid cube
+Rem   mstasiew  12/30/14 - Bug 20448392 Add hcs_hier_col$ datatype columns
+Rem   smesropi  10/01/14 - Add AUDIT$ for hcs_hr_cube$
+Rem   sfeinste  09/15/14 - Rename MDS -> HCS
+Rem   smesropi  08/20/14 - Added tables for join paths and conditions
+Rem   smesropi  07/14/14 - Added mds_hier_col$
+Rem   smesropi  07/01/14 - added col_name to i_mds_hrcube_col$_1
+Rem   smesropi  06/19/14 - Removed status column
+Rem   smesropi  05/02/14 - Replaced is_time with dim_type
+Rem   sfeinste  04/30/14 - Change all_member_caption,all_member_desc to CLOBs
+Rem   smesropi  04/15/14 - Removed src# from mds_src_col$ and added src_col#
+Rem                        for mds_cb_meas$
+Rem   smesropi  03/18/14 - Removed col_id from mds_src_col$
+Rem   sfeinste  03/12/14 - Add clsfction_lang to mds_clsfctn$ and
+Rem                        mds_cube_clsfctn$
+Rem   sfeinste  02/18/14 - Add mds_hier_attr$
+Rem   smesropi  12/20/13 - Renamed mds_hr_lvl_ord$ to mds_lvl_ord$
+Rem   smesropi  11/20/13 - Add mds_hrcube_col$, mds_cube_clsfctn$, and
+Rem                        mds_hrcube_lvl$
+Rem   smesropi  10/25/13 - Renamed mds hierarchy and cube tables 
+Rem   smesropi  09/23/13 - Replaced long with clob declaration
+Rem   smesropi  08/28/13 - Add mds_src_col$; modified mds_dim_attr$,
+Rem                        mds_cb_key$, and mds_cb_dim$
+Rem   smesropi  05/03/13 - Changed from mdas to mds
+Rem   byu       04/29/13 - Add audit$ column to mdas_dim$ and mdas_hr_view$
+Rem   smesropi  02/13/12 - Added mdas_clsfctn$
+Rem   byu       12/06/12 - change mdas_dim_attr$ to reference mdas_src$
+Rem   byu       12/04/12 - removed redundant columns
+Rem   byu       08/13/12 - add tables for cube view
+Rem   byu       06/25/12 - creation
+
+REM BEGIN - dictionary tables for hierarchy dimension
+
+REM !!NOTE!! Be sure that there is an empty line at the end of this file
+
+create table hcs_dim$                           /* attribute dimension table */
+( obj#               number not null,                       /* object number */
+--  is_distinct      number(1) not null,      /* 1 for indicating performing 
+--                                          DISTINCT operation on the source
+--                                                         data, 0 otherwise */
+--  constraints_mode number not null,               /* 0=ENFORCED, 1=TRUSTED */
+--  level_attr#      number,         /* attr# of LEVELS DETERMINED BY clause */
+  dim_type           number(1) not null,   /* 1 for STANDARD dim, 2 for TIME */
+  all_member_name    clob not null,                       /* All Member Name */
+  all_member_caption clob,                             /* All Member Caption */
+  all_member_desc    clob,                         /* All Member Description */
+  audit$             varchar2("S_OPFL") not null,        /* auditing options */
+  spare1             number,
+  spare2             number,
+  spare3             varchar2(1000),
+  spare4             date
+)
+/
+
+create unique index i_hcs_dim$_1 on hcs_dim$(obj#)
+/
+
+create table hcs_dim_attr$                     /* dimension attribute table */
+( dim#            number not null,                         /* dimension obj# */
+  attr#           number not null,  /* attribute number within the dimension */
+  attr_name       varchar2("M_IDEN"),                      /* attribute name */
+  src_col#        number not null,  /* id of src col object the attr is from */
+  data_type#      number not null,                 /* datatype of the column */
+  data_length     number not null,        /* length of the column (in bytes) */
+  charsetform     number,                                    /* charset form */
+  charsetid       number,                                      /* charset id */
+  precision#      number,                         /* precision of the column */
+  scale           number,            /* digits right of decimal pt in number */
+  is_null         number not null,                     /* can column be null */
+  property        number not null,                                  /* flags */
+  order_num       number not null,       /* order num of the attr in the dim */
+  spare1          number,
+  spare2          number,
+  spare3          varchar2(1000),
+  spare4          date
+)
+/
+
+create unique index i_hcs_dim_attr$_1 on hcs_dim_attr$(dim#, attr#)
+/
+
+create table hcs_dim_lvl_key$                   /* dimension level key table */
+( dim#            number not null,                         /* dimension obj# */
+  lvl#            number not null,     /* level number within this dimension */
+  lvl_key#        number not null,        /* lvl key number within the level */
+  order_num       number not null,    /* order num of the lvl key in the lvl */
+  is_pc           number(1) not null,         /* is this a parent-child key? */
+  spare1          number,
+  spare2          number,
+  spare3          varchar2(1000),
+  spare4          date
+)
+/
+
+create unique index i_hcs_dim_lvl_key$_1 
+  on hcs_dim_lvl_key$(dim#, lvl#, is_pc, lvl_key#)
+/
+
+/* map for attr to the lvl key it belongs to */
+create table hcs_dim_lvl_key_attr$ 
+( dim#            number not null,                         /* dimension obj# */
+  lvl#            number not null,     /* level number within this dimension */
+  lvl_key#        number not null,        /* lvl key number within the level */
+  attr#           number not null,          /* number of attr in the lvl key */
+  order_num       number not null,   /* order num of the attr in the lvl key */
+  is_pc           number(1) not null,         /* is this a parent-child key? */
+  spare1          number,
+  spare2          number,
+  spare3          varchar2(1000),
+  spare4          date
+)
+/
+
+create unique index i_hcs_dim_lvl_key_attr$_1
+  on hcs_dim_lvl_key_attr$(dim#, lvl#, is_pc, lvl_key#, attr#)
+/
+
+create table hcs_dim_dtm_attr$            /* determined attrs of each level */
+( dim#            number not null,                         /* dimension obj# */
+  attr#           number not null,                         /* id of the attr */
+  lvl#            number not null, /* id of the lvl that determines the attr */
+  in_minimal      number(1) not null,                /* attr in minimal set? */
+  order_num       number not null,   /* order number of the attr in the list */
+  spare1          number,
+  spare2          number,
+  spare3          varchar2(1000),
+  spare4          date
+)
+/
+
+create unique index i_hcs_dim_dtm_attr$_1 
+      on hcs_dim_dtm_attr$(dim#, lvl#, attr#)
+/
+
+create unique index i_hcs_dim_dtm_attr$_2 
+      on hcs_dim_dtm_attr$(dim#, lvl#, order_num)
+/
+
+create table hcs_dim_lvl$
+( dim#            number not null,                         /* dimension obj# */
+  lvl#            number not null,     /* level number within this dimension */
+  lvl_name        varchar2("M_IDEN"),                          /* level name */
+  member_name     clob not null,                              /* member Name */
+  member_caption  clob,                                    /* member Caption */
+  member_desc     clob,                                /* member Description */
+  skip_when_null  number(1), /* indicator if lvl is NOT NULL, SKIP WHEN NULL */
+  lvl_type        number not null,                             /* level type */        
+  order_num       number not null,   /* order number of the level in the dim */
+  is_pc           number(1) not null,           /* is this for parent-child? */
+  spare1          number,
+  spare2          number,
+  spare3          varchar2(1000),
+  spare4          date
+)
+/
+
+create unique index i_hcs_dim_lvl$_1 on hcs_dim_lvl$(dim#, lvl#, is_pc)
+/
+
+create table hcs_lvl_ord$                               /* lvl order by list */
+( dim#            number not null,                         /* dimension obj# */
+  ord#            number not null,          /* id of the order by in the dim */
+  dim_lvl#        number not null,                  /* dim lvl# of the level */
+  attr#           number,                           /* attr# of the order by */
+  is_asc          number(1),                     /* 1 for asc, and 0 for dsc */
+  null_first      number(1),        /* 1 for null first, and 0 for null last */
+  aggr_func       number(1),                  /* 0 unspecified, 1 MIN, 2 MAX */
+  order_num       number not null, /* order num of attr in the order by list */
+  is_pc           number(1) not null,           /* is this for parent-child? */
+  spare1          number,
+  spare2          number,
+  spare3          varchar2(1000),
+  spare4          date
+)
+/
+
+create unique index i_hcs_lvl_ord$_1 
+   on hcs_lvl_ord$(dim#, dim_lvl#, is_pc, ord#)
+/
+
+create unique index i_hcs_lvl_ord$_2 
+   on hcs_lvl_ord$(dim#, dim_lvl#, is_pc, attr#)
+/
+
+create unique index i_hcs_lvl_ord$_3
+   on hcs_lvl_ord$(dim#, dim_lvl#, is_pc, order_num)
+/
+
+REM END - dictionary tables for hierarchy dimension
+
+REM BEGIN - dictionary tables for hierarchy
+
+create table hcs_hierarchy$
+( obj#            number not null,                          /* object number */
+  dim_owner       varchar2("M_IDEN") not null,      /* owner of the base dim */
+  owner_in_ddl    number(1) not null,        /* whether dim_owner was in DDL */
+  dim_name        varchar2("M_IDEN") not null,       /* name of the base dim */
+  audit$          varchar2("S_OPFL") not null,           /* auditing options */
+  par_attr_name   varchar2("M_IDEN"),               /* parent attribute name */
+  max_depth       number,                      /* max depth for parent-child */
+  validate_state  number not null,                         /* validate state */ 
+  spare1          number,
+  spare2          number,
+  spare3          varchar2(1000),
+  spare4          date
+)  
+/
+
+create unique index i_hcs_hierarchy$_1 on hcs_hierarchy$(obj#)
+/
+
+create table hcs_hr_lvl$
+( hier#           number not null,                         /* hierarchy obj# */
+  lvl_name        varchar2("M_IDEN") not null,          /* name of the level */
+  order_num       number not null,  /* order of the hier lvl in the sequence */
+  spare1          number,
+  spare2          number,
+  spare3          varchar2(1000),
+  spare4          date
+)
+/
+
+create unique index i_hcs_hr_lvl$_1 on hcs_hr_lvl$(hier#, lvl_name)
+/
+
+create table hcs_hr_lvl_id$
+( hier#           number not null,                         /* hierarchy obj# */
+  lvl_name        varchar2("M_IDEN") not null,          /* name of the level */
+  attr_name       varchar2("M_IDEN") not null,      /* name of the attribute */
+  order_num       number not null,      /* order of the attr in the sequence */
+  spare1          number,
+  spare2          number,
+  spare3          varchar2(1000),
+  spare4          date
+)
+/
+
+create unique index i_hcs_hr_lvl_id$_1 on
+  hcs_hr_lvl_id$(hier#, lvl_name, attr_name)
+/
+create unique index i_hcs_hr_lvl_id$_2 on
+  hcs_hr_lvl_id$(hier#, lvl_name, order_num)
+/
+
+create table hcs_hier_attr$                  /* hierarchical attribute table */
+( hier#           number not null,                         /* hierarchy obj# */
+  attr#           number not null,  /* attribute number within the hierarchy */
+  attr_name       varchar2("M_IDEN"),                      /* attribute name */
+  expr            clob,                                   /* expression text */
+  data_type#      number not null,                 /* datatype of the column */
+  data_length     number not null,        /* length of the column (in bytes) */
+  charsetform     number,                                    /* charset form */
+  charsetid       number,                                      /* charset id */
+  precision#      number,                         /* precision of the column */
+  scale           number,            /* digits right of decimal pt in number */
+  is_null         number not null,                     /* can column be null */
+  property        number not null,                                  /* flags */
+  is_sys_expr     number(1) not null,        /* system-generated expression? */
+  order_num       number not null,       /* order num of the attr in the dim */
+  spare1          number,
+  spare2          number,
+  spare3          varchar2(1000),
+  spare4          date
+)
+/
+
+create unique index i_hcs_hier_attr$_1 on hcs_hier_attr$(hier#, attr#)
+/
+
+create table hcs_hier_col$                              /* hierarchy columns */
+( hier#            number not null,                 /* obj# of the hierarchy */
+  col_name         varchar2("M_IDEN") not null,            /* attribute name */
+  role             number not null,                    /* role of the column */
+  order_num        number not null,/* order number of the column in the hier */
+  data_type#       number not null,                /* datatype of the column */
+  data_length      number not null,       /* length of the column (in bytes) */
+  charsetform      number,                                   /* charset form */
+  charsetid        number,                                     /* charset id */
+  precision#       number,                        /* precision of the column */
+  scale            number,           /* digits right of decimal pt in number */
+  is_null          number not null,                    /* can column be null */
+  property         number not null,                                 /* flags */
+  spare1           number,
+  spare2           number,
+  spare3           varchar2(1000),
+  spare4           date
+)
+/
+
+create unique index i_hcs_hier_col$_1 on hcs_hier_col$(hier#, col_name)
+/
+
+create unique index i_hcs_hier_col$_2 on hcs_hier_col$(hier#, order_num)
+/
+
+REM END - dictionary tables for hierarchy
+
+
+REM BEGIN - dictionary tables for analytic view
+
+create table hcs_analytic_view$                             /* analytic view */
+( obj#             number not null,                         /* object number */
+  default_measure# number not null,                    /* default measure id */
+  audit$           varchar2("S_OPFL") not null,          /* auditing options */
+  default_aggr     varchar2("M_IDEN") not null, /* default aggr by func name */
+  validate_state   number not null,                        /* validate state */
+  spare1           number,
+  spare2           number,
+  spare3           varchar2(1000),
+  spare4           date,
+  dyn_all_cache    number(1) not null                  /* dynamic all cache? */
+)
+/
+
+create unique index i_hcs_analytic_view$_1 on hcs_analytic_view$(obj#)
+/
+
+create table hcs_av_key$                      /* analytic view dimension key */
+( av#              number not null,             /* obj# of the analytic view */
+  av_dim#          number not null,    /* id of the owning analytic view dim */
+  key#             number not null,                  /* analytic view key id 
+                                                    (av_dim# of hcs_av_dim$) */
+  src_col#         number not null,               /* id of the source column */
+  ref_attr_name    varchar2("M_IDEN"), /* name of the ref dim attr if exists */
+  order_num        number not null, /* order num of the key atrs in a av_dim */
+  spare1           number,
+  spare2           number,
+  spare3           varchar2(1000),
+  spare4           date
+)
+/
+
+create unique index i_hcs_av_key$_1 on 
+  hcs_av_key$(av#, av_dim#, key#)
+/
+
+create table hcs_av_dim$                          /* analytic view dimension */
+( av#                number not null,           /* obj# of the analytic view */
+  av_dim#            number not null,         /* id of the analytic view dim */
+  dim_owner          varchar2("M_IDEN") not null,        /* owner of the dim */
+  owner_in_ddl       number(1) not null,     /* whether dim_owner was in DDL */
+  dim_name           varchar2("M_IDEN") not null,         /* name of the dim */
+  alias              varchar2("M_IDEN"), /* alias of analytic view dimension */
+  dim_type           number(1),            /* 1 for STANDARD dim, 2 for TIME */
+  all_member_name    clob,                                /* All Member Name */
+  all_member_caption clob,                             /* All Member Caption */
+  all_member_desc    clob,                         /* All Member Description */
+  order_num          number not null,   /* order number of analytic view dim */
+  spare1             number,
+  spare2             number,
+  spare3             varchar2(1000),
+  spare4             date,
+  ref_distinct       number(1) default 0 not null  /* is distinct star join? */
+)
+/
+
+create unique index i_hcs_av_dim$_1 on hcs_av_dim$(av#, av_dim#)
+/
+
+create table hcs_av_meas$                           /* analytic view measure */
+( av#              number not null,             /* obj# of the analytic view */
+  meas#            number not null,/* id of the measure in the analytic view */
+  meas_name        varchar2("M_IDEN"),                       /* measure name */
+  meas_type        number,                                   /* measure type */
+  src_col#         number,  /* id of src col object the base measure is from */
+  aggr             varchar2("M_IDEN"),         /* aggregate by function name */
+  expr             clob,                          /* measure expression text */
+  order_num        number not null,           /* order number of the measure */
+  data_type#       number not null,                /* datatype of the column */
+  data_length      number not null,       /* length of the column (in bytes) */
+  charsetform      number,                                   /* charset form */
+  charsetid        number,                                     /* charset id */
+  precision#       number,                        /* precision of the column */
+  scale            number,           /* digits right of decimal pt in number */
+  is_null          number not null,                    /* can column be null */
+  property         number not null,                                 /* flags */
+  spare1           number,
+  spare2           number,
+  spare3           varchar2(1000),
+  spare4           date
+)
+/
+
+create unique index i_hcs_av_meas$_1 on hcs_av_meas$(av#, meas#)
+/
+
+create table hcs_av_hier$                         /* analytic view hierarchy */
+( av#              number not null,             /* obj# of the analytic view */
+  av_dim#          number not null,           /* id of the analytic view dim */
+  hier#            number not null,    /* id of analytic view hier in the av */
+  hier_owner       varchar2("M_IDEN") not null,           /* hierarchy owner */
+  owner_in_ddl     number(1) not null,      /* whether hier_owner was in DDL */
+  hier_name        varchar2("M_IDEN") not null,            /* hierarchy name */
+  hier_alias       varchar2("M_IDEN"),                    /* hierarchy alias */
+  is_default       number(1),              /* indicator if it's default hier */
+  order_num        number not null,         /* order number of the hierarchy */
+  spare1           number,
+  spare2           number,
+  spare3           varchar2(1000),
+  spare4           date
+)
+/
+
+create unique index i_hcs_av_hier$_1 on hcs_av_hier$(av#, av_dim#, hier#)
+/
+
+create table hcs_av_col$                            /* analytic view columns */
+( av#              number not null,             /* obj# of the analytic view */
+  av_dim#          number,      /* analytic view dim id, NULL if for measure */
+  av_hier#         number,          /* analytic view id, NULL if for measure */
+  sub_obj#         number not null,                 /* either attr# or meas# */
+  sub_obj_type     number not null,                           /* object type */
+  col_name         varchar2("M_IDEN") not null,      /* attr or measure name */
+  role             number not null,                    /* role of the column */
+  order_num        number not null,  /* order num of column in analytic view */
+  data_type#       number not null,                /* datatype of the column */
+  data_length      number not null,       /* length of the column (in bytes) */
+  charsetform      number,                                   /* charset form */
+  charsetid        number,                                     /* charset id */
+  precision#       number,                        /* precision of the column */
+  scale            number,           /* digits right of decimal pt in number */
+  is_null          number not null,                    /* can column be null */
+  property         number not null,                                 /* flags */
+  spare1           number,
+  spare2           number,
+  spare3           varchar2(1000),
+  spare4           date
+)
+/
+
+create unique index i_hcs_av_col$_1 
+   on hcs_av_col$(av#, av_dim#, av_hier#, col_name)
+/
+
+create unique index i_hcs_av_col$_2 on hcs_av_col$(av#, order_num)
+/
+
+create unique index i_hcs_av_col$_3 
+   on hcs_av_col$(av#, av_dim#, av_hier#, sub_obj#, sub_obj_type)
+/
+
+create table hcs_av_lvl$                   /* analytic view hierarchy levels */
+( av#            number not null,               /* obj# of the analytic view */
+  av_dim#        number not null,                    /* analytic view dim id */
+  av_hier#       number not null,              /* analytic view hierarchy id */
+  lvl#           number not null,                         /* id of the level */
+  lvl_name       varchar2("M_IDEN") not null,                  /* level name */
+  order_num      number not null,  /*order number of column in analytic view */
+  spare1         number,
+  spare2         number,
+  spare3         varchar2(1000),
+  spare4         date
+)
+/
+
+create unique index i_hcs_av_lvl$_1 
+   on hcs_av_lvl$(av#, av_dim#, av_hier#, lvl#)
+/
+
+create unique index i_hcs_av_lvl$_2 
+   on hcs_av_lvl$(av#, av_dim#, av_hier#, order_num)
+/
+
+create table hcs_av_lvlgrp$                 /* analytic view level groupings */
+( av#              number not null,             /* obj# of the analytic view */
+  lvlgrp#          number not null,              /* id of the level grouping */
+  measlst#         number not null,     /* id of the measure list for lvlgrp */
+  cache_type       varchar2("M_IDEN") not null,      /* materialization type */
+  order_num        number not null,   /* order num of group in analytic view */
+  spare1           number,
+  spare2           number,
+  spare3           varchar2(1000),
+  spare4           varchar2(1000),
+  spare5           date
+)
+/
+
+create unique index i_hcs_av_lvlgrp_1 
+   on hcs_av_lvlgrp$(av#, lvlgrp#)
+/
+
+create unique index i_hcs_av_lvlgrp_2
+   on hcs_av_lvlgrp$(av#, order_num)
+/
+
+
+create table hcs_lvlgrp_lvls$                          /* level group levels */
+( av#              number not null,             /* obj# of the analytic view */
+  lvlgrp#          number not null,              /* id of the level grouping */
+  dim_alias        varchar2("M_IDEN"),        /* attribute dim alias for lvl */
+  hier_alias       varchar2("M_IDEN"),            /* hierarchy alias for lvl */
+  level_name       varchar2("M_IDEN") not null,        /* level name for lvl */
+  order_num        number not null,  /* order number of the lvl in the group */
+  spare1           number,
+  spare2           number,
+  spare3           varchar2(1000),
+  spare4           varchar2(1000),
+  spare5           date
+)
+/
+
+create unique index i_hcs_lvlgrp_lvls_1 
+   on hcs_lvlgrp_lvls$(av#, lvlgrp#, dim_alias, hier_alias, level_name)
+/
+
+create unique index i_hcs_lvlgrp_lvls_2 
+   on hcs_lvlgrp_lvls$(av#, lvlgrp#, order_num)
+/
+
+create table hcs_measlst_measures$                  /* measure list measures */
+( av#              number not null,             /* obj# of the analytic view */
+  measlst#         number not null,                /* id of the measure list */
+  meas_name        varchar2("M_IDEN") not null,             /* measure name  */
+  order_num        number not null, /* order number of the meas in the group */
+  spare1           number,
+  spare2           number,
+  spare3           varchar2(1000),
+  spare4           varchar2(1000),
+  spare5           date
+)
+/
+
+create unique index i_hcs_measlst_measures_1 
+   on hcs_measlst_measures$(av#, measlst#, meas_name)
+/
+
+create unique index i_hcs_measlst_measures_2 
+   on hcs_measlst_measures$(av#, measlst#, order_num)
+/
+
+REM END - dictionary tables for analytic view
+
+REM BEGIN - dictionary table for classifications
+
+create table hcs_clsfctn$                                /* classifications */
+( obj#            number not null,  /* top lvl obj id containing the clsfctn */
+  sub_obj#        number,    /* optional subobject id containing the clsfctn */
+  obj_type        number not null,     /* object type containing the clsfctn */
+  clsfction_name  varchar2("M_IDEN"),                 /* classification name */
+  clsfction_lang  varchar2(64),          /* optional classification language */
+  clsfction_value clob,                     /* optional classification value */
+  order_num       number not null,     /* order number of the classification */
+  spare1          number,
+  spare2          number,
+  spare3          varchar2(1000),
+  spare4          date
+)
+/
+
+create unique index i_hcs_clsfctn$_1 on hcs_clsfctn$(obj#, sub_obj#, 
+        obj_type, clsfction_name, clsfction_lang)
+/
+
+create table hcs_av_clsfctn$                /* analytic view classifications */
+( av#             number not null,  /* analytic view obj id containing cbDim */
+  av_dim#         number not null, /* analytic view dim id containing avHier */
+  av_hier#        number not null,   /* analytic view hier id containing lvl */
+  sub_obj#        number, /* lvlId or null if cbHier, containing the clsfctn */
+  obj_type        number not null,     /* subobj type containing the clsfctn */
+  clsfction_name  varchar2("M_IDEN"),                 /* classification name */
+  clsfction_lang  varchar2(64),          /* optional classification language */
+  clsfction_value clob,                     /* optional classification value */
+  order_num       number not null,     /* order number of the classification */
+  spare1          number,
+  spare2          number,
+  spare3          varchar2(1000),
+  spare4          date
+)
+/
+
+create unique index i_hcs_av_clsfctn$_1 
+   on hcs_av_clsfctn$(av#, av_dim#, av_hier#, sub_obj#, 
+                      obj_type, clsfction_name, clsfction_lang)
+/
+
+REM BEGIN - dictionary table for sources
+
+create table hcs_src$      /* source object of an analytic view or dimension */
+( hcs_obj#         number not null,   /* obj# of hcs obj based on the source */
+  src#             number not null,                      /* id of the source */
+  owner            varchar2("M_IDEN") not null,       /* owner of the source */
+  owner_in_ddl     number(1) not null,           /* whether owner was in DDL */
+  name             varchar2("M_IDEN") not null,        /* name of the source */
+  alias            varchar2("M_IDEN"),                /* alias of the source */
+  order_num        number not null,            /* order number of the source */
+  spare1           number,
+  spare2           number,
+  spare3           varchar2(1000),
+  spare4           date
+)
+/
+
+create unique index i_hcs_src$_1 on hcs_src$(hcs_obj#, src#)
+/
+
+create table hcs_src_col$( 
+  obj#            number not null,/* top lvl object id containing the srcCol */
+  src_col#        number not null,                /* id of the source column */
+  obj_type        number not null,      /* object type containing the srcCol */
+  table_alias     varchar2("M_IDEN"),                 /* owner of the column */
+  src_col_name    varchar2("M_IDEN") not null,         /* name of the column */
+  spare1          number,
+  spare2          number,
+  spare3          varchar2(1000),
+  spare4          date
+)
+/
+
+create unique index i_hcs_src_col$_1 on hcs_src_col$(obj#, src_col#,
+         obj_type, src_col_name)
+/
+
+REM END - dictionary tables for sources
+
+ 
+REM BEGIN - dictionary table for join paths and conditions
+
+create table hcs_dim_join_path$        /* join path of a attribute dimension */
+( dim#            number not null,                         /* dimension obj# */
+  joinpath#       number not null,                    /* id of the join path */
+  join_path_name  varchar2("M_IDEN") not null,      /* name of the join path */
+  order_num       number not null,          /* order number of the join path */
+  spare1          number,
+  spare2          number,
+  spare3          varchar2(1000),
+  spare4          date
+)
+/
+
+create unique index i_hcs_dim_join_path_1 
+          on hcs_dim_join_path$(dim#, joinpath#)
+/
+
+create unique index i_hcs_dim_join_path_2
+          on hcs_dim_join_path$(dim#, join_path_name)
+/
+
+create unique index i_hcs_dim_join_path_3
+          on hcs_dim_join_path$(dim#, order_num)
+/
+
+create table hcs_join_cond_elem$      /* join condition element of join path */
+(
+  dim#           number not null, /* dim# containing the join condition elem */
+  joinpath#      number not null,                     /* id of the join path */
+  lhs_src_col#   number not null,               /* left hand side src col id */
+  rhs_src_col#   number not null,              /* right hand side src col id */
+  order_num      number not null,      /* order number of the join cond elem */
+  spare1         number,
+  spare2         number,
+  spare3         varchar2(1000),
+  spare4         date)
+/
+
+create unique index i_hcs_join_cond_elem$_1 
+          on hcs_join_cond_elem$(dim#, joinpath#, order_num)
+/
+
+create table hcs_hier_join_path$                /* join paths of a hierarchy */
+( hier#           number not null,                         /* hierarchy obj# */
+  join_path_name  varchar2("M_IDEN") not null,      /* name of the join path */
+  order_num       number not null,          /* order number of the join path */
+  spare1          number,
+  spare2          number,
+  spare3          varchar2(1000),
+  spare4          date
+)
+/
+
+create unique index i_hcs_hier_join_path_1 
+          on hcs_hier_join_path$(hier#, join_path_name)
+/
+
+create unique index i_hcs_hier_join_path_2
+          on hcs_hier_join_path$(hier#, order_num)
+/
+
+REM END - dictionary tables for join paths and conditions
+
+REM BEGIN - av dual
+
+create table av_dual (c varchar2(1));
+insert into av_dual values (null);
+grant read on sys.av_dual to public;
+
+
+REM END - av dual

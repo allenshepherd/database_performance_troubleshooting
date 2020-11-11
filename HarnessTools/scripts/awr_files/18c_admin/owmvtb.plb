@@ -1,0 +1,35 @@
+@@?/rdbms/admin/sqlsessstart.sql
+create or replace package body wmsys.owm_vt_pkg wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+b
+d01 2f2
+kF71oAS6BiHPrStWdshWV5HUrIYwg9crLiCGyi9Vxz+Vdnk+5eAssaEUq4aOjXBvWgpBz4pr
+o3koPbmaD8rcngSqw8Jjo/d+dII0Qk7k4YAHgPXbuA+clqXBmruLu4BO+TOeouKDmWe15YLa
+FgmCMCIqB+w+onVZMOgHm+kZKZx2mQmc9o9CztFENz2TfMpZ7u9vGyrdACLT6LumGvKpF7+u
+4/HC04G9YdqQlYjvK4MCi/Li1ZRrjjNP1c1Tb4/Xtr2KWd6ePk1bR4NWYm7YSwtZbDNJ3802
+1SrfTthPGOcozrGIs62TWnqr4W/1efnPum5rxg9CO3ukcOIMcdML/wy5zEUvsIA39xXmAMrf
+LC0ceTfJiyYVYq+PL9MFCOr25xkPJy0FeDSCk2j8ND5arjyuVGnb8NGxeq4ysHizKzEzRYFn
+LcDf+L6Z/gxZ25KbAJQKV8RBL2pM/blWPTrtUARDkKk0/VBhZkYLDUXNRYRZlwB8zatb6KQo
+rzREXVWmH8kFqZlyOxgO7++j8eWjwyQLYss9QxPSNDscw5G0sQqtAp8kLj84E2BDeBRGLbzU
+ekrgPpx/U238v9YhR+DrSV+Ncee106VMiko1/zmat5EZwVbRosXawRyWgF1zMEW8rvW0+eRe
+5rkXhRukZH7PGsztmpI56KDyzyAoaPhGgwMJ3/lbC2fAB+wmM2GkJL51Uxk0+K+lqMQTirSV
+jlFv2h/Ps3XqizOGJB5Bdo4=
+
+/
+@@?/rdbms/admin/sqlsessend.sql

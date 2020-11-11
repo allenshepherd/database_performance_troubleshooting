@@ -1,0 +1,153 @@
+
+REM
+REM  MODIFIED
+REM   dagagne     02/10/15 - remove ZDLRA on-disk stats
+REM   jinjche     02/28/14 - Rename a couple of columns
+REM   jinjche     11/22/13 - Add big SCN support
+REM   jinjche     10/16/13 - Rename nab to old_blocks
+REM   jinjche     08/21/13 - Add a column and rename some columns
+REM   jinjche     05/20/13 - Make the redo_rta_idx a unique index
+REM   jinjche     04/30/13 - Rename and add columns for cross-endian support
+REM   jinjche     10/15/12 - Rename redo_db.spare1 to redo_db.curlog
+REM   jinjche     08/24/12 - Add columns required to support Enterprise Manager
+REM   jinjche     07/27/12 - Change column name DBNAME to DBUNAME
+REM   jinjche     08/15/11 - Add a statement creating the dummy record
+REM   jinjche     08/15/11 - Add purge_done column
+REM   jinjche     08/11/11 - Add ts1 and ts2 columns to redo_log
+REM   jinjche     08/09/11 - Add two more columns to the redo_db table
+REM   jinjche     08/02/11 - Add GAP_RET column
+REM   jinjche     07/18/11 - Rename cur_branch column to has_child
+REM   jinjche     07/18/11 - Add more columns
+REM   jinjche     07/15/11 - Add and rename columns
+REM   jinjche     06/07/11 - Rename ERROR column to ERROR1
+REM   jinjche     06/01/11 - Add the error column to the redo_log table
+REM   jinjche     05/20/11 - Add three columns to the db table
+REM   jinjche     03/25/11 - Add column status2 to redo_log table
+REM   jinjche     03/24/11 - Change the name of the redo_pdb table
+REM   jinjche     03/20/11 - Add some columns on sequence number
+REM   jinjche     03/18/11 - Add some columns to the tables
+REM   swerthei    03/15/11 - force new version on PT.RS branch
+REM   jinjche     03/09/11 - Change the Data Guard table names
+REM   jinjche     02/24/11 - Initial creation
+REM
+
+CREATE TABLE SYSTEM.REDO_DB (
+  DBID                    NUMBER NOT NULL,
+  GLOBAL_DBNAME           VARCHAR2(129),
+  DBUNAME                 VARCHAR2(32),
+  VERSION                 VARCHAR2(32),
+  THREAD#                 NUMBER NOT NULL,
+  RESETLOGS_SCN_BAS       NUMBER,
+  RESETLOGS_SCN_WRP       NUMBER,
+  RESETLOGS_TIME          NUMBER NOT NULL,
+  PRESETLOGS_SCN_BAS      NUMBER,
+  PRESETLOGS_SCN_WRP      NUMBER,
+  PRESETLOGS_TIME         NUMBER NOT NULL,
+  SEQNO_RCV_CUR           NUMBER,
+  SEQNO_RCV_LO            NUMBER,
+  SEQNO_RCV_HI            NUMBER,
+  SEQNO_DONE_CUR          NUMBER,
+  SEQNO_DONE_LO           NUMBER,
+  SEQNO_DONE_HI           NUMBER,
+  GAP_SEQNO               NUMBER,
+  GAP_RET                 NUMBER,
+  GAP_DONE                NUMBER,
+  APPLY_SEQNO             NUMBER,
+  APPLY_DONE              NUMBER,
+  PURGE_DONE              NUMBER,
+  HAS_CHILD               NUMBER,
+  ERROR1                  NUMBER,
+  STATUS                  NUMBER,
+  CREATE_DATE             DATE,
+  TS1                     NUMBER,
+  TS2                     NUMBER,
+  GAP_NEXT_SCN            NUMBER,
+  GAP_NEXT_TIME           NUMBER,
+  CURSCN_TIME             NUMBER,
+  RESETLOGS_SCN           NUMBER NOT NULL,
+  PRESETLOGS_SCN          NUMBER NOT NULL,
+  GAP_RET2                NUMBER,
+  CURLOG                  NUMBER,
+  ENDIAN                  NUMBER,
+  ENQIDX                  NUMBER,
+  SPARE4                  NUMBER,
+  SPARE5                  DATE,
+  SPARE6                  VARCHAR2(65),
+  SPARE7                  VARCHAR2(129),
+  TS3                     NUMBER,
+  CURBLKNO                NUMBER,
+  SPARE8                  NUMBER,
+  SPARE9                  NUMBER,
+  SPARE10                 NUMBER,
+  SPARE11                 NUMBER,
+  SPARE12                 NUMBER
+) tablespace SYSAUX LOGGING
+/
+
+CREATE TABLE SYSTEM.REDO_LOG (
+  DBID                    NUMBER NOT NULL,
+  GLOBAL_DBNAME           VARCHAR2(129),
+  DBUNAME                 VARCHAR2(32),
+  VERSION                 VARCHAR2(32),
+  THREAD#                 NUMBER NOT NULL,
+  RESETLOGS_SCN_BAS       NUMBER,
+  RESETLOGS_SCN_WRP       NUMBER,
+  RESETLOGS_TIME          NUMBER NOT NULL,
+  PRESETLOGS_SCN_BAS      NUMBER,
+  PRESETLOGS_SCN_WRP      NUMBER,
+  PRESETLOGS_TIME         NUMBER NOT NULL,
+  SEQUENCE#               NUMBER NOT NULL,
+  DUPID                   NUMBER,
+  STATUS1                 NUMBER,
+  STATUS2                 NUMBER,
+  CREATE_TIME             VARCHAR2(32),
+  CLOSE_TIME              VARCHAR2(32),
+  DONE_TIME               VARCHAR2(32),
+  FIRST_SCN_BAS           NUMBER,
+  FIRST_SCN_WRP           NUMBER,
+  FIRST_TIME              NUMBER,
+  NEXT_SCN_BAS            NUMBER,
+  NEXT_SCN_WRP            NUMBER,
+  NEXT_TIME               NUMBER,
+  FIRST_SCN               NUMBER,
+  NEXT_SCN                NUMBER,
+  RESETLOGS_SCN           NUMBER NOT NULL,
+  BLOCKS                  NUMBER,
+  BLOCK_SIZE              NUMBER,
+  OLD_BLOCKS              NUMBER,
+  CREATE_DATE             DATE,
+  ERROR1                  NUMBER,
+  ERROR2                  NUMBER,
+  FILENAME                VARCHAR2(513),
+  TS1                     NUMBER,
+  TS2                     NUMBER,
+  ENDIAN                  NUMBER,
+  SPARE2                  NUMBER,
+  SPARE3                  NUMBER,
+  SPARE4                  NUMBER,
+  SPARE5                  DATE,
+  SPARE6                  VARCHAR2(65),
+  SPARE7                  VARCHAR2(129),
+  TS3                     NUMBER,
+  PRESETLOGS_SCN          NUMBER NOT NULL,
+  SPARE8                  NUMBER,
+  SPARE9                  NUMBER,
+  SPARE10                 NUMBER,
+  OLD_STATUS1             NUMBER,
+  OLD_STATUS2             NUMBER,
+  OLD_FILENAME            VARCHAR2(513)
+) tablespace SYSAUX LOGGING
+/
+
+CREATE INDEX system.redo_db_idx ON
+        system.redo_db(dbid, thread#, resetlogs_scn, resetlogs_time)
+        TABLESPACE SYSAUX LOGGING
+/
+
+CREATE INDEX system.redo_log_idx ON
+        system.redo_log(dbid, thread#, resetlogs_scn, resetlogs_time)
+        TABLESPACE SYSAUX LOGGING
+/
+
+insert into system.redo_db (dbid, thread#, resetlogs_scn_bas, resetlogs_scn_wrp, resetlogs_time, presetlogs_scn_bas, presetlogs_scn_wrp, presetlogs_time, seqno_rcv_cur, seqno_rcv_lo, seqno_rcv_hi, seqno_done_cur, seqno_done_lo, seqno_done_hi, gap_seqno, gap_ret, gap_done, apply_seqno, apply_done, purge_done, has_child, error1, status, ts1, ts2, ts3, gap_next_scn, gap_next_time, curscn_time, resetlogs_scn, presetlogs_scn, gap_ret2, curlog, endian, enqidx, spare4, curblkno, spare8, spare9, spare10, spare11, spare12 ) values (0, 0, 0, 0, 2, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+/

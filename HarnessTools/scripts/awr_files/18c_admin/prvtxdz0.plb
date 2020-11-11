@@ -1,0 +1,253 @@
+@@?/rdbms/admin/sqlsessstart.sql
+CREATE OR REPLACE PACKAGE xdb.dbms_xdbz0 wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+e95 388
+TIrXhnmz4AQtaBsPZ5zT4FTs1+kwgz3qLtATfC/NWA/uC8hRPeXGURw5gi941GF+ty4jLaCD
+9q7tw3OBpLbThYsd3/rystPT4RLki+1YB3mplmvmMzOSHr/OTjOS/lg1hh9RcDQtb40o8ITZ
+Rguh8QQKrW/w6RuJpR5mv1qMRpqRvQtS3fnF/ZXtUBgIRJtjLeABY5nLbMAgl1j/qlCEuNIN
+OZ7UK3A64YqxrW330UxVw0QquRdjjANWktQz2ZH6V1RrFgiA+7ovAxwsNn4LnjAES0zXoxD9
+GQqo0GscqDruuL+N5JoGuQAvlF3TauYO8O94XQQcO+FC77nrhcG3yTNw5NSiE8noDWXQlL7O
+xLvrPJabg0TC/k+uTEpxXjZDVSEvBTRiK1Jzcfb0DgaDbFoH3mCO5uk0U9QE9CqVRIga4uGU
+Vkf/wnsXKk05keyQw4wvuQNdUzXQ8zXolQ5ttB7pMWOeCdyiLXnlDgHzKxGkKpD9J07zBLei
+epbUaZXt++d4BL5iqQZnvP2g9j2Y8kUSMus1hMzlmDa/Lo3cy+uIXkkFFtYZGPz5imPGfEpi
+7ebpEU1dNDvDEFxbyxNKssEanHSSdKwG8ZkU63uqe+MdyhklXjbT1vUW6MyP7MKOHqFpXF4H
+z4az7dUJ5Tvzbh2ZMn2Gu7GEj8qtAsjmOLrpY0YY1wYGIqcrDMYSVM2cgophThJq3pqQ5AwU
+sx8jog1No7Lw4xbCDPgHH3mc/6awr+ogdiK8C1eAubOh+tMqo41504pZHJQIneE+GKZx/308
+9XTvpW+HM0OL37neTNl9gIDyyyvwawavOzu+zkvQIReY/ll4vK5Oqf7Ni3+g8QmhBMNEUMx8
+l325zFtqnmMCPs8g93IxnKqiUrb8
+
+/
+show errors;
+CREATE OR REPLACE FUNCTION is_vpd_enabled wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+8
+424 268
+N7/xLsXJZkbg1z9BiOvVkPuC4tEwg41ezPYFfC8Zx6qVzKt+sEzsASCyHFozrTzFT18U2gwP
+ogySfBYL2HySTkkxLfSEa22HdL/+EP5Vv8FRa0ee6aVOPXNz7b9ynRxPh0H+LQaakPry2ATn
+rKcp2JEjMh0fpZqWaS8KuOa4ObyOTR1+wYriuVQn3m7Kbf13uJxBjGzBjVIkwPlLL9Sof9F/
+v1ibcZEuwDn3YAUR4eKJomDKWd2D3bFy/Jp89jSj0Zz6e47O/4P2csOEb00mV/zRh9U+wkw1
+fK8QshZK/TVrYI4vmWUrxtZreC9MYL0apWz7umakXSwmpYt1QK5/P0LT3gvZf6fPh4GbaavP
+nJFNigoW/uA8H9ZNt3MaLHXPFDJ2BcTj5PcB/g1vebiFDttHPOn1UR6ERivvfVrJT0YFOip8
+PpAruh1Oun0zL3K2ql4rLpxeEVw3MVjp/1geRZ4hUBVhovBQ0TTvQbMmYjr9irJ75BtH/qRO
+kDcpLROopMRtP8giFJUA5iESBSRzQkKQ6Q4hNLq4gWG/gp2lvIR/5C0pfZcjVPqRiSBLbmjG
+7vU7SKX1HgfDr88R4FG14iRzHRke0jc=
+
+/
+show errors;
+grant execute on is_vpd_enabled to public;
+CREATE OR REPLACE FUNCTION get_table_name wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+8
+3ed 227
+LXkRR623Hagcf0mfOF56oREOd9Mwg40JACDWfC/NR2RXMvsaIVGIbWUEV6z9S/d5WiWV8mNN
+DAU+tQ8AfGsU8hpGRNm7ar+70SCiJ1OOpTJXg4b5Tvhwqv4kB2cbuyuwRCt0U6mnJqBwJ38d
+KLn5J5Ojr8UahncG+1tq8dOQB35HEfMicGtQIfJnZgH0WaaxGRpl9o4NJJI5bRYYFbT9D/8B
+78L/AcjGh6zV0XvhcqiP5v2UbkfJjyT4qFbuKjZeDqX/XgQZI7qsSPHHpJWjUVRY4DSZD2/i
+y1YqGSF7VVcbXJdOtB7/EI1qTSGndQmfx+wWpHHscQStLnjqwuHt605WOKd+QpfMhJkT4ZT5
+9kNgDlHLSdmvfTGfGQyf//ZCkylnOCnsO3u0cvHyBXmnz6L5pouwYhrCHU9u6zI7MAryeUxz
+MrlevLGmbGRwiDg5IB3q6S6QLQpR+33pawzOz4QRb3fFe+fEPjxMgkqA854vJfFE/X23zVOg
++oiyekEWbPeNvK7m1VC1B5BPpeBkakH5ph3huRM=
+
+/
+show errors;
+grant execute on get_table_name to public;
+CREATE OR REPLACE LIBRARY xdb.SECURITY_LIB wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+16
+27 5d
+84SuZBFlRVWV4HAeCgS3Ul/26p8wg04I9Z7AdBjD558yy7KbdPRf/gj1Cee9nrLLUjLMuHQr
+58tSdAj1yaammk6e2Q==
+
+/
+CREATE OR REPLACE LIBRARY xdb.DBMS_XDBZ_LIB wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+16
+28 5d
+0AB1tMsVZzVCvSMulv0juV+rdxgwg04I9Z7AdBjDuFKbskrQuFIYGP4I9QnnvZ6yy1IyzLh0
+K+fLUnQI9cmmpvx9mS8=
+
+/
+CREATE OR REPLACE FUNCTION isXMLTypeTable_internal wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+8
+5a8 327
+JuL8udHvOPOAFim+Yrgr8Cw62DQwg43DLtCDfC/NWA9//AkCwz6ezFwmysuhPGca2zGD3De2
+nn7Lft7mqLMYqppSWSLO8aMs8QhONFh4M7S340UVmT5+0G3dH7AQZgaB0ZN563qtGgjiH/8+
+OI/Mzt6Cv8mC2anL5E4vYYa3lA0dJctrta7nYKLbFlc4fbYThy95sWxuEnXhbmzSetEMVLzI
+ZQoZLb7SiyTkjcqZqL2NqRnqTvh4EHc+qJ1KgIzdqNhG2cJiRLFW2SEulSf8wkinpGWBGv/8
+0IQQ7b0nGnF8DSY5ESwqpNR8UDVHWl6Drf64dHrAo7lTgSJrXn9eqfmVCeCm43L6pCPeXNHS
+iERf4o0hAnqJ6+INs3cb3xWr0vdFChHX0vKw7D0HeHbq8yHczwaetJHp7P4ixCPeFRWPUQNK
+sAskBbX6LQqYqUDMZkI0uebiigZ1dkVpBMSggf0JiesbBSYvCOg5fBU5qzzPYAS+5/GBA/4h
+rXruQG8B7EmpVxCNzpIuUb5l8ksucSDHRiNCqqqFM/qoJIiboqVU8nI06CCJAnAT8Lirtdxw
+xHONqegQBgy8UbkYAsfQ3BXi6FVdCuHwLTR7GqIIvd3mcpk9XezwDEJhEOlJLoIsKNl2dYtz
+XS6rQqIf9KvewGM8PMtpTcDGfHbD+Lr7pysNd6xT990fFueFAxeMXMSNgOlUIvvz/n3SzzJf
+n7dhSF/SmL4cwcGhS33cW7cCDIddToMmRUbm437UlmQE8M8PwvfFqsF1tv2W/03vryiq+ynD
+CSk=
+
+/
+show errors;
+CREATE OR REPLACE FUNCTION isXMLTypeTable wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+8
+593 295
+hGs2FbOK4+9Bfz/G5qCDtYc476Qwg43DANAFfHTNbg819S2yGun8La+UyAGS2Dxr4RBd8foR
+N/2e9RZQJrW8iY5PiiGvQyEUb+kivIAJ/HqhsCGvciTGVY/5+T+fmqrkI9GBtmv76bgvYDMV
+d/ZUr1XZ9Mnd99vLwS89usp0eyDnqztbjtKnWu5MZKPIGQQUeCPZ5isVOTZhlXlUeQMDjCfE
+rxw9PD7P4Lo8E9foGMaT3BDNU+tBg8eb9LvBW33bcH97ivB7hRxDxArLsiLF4MQpT+qSXKSJ
+GNiCJv32FhkflHrdsJ5x0NIJ8YISYKC8WL7HcjkagLFJhIFr3M/7yLYPvdAPt5kMCVUz8aHR
+lS57TicB3E7dWVa6IC2YZ9kFtTDoc3cGyDqRgCb67rON6XxmpJ7oAE9frLfJ8F6lvo6BCZNI
+C8rgekjuArjjSraUbmA+M3rtzrNRpBI4gFXP8FsBOFJnKXXp8ktBHgqbyPYd/g6Ijs2y2IJU
+jyi4uq+Q4eY+weFnUD5jhvPO4f0bNFNr/spEm5xXgjxk6gAyQT1DOcnBXZh+cEVNdIx+MIrc
+ElmUXnrvQNtph9Vdnw3P92aFRFsZj8wGIjQaKY8+d0zHwAucxNbkfKKqGK5yNuxBrHDP/ijh
+X2d9
+
+/
+show errors;
+grant execute on isXMLTypeTable to public;
+CREATE OR REPLACE PROCEDURE setmodflg wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+7
+490 288
+e0akXR83wkx6dnMxD4rDK83CEU8wgzvDTPaMZ45VweQY+EsOwuKRY47sJVskuSsfpF4XaCqu
+4FHeHas1sl2oJLzqjBrolpN93c8j/74Hvr9xQDcCn45mIUK6KzFhMI0dTiijZu6n1rz7qvBQ
+wF9p6jg5eA03/3Qs3v6a9ZHLfytqSum89GvhObt95JUMolYiDoBCOkj5uGR6/9EIcjOBvVpP
+csG2aRcJnQmrZxsimF8OhuShMAg2z5UqBdJC4LhKa1DI7aI33YefI/DBTetLeJ71HjfLuB5d
++ej/C5q2CmyeatLi5GkiIiPM/1buyv3D1AobtwmgoLI3uEc8q4G7MhnDByO3avNXnlcnxsKF
+Jd89YemSg922kTrol8C+O/HXuqPZbQ/FVvXpROwHrh5ME7kDyy0kiR40p2Siw8gaMBHxonf4
+mD9p7rZLx4072RtrlWtVlPpImicagysgOgiL5yQWqZuUM7zb13KHu56MFqVyNSMmnMfsHs+Z
+mACFLoddE28R1bGefh7lNin17Ivk9fGg2ThPMHuso/fUmxUEO+MJzZIig0ic0i3LZrnCwQhS
+8VUHN9ZH6OD9PC0CDO45ipt3+n/WqfzFXRAyLrXhVps0SvJm0ANIzjPLdB4q1g==
+
+/
+show errors;
+grant execute on setmodflg to public;
+@?/rdbms/admin/sqlsessend.sql

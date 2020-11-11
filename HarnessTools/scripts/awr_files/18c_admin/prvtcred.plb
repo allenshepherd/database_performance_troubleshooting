@@ -1,0 +1,47 @@
+@@?/rdbms/admin/sqlsessstart.sql
+SET FEEDBACK 1
+SET NUMWIDTH 10
+SET LINESIZE 80
+SET TRIMSPOOL ON
+SET TAB OFF
+SET PAGESIZE 100
+CREATE OR REPLACE PACKAGE BODY dbms_credential wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+b
+1580 494
+u00FI+pZXwgIgxLuwnujstphNI0wg81Ur0rrfC9DbmSlYvSO5c2eV36Vr6HouushSn6wVUFm
+cP6pNnaptR8LmKH8GpgynAH7s3ajBZAIR3qdQvBxs36hZDcaeprxBSgPvHgsnVVVGRBzCClz
+F+YBLzaNj4hdDabxvQ6eq+SXa8Nfb8xnWiT28kXhJQDYFPbFwkSUnL2DPdNG9ri04lEJSFOF
+0DFDw7OJ8hE2lo8c2vFqbjwCZgFMjoPeapduIJG3TpTp2iSwX2QrVGvPFoz3tokhYnBxAp/y
+rehZ2f+A9KugctNhXY/HDw5XcNNzXSvfjXAeUkAaxZFq8kSxyskR+ipFBwug+1HZsSAGk8gV
+KtUd9bNpsNVo6cmZhUnO92L9RhpRxeba9rMXuIErrhvUlTB3ROOQ6hc92rkg1+tCYoKcOC4M
+Wy4N8zHxM7Hbjqd9pojGwCDDjicVNb7Lt3wKREqJ+hfpaldBMY9qJWDSHJUeVG5UFra3XExc
+ymYHyFLCujKIB9liE/GnZp/Q7yYejS/t2uftNIOsti5i2KuXz4v19dEwQzFy1jMTx/f7CFH+
+bm/T4MDFXOu/yD4xFrLxCxH/2CvYcCfaPvXxspSsSICHLvsQ0LDYGuCYLDf3EixJHwWeciW9
+eVzsFKDMaDzz8BFXxeslr5Nh2heFhS2+LRlWL0E+zG1VaGIgWrIX0BEYbmWOWuGbpYaAfk9M
+MzC1zjBKOQ5Z7yrXcMRiPEY0Z9OuSbd/nJ7/CtE/DG0zvTl0gRX3QobO9VRBQMEpdatxIGVN
+joYAZ0B5dvobXSJDQFCtCwXaBHZGj+BmFoRClb6sjUwYh4e87IdZt/NNkpYyJKRiz1VQboZW
+SwtVygeJ96HHikGW2hmSMKeFJBv3ruVKpxzQzJUPSOBkGXMekaXKcBmb/hSXwWIjtWsZMZzM
+IL4FXpgDfnPawgGuQtijF76b+xiVF1gjy1gjaU38xSTu0yfOo2CN01Y7PbP2TSpiJ1efiMfD
+kstN17uN/d+aVdr1AuBKM2li6SF6OOYVM4ui0FXanu0lhwl9Lcdk87lXiNE4/dSnlKR5OYjy
+aS6c1FQpQEIbb8eEKMSv+NAQtNIz483eqNGDQXto2l20AtneLrDeR4ti9IFHjlDBrRIItoqn
+Bj8=
+
+/
+@?/rdbms/admin/sqlsessend.sql

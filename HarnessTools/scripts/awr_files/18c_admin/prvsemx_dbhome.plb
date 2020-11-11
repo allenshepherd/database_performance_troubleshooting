@@ -1,0 +1,44 @@
+@@?/rdbms/admin/sqlsessstart.sql
+CREATE OR REPLACE PACKAGE prvtemx_dbhome wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+1b45 54a
+0ikRv06LRvHYjRMll8vVxgwbePswgz2TDK4FZy+5WA8txI70hKnlH9z2u9sxwhkq+OdQ2eUo
+Ghxn6Vy6gcG/dtpKpGQPZ+ysaRQGIIpYIMm8iJaI8Jbe4V0IxrtPvyiq5LFymrwkaPP8ivGC
+09o7NaO7dBHm17PzqPj5TFeIuuIUs8g+eQBtp8VEqrcYxDCNyEf2WqVFqA0s0QgL6TI0GpJf
+fFRpSVaoA67+/gO3JV8MCwDUoPYbTKs49ZH2G5Av/dUKZZa9iDgye5q0UKJCHS3xR3S0bp1P
+cq6bHmNjDn2MQAI5A9KnsGmjZSc4EE8O0Mkm4u2+02oi/9CzotYyo9ORdxnJuFL10tJdBAw7
+goFdevBDaundAUeIp86qL9u3C84OUbGKPzkja/XyAXRkvvFLF43rfzTow0ajkvIa8sAK0k6G
+zlsGQqbU1OOenguH/3RWQ1GYZlDGvY0vonL9kfhUrd6AaFNn9sWWjAV2pARBDxyq10Ex7xJo
+mUvmyLq9gyG/1lG9EBtNdNRcSWuTPaj/g4mNNluzsE5CyJoO7/Y/CnqEPzEPFXkpobQgJUZk
+TbhnOWrb4KIVGDLg8Eg7tjIhWis4B7Mm4FB9vp9uw+OTU66EdrmMJPiZxTyp85Jf6Q3yFSQU
+O/dLvQrnRsKJ2eDVubxuTANLKtPyH3GP7yZMy5GWY3gZpdBQ1yC29qjXns8kn/KMBOQc/Cdo
+6xtSizSPPsQLo/zoOaTd6MjFEB7rDeXQaqf+ucYbtFGn6cPV+6REvqg4U8D6bY1IXG5ZjMjS
+iclL3bgmlEqNvqTMV80pvvAgLLOkJ/VpODW/AzG5hhVWWcCQoKZMgdow5bfrN3Z+9xeM98GM
+97s5yB6hVJtQAnoikfnEJ2KJRmtK5xrVW5TxsR3g94+bwg0tMy/q3r6zCKJtDZLQLWns1OPG
+eBTspv1p2ZtK6fTy7DhYg5C4RRTirbbUvYAQZVlPKJGbiXUi1RtUIUHrIC2tGia7JB3Xfdjl
+/5+lTuV4bUOERhhOVRoziTcB0CdxxGe4t8sHh2+h98doASt6HA0XfGctEY+wKHXt8FDyFm5H
+Rgx7iVG61yh8OsWcEna5L1Y24g0aYlU1QqsmWUe0JlGOp5TTJY2h8WWhLhu9+hSyWBQsc4+Q
+h7SaG76kWPLippqmY/F/bf/fRGFk8SCQFkNyPhv2zUwQFxD8e/Ij7ozUz71LVEW9jjFlayse
+g06jFO3SMbq5FRjVNU6W1+4B1XX6aFjX+5wpcRqhtWF6PlVMh1IsrdF1Wzv9sI2Qflz4z3Py
+a8wwKE+sofycrP+pkRTr1c9yvD61eDIIi5Zhkdms
+
+/
+show errors;
+@?/rdbms/admin/sqlsessend.sql

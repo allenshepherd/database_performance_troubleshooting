@@ -1,0 +1,33 @@
+@@?/rdbms/admin/sqlsessstart.sql
+create or replace package wmsys.ltdtrg wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+779 268
+wP777/i/i8VralOiJRf8DvqeVdwwg5CNr0gFfHRAv/9epaeOFhhrxouiDPVmw2t69/Knt9Ed
+nzHeffiMwPEj4rdjYTIa0ggfofcnUDQGQI9yBWTEnZ37t0iQRAwNCxiZzrvmC1rbXEEOexXl
+vlOtil0WroezuRw4EV//dPDuS9kzhZtqwQPG7jefmpJudzruK8K+U2iFHVeTbm9nkLRNmXQR
+Yus1hPRG6uESX8ltCDrzWaVRLRcR4L0zFxcRC8ZdlKeWla/rm/tm3hjku92St2kSArLpqK5g
+8MYUoJ4H8TRHU4xxTUGn4KG03owXaF7S3I7lL3qovx9Ns5lViZaSLnRAfhg2G9PFEHELTRCH
+kLSQGDPReI16waCA8BsPKbQVT7PMFFsyMje+M/9NbvCcjhlE2dVHzRLHVu3nz01gzCYtghYM
+P+EN6hdkX0qN8je7rDyh1idhjhJcdo0uIeyldwRe1bT3MQLeGlBjDxv2pyXMd63sQ8hshkRw
+uQxDc3e5TXE0OHYICVLRVGO+GMevl/9cbplIBfdCjDTWqP833jrpxENQbmA6MsQ1wX34H71k
+HmUyLjpI4lGpr2cPluPNkgXasqAyDw==
+
+/
+@@?/rdbms/admin/sqlsessend.sql

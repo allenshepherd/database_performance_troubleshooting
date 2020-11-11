@@ -1,0 +1,117 @@
+REM
+REM  MODIFIED
+REM  sankejai    04/15/12 - Bug 13022221: Use GUID for ktli, instead of DB Id
+REM  amullick    01/05/12 - Bug13549280: move CLI dictionary table creation
+REM                         cattlog.sql to dtlog.bsq
+
+
+CREATE SEQUENCE CLI_ID$
+  START WITH 1
+  INCREMENT BY 1
+  MINVALUE 1
+  NOMAXVALUE
+  NOCACHE
+  ORDER
+  NOCYCLE
+/
+
+CREATE TABLE CLI_LOG$ (
+   GUID          VARCHAR2(32) NOT NULL,      /* guid associated with the log */
+   USER#         NUMBER,                     /* uid associated with this log */
+   NAME          VARCHAR2(128),                                  /* log-name */
+   CLIENT#       NUMBER,                           /* client-id for this log */
+   LOG#          NUMBER UNIQUE,                                    /* log-id */
+   FLAGS         NUMBER,                                        /* log-flags */
+   LOB_FLAGS     NUMBER,                               /* securefile options */
+   RETENTION     NUMBER,                                    /* lob-retention */
+   PART_SIZE     NUMBER,                            /* target partition size */
+   HIGH_TAB#     NUMBER,                        /* highest tab# for this log */
+   SPARE1        NUMBER,
+   SPARE2        NUMBER,
+   SPARE3        NUMBER,
+   SPARE4        NUMBER,
+   CONSTRAINT CLI_LOG$PK PRIMARY KEY (GUID, USER#, NAME)
+)
+/
+
+CREATE TABLE CLI_TAB$ (
+   GUID              VARCHAR2(32) NOT NULL,          /* guid can import from */
+                                                             /* different db */
+   USER#             NUMBER,                                        /* owner */
+   LOG#              NUMBER,                                       /* log-id */
+   TAB#              NUMBER,              /* seq# associated with this table */
+   VER#              NUMBER,                        /* schema version number */
+   NAME              VARCHAR2(128),       /* name associated with this table */
+   FLAGS             NUMBER,                 /* current value for this table */
+   LOB_FLAGS         NUMBER,                           /* securefile options */
+   CUR_TS#           NUMBER, /* current tablespace for the highest partition */
+   CRT_SCN           NUMBER,                           /* table creation scn */
+   CRT_TIME            DATE,                          /* table creation time */
+   MIN_SCN           NUMBER,             /* min scn of records stored in tab */
+   MIN_TIME            DATE,            /* min time of records stored in tab */
+   HIGH_PART#        NUMBER,                     /* highest partition number */
+   NUM_PARTS         NUMBER,          /* number of partitions for this table */
+   SPARE1            NUMBER,
+   SPARE2            NUMBER,
+   SPARE3            NUMBER,
+   SPARE4            NUMBER,
+   CONSTRAINT CLI_TAB$PK PRIMARY KEY (GUID, USER#, LOG#, TAB#)
+)
+/
+   
+
+CREATE TABLE CLI_INST$ (
+   GUID               VARCHAR2(32) NOT NULL,                         /* guid */
+   USER#              NUMBER,                                       /* owner */
+   LOG#               NUMBER,                                      /* log-id */
+   INST#              NUMBER,                                 /* instance-id */
+   FLAGS              NUMBER,                      /* current instance flags */
+   MAX_BUCKET#        NUMBER,      /* max number of buckets in this instance */
+   NUM_BUCKETS        NUMBER,             /* num buckets at last incarnation */
+   INC_SCN            NUMBER,           /* scn when this was last incarnated */
+   INC_TIME             DATE,          /* time when this was last incarnated */
+   CRT_SCN            NUMBER,                   /* scn when this was created */
+   CRT_TIME             DATE,                  /* time when this was created */
+   INC#               NUMBER,                 /* instance incarnation number */
+   SPARE1             NUMBER,
+   SPARE2             NUMBER,
+   SPARE3             NUMBER,
+   SPARE4             NUMBER,
+   CONSTRAINT CLI_INST$PK PRIMARY KEY (GUID, USER#, LOG#, INST#)
+)
+/
+
+
+CREATE TABLE CLI_PART$ (
+  GUID            VARCHAR2(32) NOT NULL,                             /* guid */
+  USER#           NUMBER,                                           /* owner */
+  LOG#            NUMBER,                                          /* log-id */
+  TAB#            NUMBER,                                    /* table number */
+  PART#           NUMBER,                                /* partition number */
+  TS#             NUMBER,              /* tablespace number of the partition */
+  LOB_FLAGS       NUMBER,                              /* securefile options */
+  NAME            VARCHAR2(128),                           /* partition name */
+  PART_SCN        NUMBER,                    /* SCN at the time of partition */
+  PART_TIME         DATE,              /* timestamp at the time of partition */
+  MIN_SCN         NUMBER,  /* min-scn column in all entries in the partition */
+  MIN_TIME          DATE,   /* min-ts column in all entries in the partition */
+  SPARE1          NUMBER,
+  SPARE2          NUMBER,
+  SPARE3          NUMBER,
+  SPARE4          NUMBER,
+  CONSTRAINT CLI_PART$PK PRIMARY KEY (GUID, USER#, LOG#, TAB#, PART#)
+)
+/
+
+CREATE TABLE CLI_TS$ (
+  GUID           VARCHAR2(32) NOT NULL,                              /* guid */
+  USER#          NUMBER,                                 /* owner of the log */
+  LOG#           NUMBER,                                            /* logid */
+  TS#            NUMBER,                                              /* tsn */
+  FLAGS          NUMBER,                                            /* flags */
+  NUM_PARTS      NUMBER,                                 /* # of partititons */
+  SPARE1         NUMBER,
+  SPARE2         NUMBER,
+  CONSTRAINT CLI_TS$PK PRIMARY KEY(GUID, USER#, LOG#, TS#)
+)
+/

@@ -1,0 +1,73 @@
+@@?/rdbms/admin/sqlsessstart.sql
+create or replace package body DBMS_MEMOPTIMIZE wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+b
+211d 4a0
+3vFmhI7uyu2tYZjnGbTaX7O5ZwUwg81Us0gFyo5Vx7zhXOWJWVw9XBJ1qwHTYVIVQK/haOIS
+LWENlgXlol7+tWq9YfsLxtyYxROKnATPuwLHV3GFLjjO89Hz51T1mVHK80Ks06fybo9y53B/
+PixLEAn/5o4BdjeJY4g300N1lyb5o3pmcWs2i44bWv5wRfjtQHpxNT9CyVQMBC+Rq7+jsMgM
+Vn+MjQf2smaOal9aZ4Lm8nKTNwv+GCKh2z5WJHlqbuRTElOqVCAcTtcjTvjBnMb4tnM6OdmU
+54iNl3kJLjU6TcrhWYEfx0DNVksvmfp/TDOCxiEVqIlfHfM0gb4hWB52r4DSQfPsfr9Kj7p2
+C0ZYn6hXj8h4DacKKE6fWKTt29K6LQuXVCEMGLhRGC6iLbpQ01JVxw2mH8frh5E1zcJyh6gD
+uI2Cbry+z3jVzfbODQt/RikpMqBYS4BivI15WlqHM3nNlb7NI8UgXsYPaqDkMk/LOGHszNKu
+dVJrd2M/5Yh32WkmRPOO8ltKCpp1AzbjulIZoobsGdjIJUNKK5+EPYNWWelFi8hg6DYfPeUy
+C7POuu4hzjFthQb+QzUp7sdvIOoZSlc7lCmc1oCZA6rw/U9rt0hvgTzYwDipp3XcWSvwH3au
+137jld/V16lxqCdfxqhvhW6gl9WxyI9NGada1znGTvSIg6mzpL7fih+0N1VvaLXl6q2RWEVC
+NCsH2o3Ylw3X1t7dPBw0PACfrGBxkES7r+kdSabN8N+gQ6HurfRb/PjKaAD3nLQKx9comq9o
+EcKOzHgq/6T9FVSDdRdfkVPAAL92n0bFufRUbxohYABjWdQnYlHo0DLv34XaCnWtgluQvvMY
+8AmpuPiEFXdvHqLQ42cHtiPKE9+NEELPG9NP3Q4HIpBRe+d5INJYCN+YkwiQ85AIQGy8M8N8
+IfN6D5JOE5+kvx1eYBKMJWEQQ027BEpIeglkArlxujMBy7q7YccK/E+nV+RRZGwgrgaWGGhy
+IIQp3BIJMpzqRpJyD9uT7AOP1glztcPJU/gNGV0eZJq7nQBKjUCMJiEE4P1tsgstOFbfX5VA
+LbR8PATUq2pUC1dBq9YS7xzZdAeNiDmlMHqNQEG3HG2yCy1rTPiu/8qWCSB9rdkXFq2KQRXb
+c09XqoFbrWb9qw==
+
+/
+show errors
+/
+grant execute on sys.dbms_memoptimize to public;
+/
+create or replace public synonym dbms_memoptimize for sys.dbms_memoptimize
+/
+create or replace library DBMS_MEMOPTIMIZE_LIB wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+16
+30 69
+SCg1RyWdxrLzr87funjiX6Al0Vkwg04I9Z7AdBjDuFKbskr+MoGBKOcI0oFfwPD+CPUJ572e
+sstSMsy4dCvny1J0CPVhyaamXhOyCw==
+
+/
+show errors
+/
+@?/rdbms/admin/sqlsessend.sql

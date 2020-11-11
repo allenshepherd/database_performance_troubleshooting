@@ -1,0 +1,54 @@
+SET ECHO ON
+SET FEEDBACK 1
+SET NUMWIDTH 10
+SET LINESIZE 80
+SET TRIMSPOOL ON
+SET TAB OFF
+SET PAGESIZE 100
+@@?/rdbms/admin/sqlsessstart.sql
+CREATE OR REPLACE PACKAGE BODY dbms_inmemory_admin wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+b
+11d2 672
+Eb8A/BQtrirt1eHklvAlF3wvkR8wg5XqeSAF3y8ZF7WeUc1wEqUY3/pA4GAiadN5tmNaNxoG
+MA/nv59bCy1eGjGp+fikocxkCLrC4EA4oXcpub7BvtqXiEokBj4191pvEYHe+D1+nwWBM/nu
+E5PiYROkFeUHL8+CPuDxXfEOvSuj3lYNqHaAXw77aJ8spD5qUvIYDKK+c+2vZUE4Qn+eyXF8
+f5AJIjtHZqgEr3ZskazH6Penrb2LhKJiOcAK9F11ryZtCPxkPTNtvuRO/3G8rA2tPYJX26z2
+S6CpLTaCMGBrNS2jZrTW6tvD3r3dg0B520L1MkcfQ73wLW/TJn0nEfCI8BSnmYmiJmWJsBSU
+wDhwMjRP7kbFDFKUHueU6jcYaqJ2agNbLvKw0/bgjhoBbYui7q5vm5y70V1tw6wFt27G7J5K
+6KITGAR56QmISr3xosHxB2jQAeT2upZ3WjCuvCJAAhK8QAhf2yyCNb7RQxNl8zgrvv78pBH6
+jOY/+ScZTyv0eTejVJu3wyabWefJWdthWiDKdBZjl2Zck26hUYkN1QOKGq2vWVyMsL+ghiJ6
+xMm6uOblB2XNKrdjPn9//w5v46jE/1guUycMlVLoyeYFcXJI1NefTPQwn8Com69IflQyowh8
+tnlm0z5lHQaxWFfiQS6bBncUcluN9FYXYQRPpjIL2262kxO31v4fLEALv5k5GISDvpTBCfvp
+uEvf/yC458/TYODwcOtQjouOwPtghS5JJDMbCRpaYncFFBVA6DJxPBKicLeE/5yF5yBGiJgB
+G6IrTVeoe0EqWWeEYubgjMXwUgiiUhG4/ivx3SUO+F3nCG4t9/0iao9AaAnwiwNvvCy+ULb3
+TtsT80FXS/nFyeb33Htd3xtYpMH/1EKOI8lsBw+Hooy2FqkjduVWeGpF17ym++eQU7gzfq5c
+X09NHP3ofqWt0gd1TyuznLWT6b/U8C5Ok3XivP0bmJRbokvG3jCW+qOZZrFVsVCET0d8tH8u
+xdN7axRSyyE2Hb/eyfNFseCx0YH/arlD3Vuka+iZsf1icIyfDlCjay5r6aj8/boTyHnuGS0S
+8JIC1V0BfbsmEdFZrCrf4nj86dV/RGJSp3/avzsLZmPI1k+WGa8XRpLkHDu/0CiaUMH4nb/V
+Nqo5KxMkHHj+mGzYANEkVTv4aiNMv0alJ+3kuinwNy9EOJdFiIkXn7eGQqu+OjeT3OVElgTA
+tyo5q/UtuRc7Tmm6JsPw6ewJzf0xSjfFb/4T/N3uN8PtNmfS5rIHF/dZv7VWu9/V0gE6S2ji
+LLEo3T78KltbwHpAZscWhweTHrP+7AHWtvsyhkjtvY2mipSuhx8h8hiIc6ScQ+HLcPb6A9uh
+6kceZk2MeaXrfEYysQFJzSho8EzxVEBLdzk44rPaw0nIwN0mEHewHTBch9A0C4a/sqq5l3B9
+12i+5oEXVudppoVnK2pR0NjiK8Yixfzn0rjQ8zB/2J9/rl5btsWtN2U7aqlHaC2/4T41Ooc7
+ORBPOkojnx5Zrnmk2ruD7V6BlbWxmblR4SUnnraSGacR8IqcjhH2Grks5QFWKAbEUdnsRnUG
+INRXBLGQn5oAnv+XeOxSXESn94sz47eJmwgoteHh3oSg
+
+/
+@?/rdbms/admin/sqlsessend.sql

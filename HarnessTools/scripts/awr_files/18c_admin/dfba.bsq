@@ -1,0 +1,168 @@
+REM
+REM  MODIFIED
+REM   vradhakr     12/19/13 - Bug 17971239: Increase size of columns for long
+REM                           identifiers.
+REM   vradhakr     02/27/12 - Insert row into SYS_FBA_TRACKEDTABLES
+REM   vradhakr     10/13/11 - Valid time temporal.
+REM   vradhakr     08/10/11 - Add dictionary tables for DBHardening : project
+REM                           32919.
+REM   sankejai     05/16/11 - moved fba global temporary tables and fba context
+REM                           tables from ktfa.c
+REM   sankejai     03/17/11 - moved in flashback archive metadata tables from
+REM                           from ktfa.c
+REM   sankejai     03/17/11 - creation
+REM
+create table SYS_FBA_FA
+( FANAME varchar2(255) not null unique,
+  FA# number,
+  RETENTION number not null,
+  CREATESCN number,
+  PURGESCN number,
+  FLAGS number not null,
+  SPARE1 number,
+  SPARE2 number,
+  OWNERNAME varchar2(255),
+  primary key (FA#))
+/
+create table SYS_FBA_TSFA
+( FA# number not null,
+  TS# number not null,
+  QUOTA number not null,
+  FLAGS number not null,
+  SPARE number,
+  primary key (FA#, TS#))
+/
+create table SYS_FBA_TRACKEDTABLES
+( OBJ# number not null unique,
+  FA# number not null,
+  DROPSCN number,
+  OBJNAME varchar2(255),
+  OWNERNAME varchar2(255),
+  FLAGS number,
+  SPARE number )
+/
+insert into SYS_FBA_TRACKEDTABLES values (-1, -1, 0, NULL, NULL, 1, NULL)
+/
+create table SYS_FBA_PARTITIONS
+( OBJ# number,
+  PARTITIONSCN number not null,
+  FLAGS number,
+  SPARE number)
+/
+create table SYS_FBA_USERS
+( FA# number,
+  USER# number not null,
+  FLAGS number,
+  unique (FA#, USER#))
+/
+create table SYS_FBA_BARRIERSCN
+( INST_ID number unique not null,
+  BARRIERSCN number not null,
+  ACTIVESCN number not null,
+  STATUS number not null,
+  SPARE number)
+/
+create table SYS_FBA_DL
+( OBJN number, LROWID varchar2(20),
+  HROWID varchar2(20),
+  USN number,
+  SLOT number,
+  SEQ number,
+  CSCN number)
+/
+create table SYS_FBA_CONTEXT
+( XID raw(8), 
+  NAMESPACE varchar2(255), 
+  PARAMETER varchar2(255), 
+  VALUE varchar2(256))
+/
+create table SYS_FBA_CONTEXT_AUD
+( XID raw(8),
+  ACTION varchar2(256),
+  AUTHENTICATED_IDENTITY varchar2(256),
+  CLIENT_IDENTIFIER varchar2(256),
+  CLIENT_INFO varchar2(256),
+  CURRENT_EDITION_NAME varchar2(256),
+  CURRENT_SCHEMA varchar2(256),
+  CURRENT_USER varchar2(256),
+  DATABASE_ROLE varchar2(256),
+  DB_NAME varchar2(256),
+  GLOBAL_UID varchar2(256),
+  HOST varchar2(256),
+  IDENTIFICATION_TYPE varchar2(256),
+  INSTANCE_NAME varchar2(256),
+  IP_ADDRESS varchar2(256),
+  MODULE varchar2(256),
+  OS_USER varchar2(256),
+  SERVER_HOST varchar2(256),
+  SERVICE_NAME varchar2(256),
+  SESSION_EDITION_NAME varchar2(256),
+  SESSION_USER varchar2(256),
+  SESSION_USERID varchar2(256),
+  SESSIONID varchar2(256),
+  TERMINAL  varchar2(256),
+  SPARE  varchar2(256))
+/
+create table SYS_FBA_CONTEXT_LIST
+( NAMESPACE varchar2(255), 
+  PARAMETER varchar2(255))
+/
+
+create global temporary table SYS_MFBA_STAGE_RID
+( OBJN number,
+  RID varchar(4000),
+  ESCN number)
+ ON COMMIT PRESERVE ROWS
+/
+create global temporary table SYS_MFBA_TRACKED_TXN
+( USN number,
+  SLOT number,
+  SEQ number)
+ ON COMMIT PRESERVE ROWS
+/
+create global temporary table SYS_MFBA_NROW
+( RID varchar(4000) )
+ ON COMMIT PRESERVE ROWS
+/
+create global temporary table SYS_MFBA_NCHANGE
+( RID varchar(4000),
+  ESCN number)
+  ON COMMIT PRESERVE ROWS
+/
+create global temporary table SYS_MFBA_NTCRV
+( RID varchar2(4000), 
+  STARTSCN number,
+  ENDSCN number,
+  XID raw(8),
+  OP varchar2(1))
+ ON COMMIT PRESERVE ROWS
+/
+create table SYS_FBA_APP
+( APPNAME varchar2(255) not null unique,
+  APP# number,
+  FA# number,
+  flags number,
+  spare number)
+/
+create table SYS_FBA_APP_TABLES
+( obj# number not null unique,
+  APP# number,
+  flags number,
+  spare number)
+/
+create table SYS_FBA_COLS
+(
+  obj# number not null,
+  columnname varchar2(255) not null,
+  flags number,
+  spare number)
+/
+create table SYS_FBA_PERIOD
+(
+  obj# number not null,
+  periodname varchar2(255) not null,
+  flags number,
+  periodstart varchar2(255) not null,
+  periodend varchar2(255) not null,
+  spare number)
+/

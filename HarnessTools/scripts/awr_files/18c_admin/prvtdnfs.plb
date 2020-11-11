@@ -1,0 +1,32 @@
+@@?/rdbms/admin/sqlsessstart.sql
+create or replace package body dbms_dnfs wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+b
+3cd 1b6
+ez5lPQNynOVZ4RJZeJg7D85ZzEIwg2O3DPZGfI4CmLlkU5jMuN1S62Xi4MANOFlmQucD05dQ
+TJhYtSjwKVd33qBkLy/xEnKtOtPa5igaNU2O2hUpOoF6bhmH/92yaPj7UN7p963wuHwqgslL
+EVYKOfDx59hCbfSz9eThuL0As9L0fWZOO9XWQveWAN6I5Frv4w9hTfbmf2sxUcejFXpmeY3b
+qge6GMFrztSe/dHW3b9nwqEbdnRsbV3VjF+QjpehBQo8vZYHRYAA2qbPfnNAGVmC7Qhzt+7h
+0HU8d6psf9WeODzBF6JZPOhOdPBcq1srKKQn9/VBHlqBB1lRZsRU4gXb8Qhh5vN4QNXeUUD5
+Q3fbDW8a9gXnDoF9tpDA5IHRLWIfvOzj0TGOOtGaiygF5FKd1TNCucEbsg2cQZi/4D655g==
+
+
+/
+show errors;
+@?/rdbms/admin/sqlsessend.sql

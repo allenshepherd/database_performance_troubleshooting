@@ -1,0 +1,6 @@
+{
+global:
+	kdzk_global_specialized_ctx;
+local:
+	*;
+};

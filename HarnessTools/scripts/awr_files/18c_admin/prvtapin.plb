@@ -1,0 +1,37 @@
+@@?/rdbms/admin/sqlsessstart.sql
+create or replace package body dbms_application_info wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+b
+e6f 36c
+z/Ws6m7CkxS65NDIPQUCELyzlqQwg9cr2UoTfI7NYTqeuzkUlugoMrMRb9RXdKvg7wWggtWJ
+IpQNbIzfXKqdNob0f0B1RpUwHcLPcgD+diRISqWk8ufjVOSmvM+SgbBoeiL5aD8ZisSY5Wgr
+mp/KlG0jpsjHQKFxuOEJdpyshcDXBmbvN5KJjju9zqlXvOnkKjbn2YmzuX5T2FLLWhaT78gJ
+oc6eOOHhdGJQuL1FatdnbL3/12MGesBSrODqvtjIGb2ydNqGZ+aAMre2RQz1CvQDiWmT6PWV
+4Yaq8RpgcZDSQ/SeEiYbsbEbm4NirOdSaWULITi+5zDyC8BkZgmDXf+CzBxlbEZqRKUEZoxZ
+tU9tr8ABSG1rHlt/k2tmt6lvk4sHFPOu48/gC3xC4ZgzhBXYSpicgsq9YebkTS9iPLP1L/oU
+lyJlP7/zWozciLY3LpDt4Dtrgg9zOz/DmKqUtCA/qrVFnZvvCVDDGIwU3GoQyxMNa4GtS+Ie
+TuL8au2a49SZGAzqcKW5eQwJO1KvfSrzofzmE5UdTbsgqRZmqEKRwkYNxN2XC+lS8RcNfDf5
+M281qSBCpfx7dAWdeDjwF8d/Mf1xX94fH9WX12PWf4WVI1ykAdJQq8VG1AeucpstxC32ufWG
+QfBUeffLAamnYN4L1V1OUb+uYMHeCeGrBl/1vTs573KSs8ZBbUmaXeKN4myGK+zzQI3UoNny
+1Zd5AVuGGo3JY+3O4k+n8ISrrXbrxXSfyjJmxPPHeCic38tOIbJOIXROIZkfeJ4feL2CKufB
+eFuH8DdS/vXLyBIHFcmwNe0PcLoUd+jwtyd6N4ABaybzw8+BzUN7Gww90E3vDTAILN0AWlU=
+
+
+/
+@?/rdbms/admin/sqlsessend.sql

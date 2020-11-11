@@ -1,0 +1,37 @@
+@@?/rdbms/admin/sqlsessstart.sql
+CREATE OR REPLACE PACKAGE DBMS_EXPORT_EXTENSION_I wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+866 327
+rSq1u4cY51yR4vBzDZwWoPwOc64wgzsr2fEGfHRogg/uCwkqDSoNsW52gKlbJMJhWa9x5LWq
+LcAcyC/9deWBRFq/o3n68Sm+VwgdS+I9IhVjxMspHa8w3i6J2tQCprsBCqkN6iuBtpoPc7uK
+2iqGQc1vbX9vdHFnNkZKmRRKF7jzULBk17kpg1uCNK+0+3xmIKEOws3q0gbn7LdhFIpHkFfA
+/sHvRAXi23hxaqWGsiJ5vQsYek4uUGJT4drzhm5v/aWNkoW/n2mq1ix6U4VVN+36H3EmWLwG
+sdu/qa9Y3oQLubeUfawdQErYUkZ9NWn/7BJEu3behcvcdCtVVvUr2bnACvI+cu/NK1/TeYmq
+Jt8lnicyAwDpKS8+BZ4KRq8C+CL6tOnTu1xPVzLRMgt/WwHCxdzMx47G4w4S6ULP08opDNa4
+tDl1HHjVOpFuFGdwjiv2VL5JZ5+hmwhu06mxHLlpENbocMfCHAW4k8CuLWO5724+2CC0OXqb
+tnjvaH7dw+/rUr8uTHXuVzAHKjBLVKxNC4zNtWCDea3UmQlRBP0mC4khj4IOm/cl59wYdfGn
+bQhugphnJu4Fq4WMQYsmnJqId++AT8mL72ev1tF66DNUbo1CYuzJDRqT32kryGgXNutBnqzr
+9OLZOU7xIDDkziQiJQhBbQkt2MmsP6fYFPyuwtAl9fW1OnUKaKegmnht9AGsCRGVsxArF+Lh
+2IBxJpCTTl3FpNEOqHGKcHLWFTXoUQUq19JD8HhjrItDaW1ciq3oDjfy7t31YyTz12Sqs72L
+Cg==
+
+/
+GRANT EXECUTE ON sys.DBMS_EXPORT_EXTENSION_I to EXECUTE_CATALOG_ROLE;
+@?/rdbms/admin/sqlsessend.sql

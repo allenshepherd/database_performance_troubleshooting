@@ -1,0 +1,35 @@
+@@?/rdbms/admin/sqlsessstart.sql
+CREATE OR REPLACE PACKAGE prvt_cpaddm wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+948 28c
+1rm6pmBeTRtZLnfpMsbqTNPHMhcwg9crACBqyi/Nig+vdVqIg1/wey9TV03fYASw10blyTuO
+XFyqqiiKz6kmBlcMtIoSu7kZEHDVl4fey5G1c/gLJP4smFUfa/CTmdxUjCpaCxOr9WAeVu+i
+KRj7ICHIdl87bFyBRWWBNi4wiUMMXb2hkV7RNXLLZALYLiVLRnFa9qK9/4UmN4y9FCCyGhcn
+k9FFglzw9FV74ni3L3xMkdyV5fdH4/LT6BbBYz0OxXmKEpNZUL6xUBwUmd7KJEX5u8o76wSz
+helBH+sbEi5XibQ+NEDU1PQL3lIf3oagLVKDRdEnVPtKYk62DWvsOyZBt8EfdjdRdVG2suiz
+8XDE1yuvZnbj5cPD1hALe26ezxZ9PJ75IXpjXodiMiJAIwMa8qya7wpnbRi/Chj/bIHZlEFe
+qTHzMN+C+3zxwLycM9ta+yj43nKksKlIuRaexM351Gfq1sZrAJXVRtHesoEmNrktSZYmR/sL
+QrXhC0I+DtknaREodtODHQdGuS5ctM4KnENQGvgW2FvUx7bwR0ygrx1bSSMM6yWxDOWNX8Ua
+5r8XLsIZpG+OPs786Mc0ONhFdVLFvJ04IvTDz1KWUdRJX7LUT2vwLc2W2wbuKJ2c/S4=
+
+/
+show errors;
+GRANT EXECUTE ON prvt_cpaddm TO PUBLIC;
+@?/rdbms/admin/sqlsessend.sql

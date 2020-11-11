@@ -1,0 +1,46 @@
+@@?/rdbms/admin/sqlsessstart.sql
+create or replace package BODY SYS.dbms_soda_util wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+b
+f1b 577
+n6x3/a/ovK4TswxjphLql3as4mIwg5UrDNAF3y+5MZ2sB6anpsZLxL1p24E38dRhq/TDWpeY
+uQK0ITUtZ2E+Rf0OfWS7dCZbedkZKkU1EMhj7jS8IMlaK3oQcrHd01jNtLDQ/igz7h6wuvjN
+CLmZ2YERwz5Y5ivVcPZ8Ao72ecPRPMowCWdvXKeRPJkqtw04uuIlsurqCOfNiD9vR3OjQtLJ
+3xOVbczhHnEOrEDhCWXVJ3C+fCVY2IlWMTNclZSWr6ngsf3dFDY/fxfUVCG8nXMFInr5Mv7G
+uzPuuU9yhr39nOTo+tT85OoEC8rD/+pWZmQM30D9HWbWfnaCA/u7KaaV2sOC5UAI4eprULjy
+3pVSs/b0dNZTVLi35gHAKUwLg6yhXxr1LLvYA/M6q2b9nDPZqJ4uXyd8VAf1qXPrjtoQxn97
+LYh4eu6rfoDEyXkzBOW30cYaYhapY1uuoZRHztOPJtbV/FF9LTNaSmc/eEaw+7wWoBzqKNVV
+Z5IijQGVssdewg351cZ7gvVpGw6SvSkIiN5z4BoeNhPvwKlJTvpcdngDtjDmmGp/qw3ImULw
+hxFu4OwYmrwZtUL4MP4I2RcnFyR/EqFzR4vqALRWPg092nk1PiboGMFaYj/9Fu0WI3PJMzPN
+rlJX/c6qR6xAKCrjjo8bsWCCVoKf4Yl2s/WNQcoNTbFHP5ZIMCQ6CoryPARuRRv3wqbR4PF4
+/bY69Tgxf0Oymj6DExEZUgWTV4cDRgXftUuQo1gyiJbWiq3J6zuX9jf47LqfyEywDa0LLOk1
+NGwTxi6uslCfWQprpIY+3MwpZdwH53n6ohcf8TGT9ZFF2IQbkA6wLS51Ec85EkyphDPhnzP+
+/cRF1+6SPvxawWa5/8yxRM/Rx+01gKT05ot9mEniDP5YR4H7yyYe+oiDsxhFjhdUt/qWWxqQ
+i9gVx2Bv7PW3cbgNA+ccPLg8NmIWqQOD6FSL9B/sTJSegJzqPjuNpxg+UDI38PceGYDqFOa7
+V098eyBW6XmHmS/2A1hTAzf4O774As2u+jniB8YOY1JTdXfMywKMZM1N6GPLK5piukFMtth6
+5kQ+Uj3gYhrYcfKgbuuXz3t52etikgwrTFww2NIC45t1/x+79atpjgdJSQtVma36RKR58C7d
+kY9olIluxuKE/pCkOHQkDwM6Uet+0OiGliNJfs37i5rQOWP+mJED7TXeQDhSuJCzJriGqHHQ
+Ovx0VZFLmo7nhiET+HTt38FCEpC+XcDmi3XSfrMZWWlLnFXdPrlB143WnppKyoYnAJ2PVmCB
+CnPXpmwkQPEQy58jktKU71n/F11B8E60hnph+J18ncoVu9DN6fEQKSG1CwnBJWtEuy7JaDwb
+lm8k5JmcWBVM
+
+/
+show errors;
+grant execute on sys.dbms_soda_util to XDB;
+@?/rdbms/admin/sqlsessend.sql

@@ -1,0 +1,72 @@
+@@?/rdbms/admin/sqlsessstart.sql
+create or replace package xdb.dbms_soda_dml wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+54e 1ba
+333uzO8FIbjE2Rur/VEGx3C3DjIwg+2JJK5qfC+VWE4+SFls292DKQbaCV61t81n2pMOX8N0
+c/nTSqyDpmMyplIM6JrtaBK/nxY8tGXScpgQg50zriaa7aafUmy947saOCgWNgfK/ZVQfgqD
+7YL9J0hNs6hEDHXIoCFt8kCe3ULVdXtyZ9+htrTGg2P/2ZFpgl3xOUcdIy3mqhJMr/rA+iLL
+mwsBBmUv2xgqSsXpqXm5k9s6Z2hF5mcw1IU+l8w4zkDjg0wUoGPmvQbKNPWzkijfYqdPjMor
+djqWjM7c72sJgfd7DPVKpQeqKgXlBn+JlPaptTGDKY5hbcFHgd/G8OhcJaChVGObZfL2FSkZ
+geRoSgC3i+OtiEaaeHIdJZEusGGnMJKVaOG6rprGdxnhwCM0HSNTGXpmE+TmHEEkJSdCgTlE
+8VaA
+
+/
+show errors;
+/
+create or replace package BODY xdb.dbms_soda_dml wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+b
+ee3 477
+EANibFgM5CHMCG+ks/MsC3K+ft8wgw3qACAFfC/N2A+va+l5Z6VQLWA58hqkG9OuyiZXWONv
+iP31hbVbI46BNaGJYyG9W/3x0L+7GZiGs5TXuylYt3S0tkL5c5snD7UitcJylqrjUKEJPoWt
+CpRJdNjI7NUDCn47Ro2gXTacyKIiaY2aCYHvLlqRXG/R8Qozvc2xRzI/2Qz87358B4pKwYs7
+i4smg5FB1dyyxGAwu7m6/aMr1TNsSy65iLG+0437KlHJT8r4iCSZWDAldk7OAal6woq4sDU/
+12sWfLb7JadoaWCykEQxMgljGvOo4YxDardB8anX+a9SlDEpXgFvkfKsoF4Gj0RYzQc7KKBN
+vhs1smNMEKLhX/KopAyQSmNfucugDMYlGu/8/sZGDN+JzlIJzl8fdnglUbQylTTYjXhI7m6O
+if2OmGjAX10AmvVG0g5ApVJwLLH3LG6e4iITy+eVbiOgubG5OPG5IT1FFQS1t/z9/cD9ghzX
+6Id3aEZVs112eqqO9hyziQ3hm/itF/veFDFnFVwl1HSEeadX62jMosm++Ati5peYRReNvv+P
+RoAggByqR0JDZldPVLpUXwSVQQ5gljkPbE5fqhkvk5g8fgK4iSz6olugF683tvLCh2p/OCvV
+rSIL5kIr/gKMcnmKF5oqOHNXdVmpTVBVLXqC+MMxEpAb8UdKK0Tn8JfHqF0xy8rs7pRP+7RJ
+pySeeSGHsA6Pw0UGfOXUDldi9mNViUmrBJVbJYp1O6dHP3qH8z5uQB7JzakPePWGIckNzKcI
+RcUlhRJQQFpvI/71MMK8PlNXccYp36CknlKb7nHfSmlNStLhDqtWI+3hkMlI2/SKbhOEMMc0
+qJqy1575ECRumeMzoSxUKyceFTGD4wap2MH+8CYoKsA9TEUVv/bA3OqcahnWwQKH4eTKzgH9
+hxc6rbiwES0flb0SIDe/vcmxIIg1LHADwld0v2s5BYrArb2xxriWcaE2ZMAWDDhobT+rFHls
+DOHjZykvBxUwiPn0q+KWDFtbyVjblqf3h6NXAeMkKsXpcmxsoN/Ka0ajuoxNd6AIUjQ8tgwY
+CzyUKpgQoB16R/Bb3RVMM1XkBjMIEFfhDpSoVvCGnKpcVxFX
+
+/
+show errors;
+@?/rdbms/admin/sqlsessend.sql

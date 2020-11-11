@@ -1,0 +1,69 @@
+@@?/rdbms/admin/sqlsessstart.sql
+CREATE OR REPLACE PACKAGE SYS.KUPC$QUEUE_INT wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+953 2fa
+Eta94uDrSWmchgEJq8ByBbtb3u8wgzsr2UoFfHSKMQ9rhKkuqc3hzT1Jo8l2MgGhjU2OIim1
+tVGb1fek2jMiX3bhyIt0B4QbOc7aw4UZ7e4HnRwAOWvjN7BtFpP0F2tQZbhW+FDHMxi3UBj7
+86UMfcWYinV/1Pl9ZnFnjdNYaQiEVGvX3HmFZkIKVPhxr5uZtJo6Bzi5Fp4nfvbpdS1oHgTr
+tYPUHAt2GqL9TX+k7eYWSy7OngwLKsYlupFoZi8i438lioXYgkznxvI3Dmm8HGpgRfd+mkor
+kQ2Kf1gzIWKP54WYqHu9F7DPCpDTbP+DWBXXDZBRbLNcSz5oh9VDEkD3p9l4ilyoAkHktmji
+6dMqYWUzhuPWPgaKBqs3nIlWMQWTujTRBOUMvSp7H8TAJDtpmMW4zZRjgSPOz4DzD1dI6Vn5
+kfPuVjzsyKQsG0+fVBFi88O8Df/UUfvaVAoyU9uJCeDAOW6ALaJHcOlqSslTF+JSIMzZHu5Z
+efw+mlKguRl8P3u7+fh8d/rjhxKHcQQ3CEgbEJro4jSJTOwt5ro110AqJ1YCZGp1c9v/eO1m
++46x7ptVYs6IW7l/j1HJy1wxtgSHvJCgF6wulqXwwQzX19lZITN5RRDwz9iHRG3zd7PA1L/A
+3K0JFi2lXK6g+Kv/08XEM4SBz3hHazvt9oK53O+Zl2zJDF2jieAICcITjiSqOw8uM9sNx1h4
+Gez6ev6P5R14cseg14pkXvmGJM4Xkr0=
+
+/
+GRANT EXECUTE ON SYS.KUPC$QUEUE_INT TO EXECUTE_CATALOG_ROLE;
+CREATE OR REPLACE PACKAGE SYS.KUPC$QUE_INT wrapped 
+a000000
+1
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+abcd
+9
+723 2a9
+aL2VZtZmjXcL6B0Pa61MX7lupnAwgztcLiCMfC9Vgp0VB42D8lwo7Yshdb0IPLQZCFfV3Pm1
+teCyOayo3utN4x0lE9B4u/DwHTr7YhjQj127nfuMZVbKpaEqUa+MZVrhNE2bx3RgwsJgpoKF
+Xlm9+xCBcb2o+bR7Qd0hqwJlKQF+9+Wc+2ZdZ2B0cohaQakZKHgYTCeIfbiFWpWLGrGIA7U5
+hxJZrDxa9xJ48U2N+/yGpHF2k/Quyo7xLwS/t9d+1EHEvUw3W8yIJ7ZFiJ+Dcm5l9vZ12P8A
+ArJxb6V0duRGb7iBCWkgaYZAI5Mj1eqTQgK5npoeM9egaiMSo111EqoJfpGF5Wo4BthxJUvc
+ZbDtRg5CMTGpIIAMMLzgCATT2tIiYjruxQK0Ot/y/XRkx8cKTGBN7RSNyBJldmsd7HSIn2eG
+ezgNOeEaWXZcGC8ylkFV9cUQu5rRXsuzYxXRieaLu6E74DOxaJPFsHyQpY2xbW4bEQBArQmn
+jv4PERk4jOYfwX2z5AEzd549Qnv/Hx8sf1Ie7gHP0Oj6pBv1rWtP14cZ/Zn3sNxFsNfkBvu9
+HIycmwVadZcjvBwIx9hX31QH3179JIbMhB4gTFiao/8BHXXdzlK9ORGwaj2Inb/zfgE+N43u
+ldczlbL3etU/QAcPtfsr3ZUy
+
+/
+GRANT EXECUTE ON SYS.KUPC$QUE_INT TO EXECUTE_CATALOG_ROLE;
+@?/rdbms/admin/sqlsessend.sql
