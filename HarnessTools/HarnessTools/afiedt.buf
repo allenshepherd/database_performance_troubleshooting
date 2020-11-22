@@ -1,0 +1,2 @@
+select * from ( select location_id, count(*) counts  from TPE.TPE_IGNITE_LEAD_PIXEL_ACTIVITY group by location_id order by 2) where counts >2
+/

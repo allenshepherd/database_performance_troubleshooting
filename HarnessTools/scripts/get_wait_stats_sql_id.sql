@@ -44,6 +44,7 @@ PROMPT -         BE PATIENT: NEXT QUERY WILL TAKE A FEW MINS FOR LARGE TIME PERI
 PROMPT -                   - THIS WILL GIIVE YOU WAIT EVENTS FOR SQL_ID PER TIME PERIOD
 PROMPT _________________________________________________________________________________________________________________________________________
 
+/*
 select to_char(min(s.end_interval_time),'MM/DD@HH24:MI') sample_end, a.event,sum(a.time_waited) event_count,a.snap_id
 --,NVL(round((sum(TEMP_SPACE_ALLOCATED)/8192),0),0)  temp_blks
 --,NVL(round((sum(PGA_ALLOCATED)/8192),0),0)  pga_blks
@@ -53,8 +54,31 @@ from dba_hist_active_sess_history a, dba_hist_snapshot s
               and time_waited>0
               and a.snap_id < (select min(s.snap_id) from dba_hist_snapshot s where s.begin_interval_time >= to_date(trim('&&end_time.'),'dd-mon-yyyy hh24:mi'))
               and a.snap_id >= (select min(s.snap_id) from dba_hist_snapshot s where s.end_interval_time >= to_date(trim('&&start_time.'),'dd-mon-yyyy hh24:mi'))
-      group by a.event,a.snap_id order by a.snap_id,event_count desc
-/
+      group by a.event,a.snap_id order by a.snap_id,event_count desc;
+*/
+
+
+select
+    times,snap_id, event, event_count, 
+    time_waited "time_waited (ms)",
+    case when time_waited = 0 then 
+        0
+    else
+        round(time_waited*100 / sum(time_waited) Over(partition by snap_id order by snap_id), 2)
+    end "percentage"
+from
+    (  select 
+        trunc(SAMPLE_TIME) as times, snap_id, event, count(event) event_count , sum(time_waited) time_waited
+        from dba_hist_active_sess_history
+        where sql_id =  '&&sql_id' 
+              and snap_id < (select min(s.snap_id) from dba_hist_snapshot s where s.begin_interval_time >= to_date(trim('&&end_time.'),'dd-mon-yyyy hh24:mi'))
+              and snap_id >= (select min(s.snap_id) from dba_hist_snapshot s where s.end_interval_time >= to_date(trim('&&start_time.'),'dd-mon-yyyy hh24:mi'))
+        group by trunc(SAMPLE_TIME),snap_id, event 
+    ) where time_waited>0 
+order by 
+    snap_id ;
+
+
 define sql_id1 = &&sql_id
 PROMPT _________________________________________________________________________________________________________________________________________
 PROMPT EXTRA DETAIL INFORMATION FOR &&sql_id

@@ -1,6 +1,8 @@
 set lines 220 pages 50000
 col MACHINE for a40 trunc
 col service_name for a20 trunc
+col OSUSER for a30
+col SCHEMANAME for a30
 select INST_ID,status,SCHEMANAME,SERVICE_NAME, OSUSER,  MACHINE, count(*) from gv$session where schemaname <>'PUBLIC' and SERVICE_NAME not like 'SYS%' group by inst_id,machine,osuser, service_name,schemaname,STATUS order by 3,5 desc
 /
 

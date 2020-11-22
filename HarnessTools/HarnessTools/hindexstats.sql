@@ -28,7 +28,7 @@ select b.index_name, b.column_position, b.column_name, b.descend, e.column_expre
 
 
 set numwidth 15
-column index_name format a25  word_wrapped heading 'Index Name'
+column index_name format a35  word_wrapped heading 'Index Name'
 column index_type format a4 heading 'Type'
 column blevel heading 'BLevel'
 column leaf_blocks format 99999999999 heading 'Leaf Blocks'

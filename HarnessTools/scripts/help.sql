@@ -33,9 +33,8 @@ PROMPT   -----------------------------------------------------------------------
 
 PROMPT   *   @checktablespace     - Use this to see current utilization of tablespace
 PROMPT   *   @checktablefrag      - Use this to see if golen gate is in sync/diagnosis
-PROMPT   *   @hindex_stats        - Use this for detailed index information
 PROMPT   *   @hstats              - Use this to see a specific table specific (author - Hotsos)
-PROMPT   *   @user_roles_privs    - Use this to see a privileges related to users and roles
+--PROMPT   *   @user_roles_privs    - Use this to see a privileges related to users and roles
 PROMPT   ------------------------------------------------------------------------
 
 PROMPT   -                        CONFIGURATION TOOLS

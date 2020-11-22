@@ -1,4 +1,4 @@
-set lines 220 pages 50000 timing on feedback on arraysize 5000
+set lines 220 pages 50000 timing on feedback on arraysize 5000 verify off serveroutput on 
 col TRACE_FILE_NAME for a100 trunc
 col trace_10046_on for a50 trunc
 col trace_10046_off for a50 trunc
