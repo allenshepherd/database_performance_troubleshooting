@@ -1,6 +1,0 @@
-{
-global:
-	Java_patchgen_kgfpmjCommit;
-local:
-	*;
-};

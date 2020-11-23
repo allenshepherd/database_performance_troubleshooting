@@ -10,13 +10,11 @@ col CNT for a5 trunc
 
 
 set lines 220 pages 9000
-col message_text for 
+col message_text for a170
 col ADR_HOME for a30 trunc
-select TO_CHAR(A.ORIGINATING_TIMESTAMP, 'dd.mm.yyyy hh24:mi:ss') MESSAGE_TIME
+select TO_CHAR(A.ORIGINATING_TIMESTAMP, 'dd.mm.yyyy hh24:mi') MESSAGE_TIME
 ,message_text
-,host_id
-,inst_id
-,adr_home 
+--,host_id
 from V$DIAG_ALERT_EXT A
 where A.ORIGINATING_TIMESTAMP > sysdate-1
 and component_id='rdbms' order by 1 desc;

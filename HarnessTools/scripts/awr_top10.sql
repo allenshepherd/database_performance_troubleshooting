@@ -362,6 +362,7 @@ WHERE ROWNUM <= 10 and executions > 10
 PROMPT _____________________________________________________________________________
 PROMPT  for detailed information regarding a particular sql, run below query
 PROMPT     @get_time_stats_sql_id.sql
+PROMPT     @get_wait_stats_sql_id.sql
 PROMPT _____________________________________________________________________________
 
 --undefine start_time
