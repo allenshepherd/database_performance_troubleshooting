@@ -1,9 +1,104 @@
-select TO_CHAR(A.ORIGINATING_TIMESTAMP, 'dd.mm.yyyy hh24:mi:ss') MESSAGE_TIME
-,message_text
-,host_id
---,inst_id
---,adr_home
-from V$DIAG_ALERT_EXT A
-where A.ORIGINATING_TIMESTAMP > sysdate-1
-and component_id='rdbms' order by 1 desc
+explain plan for
+SELECT iq.last_refresh_scn,
+       CASE WHEN iq.optype = 'DELETE' THEN
+          'Y'
+       ELSE
+          'N'
+       END AS for_delete,
+       iq.last_refresh_time,
+       iq.resv_num,
+       iq.smr_global_name,
+       iq.smr_time_stamp,
+       iq.guarantee_code,
+       iq.resv_status_code,
+       iq.resv_type_code,
+       iq.mkt_activity_id,
+       iq.property_id,
+       iq.arrival_date,
+       iq.departure_date,
+       iq.made_by_id,
+       iq.date_created,
+       iq.print_confirmation,
+       iq.block_id,
+       iq.checked_in_by_id,
+       iq.customer_no,
+       iq.entity_all,
+       iq.cancel_code,
+       iq.contr_num,
+       iq.purchase_id,
+       iq.pkg_includes_unit,
+       iq.date_checked_in,
+       iq.date_checked_out,
+       iq.changed_by_id,
+       iq.date_modified,
+       iq.guaranteed_by,
+       iq.waitlist_date,
+       iq.resv_remark,
+       iq.confirmation_form,
+       iq.cancel_date,
+       iq.mbr_contr_id,
+       iq.cb_banking_transaction_id,
+       iq.cb_inbox_id,
+       iq.create_by_process,
+       iq.exchange_category,
+       iq.exchange_company,
+       iq.exchange_resv_ref_num,
+       iq.locked_by,
+       iq.locked_on,
+       iq.print_confirmation_date,
+       iq.tour_personnel_id,
+       iq.user_resv_num,
+       iq.resv_area_id,
+       iq.lock_off_split,
+       iq.accepted_rpp,
+       iq.cc_authorization_code,
+       iq.cc_id,
+       iq.cc_trans_id,
+       iq.cc_invoice_number,
+       iq.merged_from_membership,
+       iq.merged_by,
+       iq.merged_date,
+       iq.booking_num,
+       iq.email_confirmation,
+       iq.email_confirmation_date,
+       iq.open_dated_yn,
+       iq.exp_date,
+       iq.orig_arrival_date,
+       iq.confirmation_flydocs_id,
+       iq.email_confirmation_address,
+       iq.cancel_num,
+       iq.guest_cert_override_yn,
+       iq.upgrade_by,
+       iq.upgrade_date,
+       iq.usage_year,
+       iq.booking_purpose,
+       iq.emergency_contact_name,
+       iq.emergency_contact_phone,
+       iq.menu_func_id,
+       iq.internal_exch_expiration_date,
+       iq.internal_exch_res_num,
+       iq.diamond_comfort_yn,
+       iq.express_checkout_yn,
+       iq.not_auto_cancel_ns,
+       iq.emergency_phone_country_code,
+       iq.internal_exch_deposit_date,
+       iq.tier_level,
+       iq.upgrade_count,
+       iq.upgrade_fee_waiver,
+       iq.express_checkin_yn,
+       iq.partner_property_id,
+       iq.partner_unit_type_desc
+FROM
+(
+ SELECT st.*,
+        cscn.last_refresh_scn,
+        cscn.last_refresh_time,
+        DENSE_RANK() OVER (PARTITION BY st.resv_num ORDER BY st.source_scn DESC, st.source_rsn DESC, st.log_rba DESC, st.log_position DESC) AS rn
+ FROM p_reservation st
+ JOIN edw_mv_refresh_group cscn ON cscn.mv_name = 'MV_P_RESERVATION'
+ JOIN edw_mv_ingestion_scn edscn ON cscn.mv_name = edscn.mv_name
+ WHERE st.local_scn <= cscn.last_refresh_scn
+ AND st.local_scn > edscn.ingested_scn
+) iq
+WHERE iq.rn=1
 /

@@ -1,16 +1,4 @@
-rem $Header$
-rem $Name$          hstats.sql
-
-rem Copyright (c); 2005-2011 by Hotsos Enterprises, Ltd.
-rem
-rem Retrieve statistics information for a table
-rem This version will only work with 11+
-rem
-rem
-rem This version will work with 11g and 12c Gpro 11/24/2013
-rem
-@hboilraw
-
+--@hboilraw
 
 set echo off feed off
 column colgrp heading 'Column Group/Expression' format a40
@@ -72,7 +60,7 @@ declare
          end as valrange
     from all_tab_columns a
    where a.owner = v_owner
-     and a.table_name = v_table ;
+     and a.table_name = v_table order by 1 ;
      
   -- Histogram stat information
   cursor hist_stats is
