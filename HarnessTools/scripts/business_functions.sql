@@ -1,9 +1,11 @@
-set lines 220 pages 50000
+set lines 250 pages 50000
 set feedback on
+col name for a25 trunc
+col full_query for a70 trunc
+
 select * from (
 select 
  sql_id
---, count(q.sql_id) frequency_over_snaps
 , sum(q.EXECUTIONS_DELTA) executions
 , round(sum(ROWS_PROCESSED_DELTA)/greatest(sum(executions_delta),1),1) rows_per_exec
 , round((sum(ELAPSED_TIME_delta)/greatest(sum(executions_delta),1)/1000),1) msec_per_exec
@@ -15,9 +17,10 @@ select
 , round(sum(IO_INTERCONNECT_BYTES_DELTA)/greatest(sum(executions_delta),1)/8192,1) Inter_bytes
 , round(sum(CELL_UNCOMPRESSED_BYTES_DELTA)/greatest(sum(executions_delta),1)/8192,1) ss_actual_blocks
 , round(sum(IO_OFFLOAD_RETURN_BYTES_DELTA)/greatest(sum(executions_delta),1)/8192,1) ss_return_blocks
+,  (select sql_text from dba_hist_sqltext where sql_id = q.sql_id)  full_query
 from dba_hist_sqlstat q, dba_hist_snapshot s
 where
-parsing_schema_name not in ('SYS','SYSTEM','DBIMGR','ORACLE')
+parsing_schema_name not in ('SYS1')
 and s.snap_id = q.snap_id
 and s.dbid = q.dbid
 and s.instance_number = q.instance_number
@@ -29,6 +32,7 @@ group by
 --order by q.sql_id, sample_end
 order by executions, q.sql_id
 ) out
-where out.executions >50 
+where out.executions >5 
 /
 
+set lines 220

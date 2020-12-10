@@ -15,7 +15,7 @@ PROMPT .________________________________________________________________________
 set feedback off timing off
 select name, DB_UNIQUE_NAME, open_mode, CDB, CON_ID from v$database;
 select instance_name, host_name, version , startup_time, INSTANCE_ROLE from v$instance;
-select * from (select patch_type, action, status, action_time, description patch_description from dba_registry_sqlpatch where action='APPLY' and status='SUCCESS' order by action_time desc) where rownum<3 ;
+select * from (select action, status, action_time, description patch_description from dba_registry_sqlpatch where action='APPLY' and status='SUCCESS' order by action_time desc) where rownum<3 ;
 alter session set nls_date_format = 'DD-MON-YYYY HH24:MI:SS';
 alter session set NLS_TIMESTAMP_FORMAT = 'YYYY-MM-DD HH:MI:SS.FF';
 --select sid, serial# from v$session where sid=sys_context('USERENV','SID');

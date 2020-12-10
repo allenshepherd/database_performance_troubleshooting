@@ -44,7 +44,7 @@ from
 , round(sum(q.IO_OFFLOAD_RETURN_BYTES_DELTA)/greatest(sum(q.executions_delta),1)/8192,1) ss_return_blocks
 from dba_hist_sqlstat q, dba_hist_snapshot s
 where
-parsing_schema_name not in ('SYS','SYSTEM','DBIMGR') 
+parsing_schema_name not in ('SYS1') 
 and s.snap_id = q.snap_id
 and s.dbid = q.dbid
 and s.instance_number = q.instance_number
@@ -70,7 +70,7 @@ order by executions, q.sql_id
         round(sum(IO_OFFLOAD_RETURN_BYTES_DELTA)/greatest(sum(executions_delta),1)/8192,0) ss_return_blocks
 from dba_hist_sqlstat q, dba_hist_snapshot s
 where
-parsing_schema_name not in ('SYS','SYSTEM','DBIMGR') 
+parsing_schema_name not in ('SYS1') 
 and s.snap_id = q.snap_id
 and s.dbid = q.dbid
 and s.instance_number = q.instance_number
